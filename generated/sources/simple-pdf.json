@@ -1,0 +1,94 @@
+{
+  "sourceVersion": 1,
+  "document": {
+    "id": "simple",
+    "name": "simple.pdf",
+    "type": "pdf",
+    "title": "Northwind Foods briefing",
+    "pageCount": 2
+  },
+  "sections": [
+    {
+      "id": "page-1-b1",
+      "type": "heading",
+      "level": 1,
+      "text": "Northwind Foods briefing",
+      "location": {
+        "id": "page-1",
+        "kind": "page",
+        "number": 1
+      },
+      "headingPath": [
+        "Northwind Foods briefing"
+      ]
+    },
+    {
+      "id": "page-1-b2",
+      "type": "paragraph",
+      "text": "This briefing is fictional and written only to test FilmDeck. Customer returns fell from 9.4% to 6.1% in two quarters.",
+      "location": {
+        "id": "page-1",
+        "kind": "page",
+        "number": 1
+      },
+      "headingPath": [
+        "Northwind Foods briefing"
+      ]
+    },
+    {
+      "id": "page-2-b1",
+      "type": "heading",
+      "level": 2,
+      "text": "Cost position",
+      "location": {
+        "id": "page-2",
+        "kind": "page",
+        "number": 2
+      },
+      "headingPath": [
+        "Northwind Foods briefing",
+        "Cost position"
+      ]
+    },
+    {
+      "id": "page-2-b2",
+      "type": "paragraph",
+      "text": "Freight cost per unit is $2.35, down from $3.10.",
+      "location": {
+        "id": "page-2",
+        "kind": "page",
+        "number": 2
+      },
+      "headingPath": [
+        "Northwind Foods briefing",
+        "Cost position"
+      ]
+    },
+    {
+      "id": "page-2-b3",
+      "type": "list",
+      "text": "- Fewer damaged shipments\n- Larger pallets\n- Two new carriers",
+      "items": [
+        "Fewer damaged shipments",
+        "Larger pallets",
+        "Two new carriers"
+      ],
+      "ordered": false,
+      "location": {
+        "id": "page-2",
+        "kind": "page",
+        "number": 2
+      },
+      "headingPath": [
+        "Northwind Foods briefing",
+        "Cost position"
+      ]
+    }
+  ],
+  "warnings": [],
+  "stats": {
+    "sections": 5,
+    "characters": 264,
+    "tables": 0
+  }
+}

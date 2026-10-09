@@ -1,0 +1,10 @@
+/* ---------- EX1 minimal ---------- */
+.ex1-word{position:absolute;left:0;right:0;top:420px;text-align:center;font:900 300px/1 var(--f-display)}
+
+/* ---------- EX2 complete ---------- */
+.ex2-axis{stroke:var(--line);stroke-width:2}
+.ex2-bar{fill:var(--paper)}
+.ex2-bar.hot{fill:var(--alarm)}
+.ex2-lab{font:700 34px var(--f-display);letter-spacing:.1em;fill:var(--paper)}
+.ex2-val{font:500 22px var(--f-mono);letter-spacing:.14em;fill:var(--dim)}
+.ex2-cap{position:absolute;left:124px;top:880px;font:italic 400 52px/1.1 var(--f-serif);color:#ddd7cc}

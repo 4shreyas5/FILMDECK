@@ -1,0 +1,323 @@
+{
+  "storyboardVersion": 1,
+  "deck": {
+    "id": "harborline-delays",
+    "title": "Why Harborline orders run late",
+    "subtitle": "Fictional operations review, not real data",
+    "intro": "A fictional demo about a made-up logistics company. Every figure comes from the source brief. Sound is on, best viewed fullscreen.",
+    "language": "en",
+    "theme": "ink-ember",
+    "fictional": true,
+    "titleAccent": "late"
+  },
+  "sources": [
+    {
+      "id": "p2",
+      "kind": "document",
+      "label": "Cycle time paragraph",
+      "locator": "p2"
+    },
+    {
+      "id": "p3",
+      "kind": "document",
+      "label": "Delay paragraph",
+      "locator": "p3"
+    },
+    {
+      "id": "p4",
+      "kind": "document",
+      "label": "Peak paragraph",
+      "locator": "p4"
+    }
+  ],
+  "facts": [
+    {
+      "id": "target",
+      "kind": "number",
+      "value": 24,
+      "display": "24 hours",
+      "sourceRef": "p2",
+      "evidence": "The target is 24 hours."
+    },
+    {
+      "id": "actual",
+      "kind": "number",
+      "value": 52,
+      "display": "52 hours",
+      "sourceRef": "p2",
+      "evidence": "The average order cycle time is 52 hours."
+    },
+    {
+      "id": "packing",
+      "kind": "number",
+      "value": 38,
+      "display": "38%",
+      "unit": "%",
+      "sourceRef": "p3",
+      "evidence": "38% of delays happen at the packing stage, more than at picking or shipping."
+    },
+    {
+      "id": "peak",
+      "kind": "number",
+      "value": 3,
+      "display": "3 times",
+      "sourceRef": "p4",
+      "evidence": "During the peak season, order volume rises to 3 times the normal level, but packing capacity does not change."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "open",
+      "chapter": "THE DELAY",
+      "kicker": "Opening",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "open",
+        "line1": "Orders take too long.",
+        "line2": "We need to know where.",
+        "emphasis": "where",
+        "bigWord": "The late orders.",
+        "caption": "HARBORLINE · FICTIONAL REVIEW"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Orders are taking longer than they should."
+        },
+        {
+          "n": 2,
+          "notes": "We looked for the stage that slows them down."
+        },
+        {
+          "n": 3,
+          "notes": "This is a fictional review of a made-up company."
+        }
+      ]
+    },
+    {
+      "id": "cycle",
+      "chapter": "THE PROBLEM",
+      "kicker": "The problem",
+      "title": "Orders run late.",
+      "mood": "tense",
+      "recipe": "gauge-needle",
+      "inputs": {
+        "scale": {
+          "min": 0,
+          "max": 60,
+          "majorStep": 20,
+          "minorStep": 5,
+          "unit": "h"
+        },
+        "before": {
+          "fact": "target"
+        },
+        "after": {
+          "fact": "actual"
+        },
+        "labelBefore": "ORDER CYCLE · TARGET",
+        "labelAfter": "ORDER CYCLE · ACTUAL",
+        "afterTone": "negative"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Order cycle time is how long an order takes."
+        },
+        {
+          "n": 2,
+          "notes": "The target is 24 hours."
+        },
+        {
+          "n": 3,
+          "notes": "The actual time is 52 hours."
+        }
+      ]
+    },
+    {
+      "id": "stage",
+      "chapter": "THE STAGE",
+      "kicker": "The bottleneck",
+      "title": "Where orders stall.",
+      "mood": "tense",
+      "recipe": "range-bar-chart",
+      "inputs": {
+        "scale": {
+          "min": 0,
+          "max": 60,
+          "majorStep": 20,
+          "step": 10,
+          "unit": "%"
+        },
+        "rows": [
+          {
+            "label": "DELAYS AT PACKING",
+            "value": {
+              "fact": "packing"
+            },
+            "tone": "negative"
+          }
+        ],
+        "verdict": {
+          "kicker": "THE BOTTLENECK",
+          "word": "PACKING.",
+          "sub": "More delays than picking or shipping."
+        },
+        "axisLabel": "SHARE OF DELAYS"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Delays can happen at picking, packing or shipping."
+        },
+        {
+          "n": 2,
+          "notes": "38% of delays happen at packing."
+        },
+        {
+          "n": 3,
+          "notes": "That is more than the other stages."
+        }
+      ]
+    },
+    {
+      "id": "causes",
+      "chapter": "THE CAUSES",
+      "kicker": "The causes",
+      "title": "Why packing stalls.",
+      "mood": "rising",
+      "recipe": "pillars-roof",
+      "inputs": {
+        "roofLabel": "PACKING CAPACITY",
+        "pillars": [
+          {
+            "heading": "PEAK SEASON",
+            "items": [
+              "Volume rises to 3 times normal"
+            ]
+          },
+          {
+            "heading": "FIXED CAPACITY",
+            "items": [
+              "Packing capacity does not change"
+            ]
+          },
+          {
+            "heading": "UNEVEN SHIFTS",
+            "items": [
+              "Nights understaffed",
+              "Days overloaded"
+            ]
+          }
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Three things hold packing back."
+        },
+        {
+          "n": 2,
+          "notes": "At peak, volume rises to 3 times normal."
+        },
+        {
+          "n": 3,
+          "notes": "Capacity stays fixed."
+        },
+        {
+          "n": 4,
+          "notes": "And the shifts are uneven."
+        },
+        {
+          "n": 5,
+          "notes": "Packing cannot keep up."
+        }
+      ]
+    },
+    {
+      "id": "answer",
+      "chapter": "THE ANSWER",
+      "kicker": "The answer",
+      "mood": "rising",
+      "recipe": "strike-three-moves-checklist",
+      "inputs": {
+        "headlineLead": "DON'T BUY A",
+        "headlineStruck": "NEW SYSTEM.",
+        "sub": {
+          "lead": "Fix ",
+          "accent": "packing first."
+        },
+        "moves": [
+          {
+            "head": "ADD STATIONS",
+            "text": "More packing stations."
+          },
+          {
+            "head": "REBALANCE SHIFTS",
+            "text": "Move people from days to nights."
+          },
+          {
+            "head": "PLAN FOR PEAK",
+            "text": "Peak volume is 3 times normal."
+          }
+        ],
+        "checklist": [
+          "Add packing stations",
+          "Rebalance day and night shifts",
+          "Plan capacity for the peak season"
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "A new warehouse system is not the fix."
+        },
+        {
+          "n": 2,
+          "notes": "Packing is."
+        },
+        {
+          "n": 3,
+          "notes": "Three moves."
+        },
+        {
+          "n": 4,
+          "notes": "The checklist."
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "chapter": "ON TIME",
+      "kicker": "Closing",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "close",
+        "line1": "Speed is lost at one stage,",
+        "line2": "and that stage can be fixed.",
+        "emphasis": "can be fixed",
+        "bigWord": "Fix packing.",
+        "caption": "HARBORLINE · FICTIONAL REVIEW",
+        "thanks": "Thank you."
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Speed is lost at one stage."
+        },
+        {
+          "n": 2,
+          "notes": "That stage can be fixed."
+        },
+        {
+          "n": 3,
+          "notes": "Thank you. This was fictional."
+        }
+      ]
+    }
+  ]
+}

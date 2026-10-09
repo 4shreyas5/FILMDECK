@@ -1,0 +1,33 @@
+{
+  "name": "filmdeck",
+  "version": "0.5.0",
+  "private": true,
+  "description": "FilmDeck: turns a source document into a cinematic, presenter-controlled HTML deck.",
+  "engines": {
+    "node": ">=22.2"
+  },
+  "bin": {
+    "filmdeck": "tools/filmdeck.mjs"
+  },
+  "scripts": {
+    "filmdeck": "node tools/filmdeck.mjs",
+    "test": "node tests/generated/validator-tests.mjs && node tests/generated/recipe-tests.mjs && node tests/ai/pipeline-tests.mjs && node tests/ai/evidence-tests.mjs && node tests/ai/multichunk-tests.mjs && node tests/ingestion/ingestion-tests.mjs && node tests/ingestion/chunk-tests.mjs && node tests/e2e/cli-tests.mjs && node tests/e2e/api-tests.mjs && node tests/ai/live-path-tests.mjs && node tests/ai/adversarial-tests.mjs && node tests/live/harness-selftest.mjs",
+    "test:corpus": "node tests/corpus/corpus.mjs",
+    "test:layout": "node tests/generated/layout-tests.mjs",
+    "test:e2e": "node tests/e2e/e2e.mjs",
+    "test:live": "node tests/live/live-eval.mjs",
+    "test:web": "node tests/web/web-e2e.mjs && node tests/web/web-live-e2e.mjs && node tests/web/web-hardening-e2e.mjs",
+    "setup:qa": "node scripts/setup-qa.mjs",
+    "web:install": "npm install --prefix web",
+    "web:build": "npm run build --prefix web",
+    "web:start": "npm run start --prefix web",
+    "web:dev": "npm run dev --prefix web",
+    "review": "node tools/review-deck.mjs",
+    "test:web:mock": "node tests/web/web-e2e.mjs",
+    "test:web:fake-live": "node tests/web/web-live-e2e.mjs",
+    "test:offline": "npm test",
+    "test:browser": "node tests/generated/layout-tests.mjs && node tests/review/review-tests.mjs",
+    "test:web:hardening": "node tests/web/web-hardening-e2e.mjs",
+    "review:samples": "node scripts/review-samples.mjs"
+  }
+}

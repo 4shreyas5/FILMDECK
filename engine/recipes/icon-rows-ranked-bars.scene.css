@@ -1,0 +1,16 @@
+/* ---------- __SID__ icon-rows-ranked-bars ---------- */
+.__C__-a,.__C__-f{position:absolute;inset:0}
+.__C__-row{position:absolute;left:180px;width:1560px}
+.__C__-row .h{font:italic 400 44px/1 var(--f-serif);color:#e2dcd2;margin-bottom:26px;white-space:nowrap}
+.__C__-row .h b{font:800 28px/1 var(--f-display);font-style:normal;letter-spacing:.22em;margin-right:18px;vertical-align:4px}
+.__C__-row .ic{display:flex;gap:12px;flex-wrap:nowrap}
+.__C__-row .fg{flex:none;width:46px;height:74px;overflow:visible}
+.__C__-x{position:absolute;left:180px;top:850px;font:800 40px/1 var(--f-display);letter-spacing:.22em;color:var(--alarm);transform-origin:0 50%;white-space:nowrap}
+.__C__-fk{position:absolute;left:180px;top:290px;font:500 16px/1 var(--f-mono);letter-spacing:.36em;color:var(--ember);white-space:nowrap}
+.__C__-f .r{position:absolute;left:180px;width:1560px;height:130px}
+.__C__-f .lb{position:absolute;left:0;top:22px;font:900 78px/1 var(--f-display);white-space:nowrap}
+.__C__-f .tg{position:absolute;left:640px;top:0;font:500 16px/1 var(--f-mono);letter-spacing:.28em;color:var(--dim);white-space:nowrap}
+.__C__-f .bar{position:absolute;left:640px;top:34px;height:66px;background:linear-gradient(90deg,var(--ember-2),var(--ember));box-shadow:0 0 40px rgba(242,162,71,.3)}
+.__C__-f .bar.m{background:linear-gradient(90deg,#4d5361,#a3a9b5);box-shadow:none}
+.__C__-f .vv{position:absolute;top:36px;font:800 52px/1 var(--f-display);color:var(--paper);white-space:nowrap}
+.__C__-src{position:absolute;left:180px;top:880px;width:1560px;font:italic 400 40px/1.2 var(--f-serif);color:#cfc9be}

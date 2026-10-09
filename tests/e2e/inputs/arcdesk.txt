@@ -1,0 +1,11 @@
+ArcDesk is a fictional help-desk software company. This brief is fictional and was written only to test FilmDeck.
+
+Monthly customer churn rose from 3% to 7% over the last two quarters.
+
+Exit surveys show 41% of leaving customers named price as the main reason, compared with 12% who named missing features.
+
+Competitors are offering discounts of 15–25% to ArcDesk's mid-size accounts. ArcDesk's own loyalty discount is 5–8%.
+
+Support response time is unchanged at 2 hours, and satisfaction scores have stayed flat.
+
+The leadership team wants a plan that protects mid-size accounts without starting a price war.

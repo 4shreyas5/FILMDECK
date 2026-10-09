@@ -1,0 +1,243 @@
+{
+  "storyboardVersion": 1,
+  "deck": {
+    "id": "village-library",
+    "title": "The library that came back",
+    "subtitle": "Fictional story, not a real place",
+    "intro": "A fictional demo about an imagined village library. Every figure comes from the source brief. Sound is on, best viewed fullscreen.",
+    "language": "en",
+    "theme": "ink-ember",
+    "fictional": true,
+    "titleAccent": "came back"
+  },
+  "sources": [
+    {
+      "id": "p1",
+      "kind": "document",
+      "label": "Story introduction",
+      "locator": "p1"
+    }
+  ],
+  "facts": [],
+  "scenes": [
+    {
+      "id": "open",
+      "chapter": "NEARLY CLOSED",
+      "kicker": "Opening",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "open",
+        "line1": "The village library was nearly closed.",
+        "line2": "The roof leaked and few people came.",
+        "emphasis": "few people came",
+        "bigWord": "The library.",
+        "caption": "A FICTIONAL STORY"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The village library was nearly closed."
+        },
+        {
+          "n": 2,
+          "notes": "The roof leaked and few people came."
+        },
+        {
+          "n": 3,
+          "notes": "This is a fictional story."
+        }
+      ]
+    },
+    {
+      "id": "turn",
+      "chapter": "THE TURN",
+      "kicker": "The turn",
+      "title": "Neighbours made a start.",
+      "mood": "rising",
+      "recipe": "pillars-roof",
+      "inputs": {
+        "roofLabel": "A PLACE TO BELONG",
+        "pillars": [
+          {
+            "heading": "GATHER",
+            "items": [
+              "Neighbours met on weekday evenings"
+            ]
+          },
+          {
+            "heading": "REPAIR",
+            "items": [
+              "Old books were mended together"
+            ]
+          },
+          {
+            "heading": "SHARE",
+            "items": [
+              "Stories and tea were shared"
+            ]
+          }
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Some neighbours began to meet there."
+        },
+        {
+          "n": 2,
+          "notes": "They gathered on weekday evenings."
+        },
+        {
+          "n": 3,
+          "notes": "They repaired old books."
+        },
+        {
+          "n": 4,
+          "notes": "And shared stories."
+        },
+        {
+          "n": 5,
+          "notes": "It started small."
+        }
+      ]
+    },
+    {
+      "id": "grow",
+      "chapter": "THE GROWTH",
+      "kicker": "The growth",
+      "title": "Others joined in.",
+      "mood": "rising",
+      "recipe": "pillars-roof",
+      "inputs": {
+        "roofLabel": "THE COMMUNITY JOINED",
+        "pillars": [
+          {
+            "heading": "CHILDREN",
+            "items": [
+              "Children joined the circle"
+            ]
+          },
+          {
+            "heading": "TEACHER",
+            "items": [
+              "A retired teacher began a reading circle"
+            ]
+          },
+          {
+            "heading": "BAKER",
+            "items": [
+              "The baker gave tea and cake"
+            ]
+          }
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Soon children joined them."
+        },
+        {
+          "n": 2,
+          "notes": "A retired teacher started a reading circle."
+        },
+        {
+          "n": 3,
+          "notes": "The local baker donated tea and cake."
+        },
+        {
+          "n": 4,
+          "notes": "The library filled up."
+        },
+        {
+          "n": 5,
+          "notes": "People gave what they could."
+        }
+      ]
+    },
+    {
+      "id": "council",
+      "chapter": "THE COUNCIL",
+      "kicker": "The council",
+      "mood": "rising",
+      "recipe": "strike-three-moves-checklist",
+      "inputs": {
+        "headlineLead": "DON'T CLOSE THE",
+        "headlineStruck": "LIBRARY.",
+        "sub": {
+          "lead": "Let people ",
+          "accent": "make it theirs."
+        },
+        "moves": [
+          {
+            "head": "MEET",
+            "text": "Neighbours came on weekday evenings."
+          },
+          {
+            "head": "SHARE",
+            "text": "A reading circle and local cake."
+          },
+          {
+            "head": "SUPPORT",
+            "text": "The council fixed the roof."
+          }
+        ],
+        "checklist": [
+          "The council noticed the change",
+          "It agreed to fix the roof",
+          "It agreed to keep the library open"
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The council noticed the change."
+        },
+        {
+          "n": 2,
+          "notes": "It agreed to help."
+        },
+        {
+          "n": 3,
+          "notes": "Three moves."
+        },
+        {
+          "n": 4,
+          "notes": "The checklist."
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "chapter": "BELONGING",
+      "kicker": "Closing",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "close",
+        "line1": "People look after places,",
+        "line2": "that feel like they belong to them.",
+        "emphasis": "belong to them",
+        "bigWord": "Make it theirs.",
+        "caption": "A FICTIONAL STORY",
+        "thanks": "Thank you."
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "People look after places they feel belong to them."
+        },
+        {
+          "n": 2,
+          "notes": "That is what the neighbours learned."
+        },
+        {
+          "n": 3,
+          "notes": "Thank you. This was a fictional story."
+        }
+      ]
+    }
+  ]
+}

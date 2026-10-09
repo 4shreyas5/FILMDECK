@@ -1,0 +1,345 @@
+{
+  "storyboardVersion": 1,
+  "deck": {
+    "id": "halden-review",
+    "title": "Halden adapts its shops",
+    "subtitle": "Fictional case, not real data",
+    "intro": "A fictional case written only to test FilmDeck. Every figure comes from the source. Sound is on, best viewed fullscreen.",
+    "language": "en",
+    "theme": "ink-ember",
+    "fictional": true,
+    "titleAccent": "adapts"
+  },
+  "sources": [
+    {
+      "id": "slide-2-title",
+      "kind": "slide",
+      "label": "Store sales fell 6% while online sales grew 23%",
+      "locator": "slide-2"
+    },
+    {
+      "id": "slide-3-b1",
+      "kind": "slide",
+      "label": "Cost line | Share of costs | Change Rent | 38% | +4% Staff |",
+      "locator": "slide-3"
+    },
+    {
+      "id": "slide-4-b1",
+      "kind": "slide",
+      "label": "- Small stores lost 14% of visits - Large stores lost 5% of ",
+      "locator": "slide-4"
+    },
+    {
+      "id": "slide-5-b1",
+      "kind": "slide",
+      "label": "- Close 12 of the weakest stores - Open 40 pickup points nea",
+      "locator": "slide-5"
+    }
+  ],
+  "facts": [
+    {
+      "id": "online-growth",
+      "kind": "number",
+      "value": 23,
+      "display": "23%",
+      "unit": "%",
+      "sourceRef": "slide-2-title",
+      "evidence": "Store sales fell 6% while online sales grew 23%"
+    },
+    {
+      "id": "store-drop",
+      "kind": "number",
+      "value": 6,
+      "display": "6%",
+      "unit": "%",
+      "sourceRef": "slide-2-title",
+      "evidence": "Store sales fell 6% while online sales grew 23%"
+    },
+    {
+      "id": "small-loss",
+      "kind": "number",
+      "value": 14,
+      "display": "14%",
+      "unit": "%",
+      "sourceRef": "slide-3-b1",
+      "evidence": "Logistics | 14% | +9%"
+    },
+    {
+      "id": "large-loss",
+      "kind": "number",
+      "value": 5,
+      "display": "5%",
+      "unit": "%",
+      "sourceRef": "slide-4-b1",
+      "evidence": "- Large stores lost 5% of visits"
+    },
+    {
+      "id": "close-n",
+      "kind": "number",
+      "value": 12,
+      "display": "12",
+      "sourceRef": "slide-5-b1",
+      "evidence": "- Close 12 of the weakest stores"
+    },
+    {
+      "id": "pickup-n",
+      "kind": "number",
+      "value": 40,
+      "display": "40",
+      "sourceRef": "slide-5-b1",
+      "evidence": "- Open 40 pickup points near transit"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "open",
+      "chapter": "THE STORY",
+      "kicker": "Opening",
+      "mood": "quiet",
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "open",
+        "line1": "A good year online.",
+        "line2": "A harder year in the shops.",
+        "emphasis": "harder year",
+        "bigWord": "Two speeds.",
+        "caption": "HALDEN RETAIL · FICTIONAL"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "This is a fictional case written to test the deck."
+        },
+        {
+          "n": 2,
+          "notes": "We look at what the document says."
+        },
+        {
+          "n": 3,
+          "notes": "Every figure comes from the source."
+        }
+      ]
+    },
+    {
+      "id": "online",
+      "chapter": "THE SHIFT",
+      "kicker": "The shift",
+      "title": "Online keeps growing.",
+      "mood": "rising",
+      "recipe": "big-number",
+      "inputs": {
+        "label": "ONLINE SALES, YEAR ON YEAR",
+        "value": {
+          "fact": "online-growth"
+        },
+        "context": "Shops are moving the other way.",
+        "compare": {
+          "label": "STORES FELL BY",
+          "value": {
+            "fact": "store-drop"
+          }
+        }
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Online sales are the bright spot."
+        },
+        {
+          "n": 2,
+          "notes": "They grew by 23% year on year."
+        },
+        {
+          "n": 3,
+          "notes": "Store sales fell by 6% in the same period."
+        }
+      ]
+    },
+    {
+      "id": "footfall",
+      "chapter": "THE VISITS",
+      "kicker": "The visits",
+      "title": "Small stores suffer most.",
+      "mood": "tense",
+      "recipe": "comparison",
+      "inputs": {
+        "left": {
+          "heading": "SMALL STORES",
+          "metrics": [
+            {
+              "label": "VISITS LOST",
+              "value": {
+                "fact": "small-loss"
+              }
+            }
+          ]
+        },
+        "right": {
+          "heading": "LARGE STORES",
+          "metrics": [
+            {
+              "label": "VISITS LOST",
+              "value": {
+                "fact": "large-loss"
+              }
+            }
+          ]
+        },
+        "verdict": "Footfall is falling fastest in small stores."
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Footfall fell in every store type."
+        },
+        {
+          "n": 2,
+          "notes": "Small stores lost 14% of visits."
+        },
+        {
+          "n": 3,
+          "notes": "Large stores lost 5%."
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "chapter": "THE PLAN",
+      "kicker": "The plan",
+      "title": "Close some, open more.",
+      "mood": "tense",
+      "recipe": "range-bar-chart",
+      "inputs": {
+        "scale": {
+          "min": 0,
+          "max": 50,
+          "majorStep": 10,
+          "step": 10,
+          "unit": ""
+        },
+        "rows": [
+          {
+            "label": "CLOSE",
+            "value": {
+              "fact": "close-n"
+            },
+            "tone": "negative"
+          },
+          {
+            "label": "OPEN",
+            "value": {
+              "fact": "pickup-n"
+            },
+            "tone": "positive"
+          }
+        ],
+        "verdict": {
+          "kicker": "THE READING",
+          "word": "SHIFT.",
+          "sub": "Fewer shops, more pickup points."
+        }
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The recommendation has two parts."
+        },
+        {
+          "n": 2,
+          "notes": "Close 12 of the weakest stores."
+        },
+        {
+          "n": 3,
+          "notes": "Open 40 pickup points near transit."
+        },
+        {
+          "n": 4,
+          "notes": "The network gets smaller and faster."
+        }
+      ]
+    },
+    {
+      "id": "how",
+      "chapter": "THE HOW",
+      "kicker": "The how",
+      "title": "How the plan works.",
+      "mood": "calm",
+      "recipe": "pillars-roof",
+      "inputs": {
+        "roofLabel": "A SMALLER, FASTER NETWORK",
+        "pillars": [
+          {
+            "heading": "CLOSE",
+            "items": [
+              "Agree the list with the board"
+            ]
+          },
+          {
+            "heading": "OPEN",
+            "items": [
+              "Choose pickup sites near transit"
+            ]
+          },
+          {
+            "heading": "REINVEST",
+            "items": [
+              "Put savings into delivery speed"
+            ]
+          }
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The plan rests on three pillars."
+        },
+        {
+          "n": 2,
+          "notes": "First, close the weakest stores."
+        },
+        {
+          "n": 3,
+          "notes": "Second, open pickup points."
+        },
+        {
+          "n": 4,
+          "notes": "Third, reinvest the savings."
+        },
+        {
+          "n": 5,
+          "notes": "Together they make a smaller, faster network."
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "chapter": "THE POINT",
+      "kicker": "Closing",
+      "mood": "quiet",
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "close",
+        "line1": "The shops are changing,",
+        "line2": "and the network can change with them.",
+        "emphasis": "change with them",
+        "bigWord": "Adapt.",
+        "caption": "HALDEN RETAIL · FICTIONAL",
+        "thanks": "Thank you."
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "That is the picture the document gives."
+        },
+        {
+          "n": 2,
+          "notes": "The details are in the source."
+        },
+        {
+          "n": 3,
+          "notes": "Thank you. This was a fictional case."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+These font files are copies of the ones vendored for the generated decks (see engine/vendor/NOTICE.md): Barlow Condensed, Instrument Serif and JetBrains Mono, from Google Fonts, SIL Open Font License 1.1 (https://openfontlicense.org). They are served locally so the web app needs no internet. Unmodified and not renamed.

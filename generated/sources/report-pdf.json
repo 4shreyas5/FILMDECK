@@ -1,0 +1,182 @@
+{
+  "sourceVersion": 1,
+  "document": {
+    "id": "report",
+    "name": "report.pdf",
+    "type": "pdf",
+    "title": "Northwind Foods annual report",
+    "pageCount": 3
+  },
+  "sections": [
+    {
+      "id": "page-1-b1",
+      "type": "heading",
+      "level": 1,
+      "text": "Northwind Foods annual report",
+      "location": {
+        "id": "page-1",
+        "kind": "page",
+        "number": 1
+      },
+      "headingPath": [
+        "Northwind Foods annual report"
+      ]
+    },
+    {
+      "id": "page-1-b2",
+      "type": "paragraph",
+      "text": "This report is fictional and exists only to test FilmDeck ingestion. Revenue was $4.2 million in 2025, up 18% from $3.56 million.",
+      "location": {
+        "id": "page-1",
+        "kind": "page",
+        "number": 1
+      },
+      "headingPath": [
+        "Northwind Foods annual report"
+      ]
+    },
+    {
+      "id": "page-1-b3",
+      "type": "heading",
+      "level": 2,
+      "text": "Highlights",
+      "location": {
+        "id": "page-1",
+        "kind": "page",
+        "number": 1
+      },
+      "headingPath": [
+        "Northwind Foods annual report",
+        "Highlights"
+      ]
+    },
+    {
+      "id": "page-1-b4",
+      "type": "list",
+      "text": "- Customer satisfaction reached 91 out of 100\n- Average delivery time fell to 2.4 days\n- Returns dropped 35% to 6.1%",
+      "items": [
+        "Customer satisfaction reached 91 out of 100",
+        "Average delivery time fell to 2.4 days",
+        "Returns dropped 35% to 6.1%"
+      ],
+      "ordered": false,
+      "location": {
+        "id": "page-1",
+        "kind": "page",
+        "number": 1
+      },
+      "headingPath": [
+        "Northwind Foods annual report",
+        "Highlights"
+      ]
+    },
+    {
+      "id": "page-2-b1",
+      "type": "heading",
+      "level": 1,
+      "text": "Regional results",
+      "location": {
+        "id": "page-2",
+        "kind": "page",
+        "number": 2
+      },
+      "headingPath": [
+        "Regional results"
+      ]
+    },
+    {
+      "id": "page-2-b2",
+      "type": "paragraph",
+      "text": "The table below lists revenue by region, in millions of dollars.",
+      "location": {
+        "id": "page-2",
+        "kind": "page",
+        "number": 2
+      },
+      "headingPath": [
+        "Regional results"
+      ]
+    },
+    {
+      "id": "page-2-b3",
+      "type": "table",
+      "text": "Region | Revenue ($M) | Growth\nNorth | 1.9 | 21%\nSouth | 1.4 | 12%\nWest | 0.9 | 19%",
+      "headers": [
+        "Region",
+        "Revenue ($M)",
+        "Growth"
+      ],
+      "rows": [
+        [
+          "North",
+          "1.9",
+          "21%"
+        ],
+        [
+          "South",
+          "1.4",
+          "12%"
+        ],
+        [
+          "West",
+          "0.9",
+          "19%"
+        ]
+      ],
+      "location": {
+        "id": "page-2",
+        "kind": "page",
+        "number": 2
+      },
+      "headingPath": [
+        "Regional results"
+      ]
+    },
+    {
+      "id": "page-2-b4",
+      "type": "paragraph",
+      "text": "North remained the largest region with 45% of revenue.",
+      "location": {
+        "id": "page-2",
+        "kind": "page",
+        "number": 2
+      },
+      "headingPath": [
+        "Regional results"
+      ]
+    },
+    {
+      "id": "page-3-b1",
+      "type": "heading",
+      "level": 1,
+      "text": "Outlook",
+      "location": {
+        "id": "page-3",
+        "kind": "page",
+        "number": 3
+      },
+      "headingPath": [
+        "Outlook"
+      ]
+    },
+    {
+      "id": "page-3-b2",
+      "type": "paragraph",
+      "text": "Management expects revenue of ₹4,200 crore equivalent next year, with 3 new stores by March 2026.",
+      "location": {
+        "id": "page-3",
+        "kind": "page",
+        "number": 3
+      },
+      "headingPath": [
+        "Outlook"
+      ]
+    }
+  ],
+  "warnings": [],
+  "stats": {
+    "sections": 10,
+    "characters": 605,
+    "tables": 1
+  }
+}

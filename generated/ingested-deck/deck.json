@@ -1,0 +1,304 @@
+{
+  "title": "Northwind grows again",
+  "introKicker": "Fictional deck, not real data",
+  "introTitle": "Northwind <em>grows</em> again",
+  "introParagraph": "A fictional demo about a made-up food company. Every figure comes from the source slides. Sound is on, best viewed fullscreen.",
+  "helpDigits": "<div><b>1 to 5</b><br>jump to scene</div>",
+  "sections": [
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "generator": {
+    "version": 1,
+    "storyboardSha256": "69a1c66dbb1a2be144b8666be041c2ef593ea3435d0d75a1f8cc6e4aafd27fb9",
+    "deckId": "northwind-q3",
+    "fictional": true
+  },
+  "sources": [
+    {
+      "id": "slide-2-title",
+      "kind": "slide",
+      "label": "Slide 2 headline",
+      "locator": "slide 2"
+    },
+    {
+      "id": "slide-2-b1",
+      "kind": "slide",
+      "label": "Slide 2 revenue bullets",
+      "locator": "slide 2"
+    },
+    {
+      "id": "slide-3-b1",
+      "kind": "table",
+      "label": "Slide 3 regional table",
+      "locator": "slide 3"
+    }
+  ],
+  "facts": [
+    {
+      "id": "growth",
+      "kind": "number",
+      "value": 18,
+      "display": "18%",
+      "unit": "%",
+      "sourceRef": "slide-2-title"
+    },
+    {
+      "id": "rev-last",
+      "kind": "number",
+      "value": 3.56,
+      "display": "$3.56M",
+      "sourceRef": "slide-2-b1"
+    },
+    {
+      "id": "rev-now",
+      "kind": "number",
+      "value": 4.2,
+      "display": "$4.2M",
+      "sourceRef": "slide-2-b1"
+    },
+    {
+      "id": "online",
+      "kind": "number",
+      "value": 62,
+      "display": "62%",
+      "unit": "%",
+      "sourceRef": "slide-2-b1"
+    },
+    {
+      "id": "north",
+      "kind": "number",
+      "value": 1.9,
+      "display": "$1.9M",
+      "sourceRef": "slide-3-b1"
+    },
+    {
+      "id": "south",
+      "kind": "number",
+      "value": 1.4,
+      "display": "$1.4M",
+      "sourceRef": "slide-3-b1"
+    },
+    {
+      "id": "west",
+      "kind": "number",
+      "value": 0.9,
+      "display": "$0.9M",
+      "sourceRef": "slide-3-b1"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "open",
+      "section": "s1",
+      "n": 1,
+      "chapter": "THE QUARTER",
+      "recipe": "minimal-close",
+      "mood": "quiet",
+      "letterbox": true,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "This is a fictional quarterly review.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "We look at where growth came from.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "Every figure is taken from the source slides.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [],
+      "sources": []
+    },
+    {
+      "id": "revenue",
+      "section": "s2",
+      "n": 2,
+      "chapter": "THE GROWTH",
+      "recipe": "range-bar-chart",
+      "mood": "rising",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Revenue is shown in millions of dollars.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "Last year the quarter brought in $3.56M.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "This year it reached $4.2M.",
+          "summary": null
+        },
+        {
+          "n": 4,
+          "notes": "That is growth of 18% year on year.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "fact": "rev-last",
+          "display": "$3.56M",
+          "sourceRef": "slide-2-b1"
+        },
+        {
+          "fact": "rev-now",
+          "display": "$4.2M",
+          "sourceRef": "slide-2-b1"
+        }
+      ],
+      "sources": [
+        "slide-2-b1"
+      ]
+    },
+    {
+      "id": "regions",
+      "section": "s3",
+      "n": 3,
+      "chapter": "THE REGIONS",
+      "recipe": "range-bar-chart",
+      "mood": "rising",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The table splits revenue by region.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "The north brought in $1.9M.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "The south brought in $1.4M and the west $0.9M.",
+          "summary": null
+        },
+        {
+          "n": 4,
+          "notes": "The north is the largest region.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "fact": "north",
+          "display": "$1.9M",
+          "sourceRef": "slide-3-b1"
+        },
+        {
+          "fact": "south",
+          "display": "$1.4M",
+          "sourceRef": "slide-3-b1"
+        },
+        {
+          "fact": "west",
+          "display": "$0.9M",
+          "sourceRef": "slide-3-b1"
+        }
+      ],
+      "sources": [
+        "slide-3-b1"
+      ]
+    },
+    {
+      "id": "channel",
+      "section": "s4",
+      "n": 4,
+      "chapter": "THE SHIFT",
+      "recipe": "strike-three-moves-checklist",
+      "mood": "rising",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Online orders were 62% of sales.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "So shops alone are not the plan.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "Three moves follow from the numbers.",
+          "summary": null
+        },
+        {
+          "n": 4,
+          "notes": "This is the checklist.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [],
+      "sources": []
+    },
+    {
+      "id": "close",
+      "section": "s5",
+      "n": 5,
+      "chapter": "REASONS TO STAY",
+      "recipe": "minimal-close",
+      "mood": "quiet",
+      "letterbox": true,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Revenue is growing.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "Online is leading the way.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "Thank you. This was a fictional review.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [],
+      "sources": []
+    }
+  ],
+  "allowedNumberStrings": [
+    "18%",
+    "$3.56M",
+    "$4.2M",
+    "62%",
+    "$1.9M",
+    "$1.4M",
+    "$0.9M",
+    "Scene 01 · Opening",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "Scene 02 · The growth",
+    "Scene 03 · The regions",
+    "Scene 04 · The shift",
+    "MOVE 01",
+    "MOVE 02",
+    "MOVE 03",
+    "Scene 05 · Closing"
+  ]
+}

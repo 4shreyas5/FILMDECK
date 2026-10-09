@@ -1,0 +1,194 @@
+{
+  "sourceVersion": 1,
+  "document": {
+    "id": "report",
+    "name": "report.docx",
+    "type": "docx",
+    "title": "Northwind Foods annual summary (fictional)"
+  },
+  "sections": [
+    {
+      "id": "p1",
+      "type": "heading",
+      "level": 1,
+      "text": "Northwind Foods annual summary",
+      "location": {
+        "id": "p1",
+        "kind": "paragraph",
+        "number": 1
+      },
+      "headingPath": [
+        "Northwind Foods annual summary"
+      ]
+    },
+    {
+      "id": "p2",
+      "type": "paragraph",
+      "text": "This document is fictional and exists only to test FilmDeck ingestion.",
+      "location": {
+        "id": "p2",
+        "kind": "paragraph",
+        "number": 2
+      },
+      "headingPath": [
+        "Northwind Foods annual summary"
+      ]
+    },
+    {
+      "id": "p3",
+      "type": "heading",
+      "level": 1,
+      "text": "Sales",
+      "location": {
+        "id": "p3",
+        "kind": "paragraph",
+        "number": 3
+      },
+      "headingPath": [
+        "Sales"
+      ]
+    },
+    {
+      "id": "p4",
+      "type": "paragraph",
+      "text": "Total sales were ₹4,200 crore in FY2025, an increase of 12.5% over FY2024.",
+      "location": {
+        "id": "p4",
+        "kind": "paragraph",
+        "number": 4
+      },
+      "headingPath": [
+        "Sales"
+      ]
+    },
+    {
+      "id": "p5",
+      "type": "heading",
+      "level": 2,
+      "text": "Sales by channel",
+      "location": {
+        "id": "p5",
+        "kind": "paragraph",
+        "number": 5
+      },
+      "headingPath": [
+        "Sales",
+        "Sales by channel"
+      ]
+    },
+    {
+      "id": "p6",
+      "type": "table",
+      "text": "Channel | Sales (₹ crore) | Share\nRetail | 2,520 | 60%\nOnline | 1,260 | 30%\nExport | 420 | 10%",
+      "headers": [
+        "Channel",
+        "Sales (₹ crore)",
+        "Share"
+      ],
+      "rows": [
+        [
+          "Retail",
+          "2,520",
+          "60%"
+        ],
+        [
+          "Online",
+          "1,260",
+          "30%"
+        ],
+        [
+          "Export",
+          "420",
+          "10%"
+        ]
+      ],
+      "location": {
+        "id": "p6",
+        "kind": "paragraph",
+        "number": 6
+      },
+      "headingPath": [
+        "Sales",
+        "Sales by channel"
+      ]
+    },
+    {
+      "id": "p7",
+      "type": "heading",
+      "level": 1,
+      "text": "People",
+      "location": {
+        "id": "p7",
+        "kind": "paragraph",
+        "number": 7
+      },
+      "headingPath": [
+        "People"
+      ]
+    },
+    {
+      "id": "p8",
+      "type": "paragraph",
+      "text": "Headcount reached 8,150 by 31 March 2025.",
+      "location": {
+        "id": "p8",
+        "kind": "paragraph",
+        "number": 8
+      },
+      "headingPath": [
+        "People"
+      ]
+    },
+    {
+      "id": "p9",
+      "type": "paragraph",
+      "text": "Hiring priorities:",
+      "location": {
+        "id": "p9",
+        "kind": "paragraph",
+        "number": 9
+      },
+      "headingPath": [
+        "People"
+      ]
+    },
+    {
+      "id": "p10",
+      "type": "list",
+      "text": "- Warehouse operations\n- Customer support\n- Data analytics",
+      "items": [
+        "Warehouse operations",
+        "Customer support",
+        "Data analytics"
+      ],
+      "ordered": false,
+      "location": {
+        "id": "p10",
+        "kind": "paragraph",
+        "number": 10
+      },
+      "headingPath": [
+        "People"
+      ]
+    },
+    {
+      "id": "p11",
+      "type": "paragraph",
+      "text": "Visible inserted text.",
+      "location": {
+        "id": "p11",
+        "kind": "paragraph",
+        "number": 11
+      },
+      "headingPath": [
+        "People"
+      ]
+    }
+  ],
+  "warnings": [],
+  "stats": {
+    "sections": 11,
+    "characters": 434,
+    "tables": 1
+  }
+}

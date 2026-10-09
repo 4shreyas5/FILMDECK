@@ -1,0 +1,512 @@
+{
+  "title": "Halden adapts its shops",
+  "introKicker": "Fictional case, not real data",
+  "introTitle": "Halden <em>adapts</em> its shops",
+  "introParagraph": "A fictional case written only to test FilmDeck. Every figure comes from the source. Sound is on, best viewed fullscreen.",
+  "helpDigits": "<div><b>1 to 6</b><br>jump to scene</div>",
+  "sections": [
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6"
+  ],
+  "generator": {
+    "version": 2,
+    "offline": true,
+    "gsap": "3.12.5",
+    "storyboardSha256": "271d358a84363f98d87d206afe489b8f76b4fe998b2625e8bf4b35ff4f554275",
+    "deckId": "halden-review",
+    "fictional": true
+  },
+  "sources": [
+    {
+      "id": "slide-2-title",
+      "kind": "slide",
+      "label": "Store sales fell 6% while online sales grew 23%",
+      "locator": "slide-2"
+    },
+    {
+      "id": "slide-3-b1",
+      "kind": "slide",
+      "label": "Cost line | Share of costs | Change Rent | 38% | +4% Staff |",
+      "locator": "slide-3"
+    },
+    {
+      "id": "slide-4-b1",
+      "kind": "slide",
+      "label": "- Small stores lost 14% of visits - Large stores lost 5% of ",
+      "locator": "slide-4"
+    },
+    {
+      "id": "slide-5-b1",
+      "kind": "slide",
+      "label": "- Close 12 of the weakest stores - Open 40 pickup points nea",
+      "locator": "slide-5"
+    }
+  ],
+  "facts": [
+    {
+      "id": "online-growth",
+      "kind": "number",
+      "value": 23,
+      "display": "23%",
+      "unit": "%",
+      "sourceRef": "slide-2-title",
+      "evidence": "Store sales fell 6% while online sales grew 23%"
+    },
+    {
+      "id": "store-drop",
+      "kind": "number",
+      "value": 6,
+      "display": "6%",
+      "unit": "%",
+      "sourceRef": "slide-2-title",
+      "evidence": "Store sales fell 6% while online sales grew 23%"
+    },
+    {
+      "id": "small-loss",
+      "kind": "number",
+      "value": 14,
+      "display": "14%",
+      "unit": "%",
+      "sourceRef": "slide-3-b1",
+      "evidence": "Logistics | 14% | +9%"
+    },
+    {
+      "id": "large-loss",
+      "kind": "number",
+      "value": 5,
+      "display": "5%",
+      "unit": "%",
+      "sourceRef": "slide-4-b1",
+      "evidence": "- Large stores lost 5% of visits"
+    },
+    {
+      "id": "close-n",
+      "kind": "number",
+      "value": 12,
+      "display": "12",
+      "sourceRef": "slide-5-b1",
+      "evidence": "- Close 12 of the weakest stores"
+    },
+    {
+      "id": "pickup-n",
+      "kind": "number",
+      "value": 40,
+      "display": "40",
+      "sourceRef": "slide-5-b1",
+      "evidence": "- Open 40 pickup points near transit"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "open",
+      "section": "s1",
+      "n": 1,
+      "chapter": "THE STORY",
+      "recipe": "minimal-close",
+      "mood": "quiet",
+      "letterbox": true,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "This is a fictional case written to test the deck.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "We look at what the document says.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "Every figure comes from the source.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [],
+      "sources": [],
+      "textZones": [
+        {
+          "selector": ".s1-l1",
+          "role": "line 1",
+          "maxLines": 1,
+          "maxWidth": 1400
+        },
+        {
+          "selector": ".s1-l2",
+          "role": "line 2",
+          "maxLines": 2,
+          "maxWidth": 1400
+        },
+        {
+          "selector": ".s1-big",
+          "role": "giant word",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s1-k",
+          "role": "caption",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s1-ty",
+          "role": "thanks",
+          "maxLines": 1,
+          "maxWidth": 1700
+        }
+      ]
+    },
+    {
+      "id": "online",
+      "section": "s2",
+      "n": 2,
+      "chapter": "THE SHIFT",
+      "recipe": "big-number",
+      "mood": "rising",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Online sales are the bright spot.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "They grew by 23% year on year.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "Store sales fell by 6% in the same period.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "fact": "online-growth",
+          "display": "23%",
+          "sourceRef": "slide-2-title"
+        },
+        {
+          "fact": "store-drop",
+          "display": "6%",
+          "sourceRef": "slide-2-title"
+        }
+      ],
+      "sources": [
+        "slide-2-title"
+      ],
+      "textZones": [
+        {
+          "selector": ".s2-l",
+          "role": "label",
+          "maxLines": 1,
+          "maxWidth": 1560
+        },
+        {
+          "selector": ".s2-n",
+          "role": "hero number",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s2-c",
+          "role": "context",
+          "maxLines": 2,
+          "maxWidth": 1560
+        },
+        {
+          "selector": ".s2-f",
+          "role": "comparison",
+          "maxLines": 1,
+          "maxWidth": 1560
+        }
+      ]
+    },
+    {
+      "id": "footfall",
+      "section": "s3",
+      "n": 3,
+      "chapter": "THE VISITS",
+      "recipe": "comparison",
+      "mood": "tense",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Footfall fell in every store type.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "Small stores lost 14% of visits.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "Large stores lost 5%.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "fact": "small-loss",
+          "display": "14%",
+          "sourceRef": "slide-3-b1"
+        },
+        {
+          "fact": "large-loss",
+          "display": "5%",
+          "sourceRef": "slide-4-b1"
+        }
+      ],
+      "sources": [
+        "slide-3-b1",
+        "slide-4-b1"
+      ],
+      "textZones": [
+        {
+          "selector": ".s3-p .h",
+          "role": "side heading",
+          "maxLines": 1,
+          "maxWidth": 720
+        },
+        {
+          "selector": ".s3-p .k",
+          "role": "metric label",
+          "maxLines": 1,
+          "maxWidth": 720
+        },
+        {
+          "selector": ".s3-p .v",
+          "role": "metric value",
+          "maxLines": 1,
+          "maxWidth": 720
+        },
+        {
+          "selector": ".s3-vd",
+          "role": "verdict",
+          "maxLines": 1,
+          "maxWidth": 1560
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "section": "s4",
+      "n": 4,
+      "chapter": "THE PLAN",
+      "recipe": "range-bar-chart",
+      "mood": "tense",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The recommendation has two parts.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "Close 12 of the weakest stores.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "Open 40 pickup points near transit.",
+          "summary": null
+        },
+        {
+          "n": 4,
+          "notes": "The network gets smaller and faster.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "fact": "close-n",
+          "display": "12",
+          "sourceRef": "slide-5-b1"
+        },
+        {
+          "fact": "pickup-n",
+          "display": "40",
+          "sourceRef": "slide-5-b1"
+        }
+      ],
+      "sources": [
+        "slide-5-b1"
+      ],
+      "textZones": [
+        {
+          "selector": ".s4-cd .h",
+          "role": "card heading",
+          "maxLines": 1,
+          "maxWidth": 580
+        },
+        {
+          "selector": ".s4-cd .p",
+          "role": "card text",
+          "maxLines": 3,
+          "maxWidth": 580
+        },
+        {
+          "selector": ".s4-v .b",
+          "role": "verdict word",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s4-v .s",
+          "role": "verdict sub",
+          "maxLines": 2,
+          "maxWidth": 1560
+        },
+        {
+          "selector": "text.s4-rl",
+          "role": "row label",
+          "maxLines": 1,
+          "maxWidth": 480
+        }
+      ]
+    },
+    {
+      "id": "how",
+      "section": "s5",
+      "n": 5,
+      "chapter": "THE HOW",
+      "recipe": "pillars-roof",
+      "mood": "calm",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The plan rests on three pillars.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "First, close the weakest stores.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "Second, open pickup points.",
+          "summary": null
+        },
+        {
+          "n": 4,
+          "notes": "Third, reinvest the savings.",
+          "summary": null
+        },
+        {
+          "n": 5,
+          "notes": "Together they make a smaller, faster network.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [],
+      "sources": [],
+      "textZones": [
+        {
+          "selector": ".s5-pil .h",
+          "role": "pillar heading",
+          "maxLines": 1,
+          "maxWidth": 340
+        },
+        {
+          "selector": ".s5-pil li",
+          "role": "pillar item",
+          "maxLines": 4,
+          "maxWidth": 340
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "section": "s6",
+      "n": 6,
+      "chapter": "THE POINT",
+      "recipe": "minimal-close",
+      "mood": "quiet",
+      "letterbox": true,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "That is the picture the document gives.",
+          "summary": null
+        },
+        {
+          "n": 2,
+          "notes": "The details are in the source.",
+          "summary": null
+        },
+        {
+          "n": 3,
+          "notes": "Thank you. This was a fictional case.",
+          "summary": null
+        }
+      ],
+      "sourceRefs": [],
+      "sources": [],
+      "textZones": [
+        {
+          "selector": ".s6-l1",
+          "role": "line 1",
+          "maxLines": 1,
+          "maxWidth": 1400
+        },
+        {
+          "selector": ".s6-l2",
+          "role": "line 2",
+          "maxLines": 2,
+          "maxWidth": 1400
+        },
+        {
+          "selector": ".s6-big",
+          "role": "giant word",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s6-k",
+          "role": "caption",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s6-ty",
+          "role": "thanks",
+          "maxLines": 1,
+          "maxWidth": 1700
+        }
+      ]
+    }
+  ],
+  "allowedNumberStrings": [
+    "23%",
+    "6%",
+    "14%",
+    "5%",
+    "12",
+    "40",
+    "Scene 01 · Opening",
+    "Scene 02 · The shift",
+    "Scene 03 · The visits",
+    "0",
+    "10",
+    "20",
+    "30",
+    "50",
+    "Scene 04 · The plan",
+    "Scene 05 · The how",
+    "PILLAR 01",
+    "PILLAR 02",
+    "PILLAR 03",
+    "Scene 06 · Closing"
+  ]
+}

@@ -1,0 +1,18 @@
+/* ---------- __SID__ range-bar-chart ---------- */
+.__C__-a{position:absolute;inset:0}
+.__C__-gl{stroke:rgba(238,233,224,.07);stroke-width:1}
+.__C__-ax{stroke:rgba(238,233,224,.45);stroke-width:2}
+.__C__-tl{font:500 16px var(--f-mono);fill:var(--dim);text-anchor:middle}
+.__C__-at{font:500 14px var(--f-mono);letter-spacing:.3em;fill:var(--dim);text-anchor:end}
+.__C__-rl{font:700 30px var(--f-display);letter-spacing:.08em;fill:var(--paper);text-anchor:end}
+.__C__-vl{font:800 40px var(--f-display);letter-spacing:.02em}
+.__C__-gd{stroke:rgba(238,233,224,.55);stroke-width:2;stroke-dasharray:4 6}
+.__C__-gb{fill:none;stroke:var(--paper);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.__C__-gt{font:500 15px var(--f-mono);letter-spacing:.24em;fill:var(--paper);text-anchor:middle}
+.__C__-cd{position:absolute;top:760px;width:620px;padding-left:26px;border-left:3px solid var(--tone)}
+.__C__-cd .h{font:800 44px/1 var(--f-display);letter-spacing:.06em}
+.__C__-cd .p{font:italic 400 34px/1.2 var(--f-serif);color:#d4cec3;margin-top:12px}
+.__C__-v{position:absolute;left:0;right:0;top:330px;text-align:center}
+.__C__-v .k{font:500 18px/1 var(--f-mono);letter-spacing:.5em;padding-left:.5em;color:var(--dim)}
+.__C__-v .b{white-space:nowrap;font:900 210px/1 var(--f-display);color:var(--ember);margin-top:18px;text-shadow:0 0 60px rgba(242,162,71,.3)}
+.__C__-v .s{font:italic 400 64px/1.1 var(--f-serif);color:#e2dcd2;margin-top:10px}

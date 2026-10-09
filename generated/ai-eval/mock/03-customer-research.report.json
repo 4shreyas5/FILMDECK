@@ -1,0 +1,27 @@
+{
+  "mode": "mock",
+  "name": "03-customer-research",
+  "generated": true,
+  "firstPassValid": true,
+  "repairRequired": false,
+  "repairs": 0,
+  "finalValid": true,
+  "fenced": true,
+  "cats": {},
+  "attempts": [
+    {
+      "attempt": 0,
+      "kind": "generate",
+      "valid": true,
+      "fenced": true,
+      "errorCount": 0,
+      "errors": []
+    }
+  ],
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheWrite": 0
+  }
+}

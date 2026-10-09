@@ -1,0 +1,121 @@
+{
+  "mode": "mock",
+  "model": null,
+  "label": "MOCK RESULTS: deterministic hand-written fixtures. NOT an AI result and NOT evidence of model reliability.",
+  "inputs": 10,
+  "generated": 10,
+  "firstPassValid": 6,
+  "finalValid": 10,
+  "firstPassRate": 0.6,
+  "finalRate": 1,
+  "repairRequired": 4,
+  "avgRepairsAllInputs": 0.5,
+  "avgRepairsWhenRepaired": 1.25,
+  "inputsWithUnknownRecipe": 0,
+  "inputsWithUnsupportedRecipe": 1,
+  "inputsWithNumberProvenanceFailure": 2,
+  "inputsWithSchemaFailure": 1,
+  "inputsWithSourceRefFailure": 1,
+  "inputsWithBeatLimitFailure": 1,
+  "inputsWithJsonParseFailure": 1,
+  "errorsByCategory": {
+    "number-provenance": 1,
+    "unsupported-recipe": 1,
+    "json-parse": 1,
+    "beat-count": 1,
+    "recipe-input": 2,
+    "evidence": 1,
+    "ungrounded-fact": 1,
+    "source-reference": 1
+  },
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheWrite": 0
+  },
+  "rows": [
+    {
+      "name": "01-saas-churn",
+      "firstPassValid": true,
+      "repairs": 0,
+      "finalValid": true,
+      "categories": {}
+    },
+    {
+      "name": "02-marketing-campaign",
+      "firstPassValid": false,
+      "repairs": 1,
+      "finalValid": true,
+      "categories": {
+        "number-provenance": 1
+      }
+    },
+    {
+      "name": "03-customer-research",
+      "firstPassValid": true,
+      "repairs": 0,
+      "finalValid": true,
+      "categories": {}
+    },
+    {
+      "name": "04-startup-strategy",
+      "firstPassValid": false,
+      "repairs": 1,
+      "finalValid": true,
+      "categories": {
+        "unsupported-recipe": 1
+      }
+    },
+    {
+      "name": "05-ops-problem",
+      "firstPassValid": true,
+      "repairs": 0,
+      "finalValid": true,
+      "categories": {}
+    },
+    {
+      "name": "06-hr-people",
+      "firstPassValid": true,
+      "repairs": 0,
+      "finalValid": true,
+      "categories": {}
+    },
+    {
+      "name": "07-product-launch",
+      "firstPassValid": false,
+      "repairs": 1,
+      "finalValid": true,
+      "categories": {
+        "json-parse": 1
+      }
+    },
+    {
+      "name": "08-financial-case",
+      "firstPassValid": true,
+      "repairs": 0,
+      "finalValid": true,
+      "categories": {}
+    },
+    {
+      "name": "09-qualitative-story",
+      "firstPassValid": true,
+      "repairs": 0,
+      "finalValid": true,
+      "categories": {}
+    },
+    {
+      "name": "10-many-numbers",
+      "firstPassValid": false,
+      "repairs": 2,
+      "finalValid": true,
+      "categories": {
+        "beat-count": 1,
+        "recipe-input": 2,
+        "evidence": 1,
+        "ungrounded-fact": 1,
+        "source-reference": 1
+      }
+    }
+  ]
+}

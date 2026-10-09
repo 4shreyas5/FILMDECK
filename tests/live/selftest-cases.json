@@ -1,0 +1,1 @@
+{ "note": "Used only by tests/live/harness-selftest.mjs against a local fake endpoint.", "cases": [ { "id": "selftest-pptx", "file": "tests/live/docs/quarterly-review-final-v3.pptx", "kind": "self-test", "fictional": true, "variance": true } ] }

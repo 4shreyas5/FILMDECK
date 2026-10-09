@@ -1,0 +1,322 @@
+{
+  "storyboardVersion": 1,
+  "deck": {
+    "id": "tidewell-strategy",
+    "title": "Where Tidewell should start",
+    "subtitle": "Fictional strategy note, not real data",
+    "intro": "A fictional demo about a made-up sensor start-up. Every figure comes from the source brief. Sound is on, best viewed fullscreen.",
+    "language": "en",
+    "theme": "ink-ember",
+    "fictional": true,
+    "titleAccent": "start"
+  },
+  "sources": [
+    {
+      "id": "p3",
+      "kind": "document",
+      "label": "Pricing paragraph",
+      "locator": "p3"
+    },
+    {
+      "id": "p4",
+      "kind": "document",
+      "label": "Utilities paragraph",
+      "locator": "p4"
+    },
+    {
+      "id": "p5",
+      "kind": "document",
+      "label": "Goal paragraph",
+      "locator": "p5"
+    }
+  ],
+  "facts": [
+    {
+      "id": "pm-price",
+      "kind": "range",
+      "value": {
+        "lo": 15,
+        "hi": 20
+      },
+      "display": "$15–$20",
+      "sourceRef": "p3",
+      "evidence": "Property managers would pay $15–$20 per sensor per month."
+    },
+    {
+      "id": "home-max",
+      "kind": "number",
+      "value": 5,
+      "display": "$5",
+      "sourceRef": "p3",
+      "evidence": "Home owners resisted any monthly fee above $5."
+    },
+    {
+      "id": "util-years",
+      "kind": "number",
+      "value": 3,
+      "display": "3 years",
+      "sourceRef": "p4",
+      "evidence": "Municipal utilities buy slowly but sign contracts of 3 years or more."
+    },
+    {
+      "id": "goal",
+      "kind": "number",
+      "value": 200,
+      "display": "200",
+      "sourceRef": "p5",
+      "evidence": "The first-year goal is 200 customers, all in one segment, rather than a little of everything."
+    },
+    {
+      "id": "price-gap",
+      "kind": "number",
+      "value": 10,
+      "display": "$10",
+      "derivation": {
+        "op": "diff",
+        "of": [
+          "pm-price.lo",
+          "home-max"
+        ]
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "open",
+      "chapter": "THE CHOICE",
+      "kicker": "Opening",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "open",
+        "line1": "Three groups could buy.",
+        "line2": "We can only start with one.",
+        "emphasis": "one",
+        "bigWord": "Where to start.",
+        "caption": "TIDEWELL · FICTIONAL STRATEGY NOTE"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Tidewell sells water-leak sensors."
+        },
+        {
+          "n": 2,
+          "notes": "Three customer groups were considered."
+        },
+        {
+          "n": 3,
+          "notes": "This is a fictional note about a made-up start-up."
+        }
+      ]
+    },
+    {
+      "id": "groups",
+      "chapter": "THE GROUPS",
+      "kicker": "The groups",
+      "title": "Who would pay?",
+      "mood": "rising",
+      "recipe": "pillars-roof",
+      "inputs": {
+        "roofLabel": "THREE CUSTOMER GROUPS",
+        "pillars": [
+          {
+            "heading": "HOME OWNERS",
+            "items": [
+              "Resisted any monthly fee above $5"
+            ]
+          },
+          {
+            "heading": "PROPERTY MANAGERS",
+            "items": [
+              "Would pay $15–$20 per sensor per month"
+            ]
+          },
+          {
+            "heading": "UTILITIES",
+            "items": [
+              "Buy slowly",
+              "Sign contracts of 3 years or more"
+            ]
+          }
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Three groups were on the table."
+        },
+        {
+          "n": 2,
+          "notes": "Home owners resisted any fee above $5."
+        },
+        {
+          "n": 3,
+          "notes": "Property managers would pay $15–$20."
+        },
+        {
+          "n": 4,
+          "notes": "Utilities buy slowly but sign for 3 years or more."
+        },
+        {
+          "n": 5,
+          "notes": "Each one is a different business."
+        }
+      ]
+    },
+    {
+      "id": "price",
+      "chapter": "THE PRICE",
+      "kicker": "The price",
+      "title": "Managers pay more.",
+      "mood": "tense",
+      "recipe": "range-bar-chart",
+      "inputs": {
+        "scale": {
+          "min": 0,
+          "max": 30,
+          "majorStep": 10,
+          "step": 5,
+          "unit": ""
+        },
+        "rows": [
+          {
+            "label": "PROPERTY MANAGERS",
+            "value": {
+              "fact": "pm-price"
+            },
+            "tone": "accent"
+          },
+          {
+            "label": "HOME OWNERS",
+            "value": {
+              "fact": "home-max"
+            },
+            "tone": "negative"
+          }
+        ],
+        "verdict": {
+          "kicker": "THE FIRST CUSTOMER",
+          "word": "MANAGERS.",
+          "sub": "Not everyone at once."
+        },
+        "gap": {
+          "from": {
+            "row": 1,
+            "edge": "hi"
+          },
+          "to": {
+            "row": 0,
+            "edge": "lo"
+          },
+          "value": {
+            "fact": "price-gap"
+          }
+        },
+        "axisLabel": "DOLLARS PER SENSOR PER MONTH"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Compare what each group would pay per month."
+        },
+        {
+          "n": 2,
+          "notes": "Managers would pay $15–$20."
+        },
+        {
+          "n": 3,
+          "notes": "Home owners would not go above $5."
+        },
+        {
+          "n": 4,
+          "notes": "So managers come first."
+        }
+      ]
+    },
+    {
+      "id": "answer",
+      "chapter": "THE ANSWER",
+      "kicker": "The answer",
+      "mood": "rising",
+      "recipe": "strike-three-moves-checklist",
+      "inputs": {
+        "headlineLead": "DON'T SELL TO",
+        "headlineStruck": "EVERYONE.",
+        "sub": {
+          "lead": "Win ",
+          "accent": "one segment first."
+        },
+        "moves": [
+          {
+            "head": "FOCUS",
+            "text": "Property managers first."
+          },
+          {
+            "head": "WAIT",
+            "text": "Utilities are a later step."
+          },
+          {
+            "head": "CONCENTRATE",
+            "text": "One segment, not a little of everything."
+          }
+        ],
+        "checklist": [
+          "Aim for 200 customers in year one",
+          "Keep them all in one segment",
+          "Treat utilities as a later step"
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The goal is 200 customers in the first year."
+        },
+        {
+          "n": 2,
+          "notes": "All of them in one segment."
+        },
+        {
+          "n": 3,
+          "notes": "Three moves."
+        },
+        {
+          "n": 4,
+          "notes": "The checklist."
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "chapter": "FOCUS",
+      "kicker": "Closing",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "close",
+        "line1": "A little of everything,",
+        "line2": "wins nothing. One segment can win.",
+        "emphasis": "One segment can win",
+        "bigWord": "Start with one.",
+        "caption": "TIDEWELL · FICTIONAL STRATEGY NOTE",
+        "thanks": "Thank you."
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "A little of everything wins nothing."
+        },
+        {
+          "n": 2,
+          "notes": "One segment can win."
+        },
+        {
+          "n": 3,
+          "notes": "Thank you. This was fictional."
+        }
+      ]
+    }
+  ]
+}

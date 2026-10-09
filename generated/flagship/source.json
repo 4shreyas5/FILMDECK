@@ -1,0 +1,235 @@
+{
+  "sourceVersion": 1,
+  "document": {
+    "id": "01-consulting-deck",
+    "name": "01-consulting-deck.pptx",
+    "type": "pptx",
+    "title": "Halden Retail store network review (fictional)",
+    "slideCount": 6,
+    "fictional": true
+  },
+  "sections": [
+    {
+      "id": "slide-1-title",
+      "type": "heading",
+      "level": 1,
+      "text": "Halden Retail: store network review",
+      "location": {
+        "id": "slide-1",
+        "kind": "slide",
+        "number": 1
+      }
+    },
+    {
+      "id": "slide-1-b1",
+      "type": "paragraph",
+      "text": "Fictional case prepared for FilmDeck testing",
+      "location": {
+        "id": "slide-1",
+        "kind": "slide",
+        "number": 1
+      },
+      "headingPath": [
+        "Halden Retail: store network review"
+      ]
+    },
+    {
+      "id": "slide-2-title",
+      "type": "heading",
+      "level": 1,
+      "text": "Store sales fell 6% while online sales grew 23%",
+      "location": {
+        "id": "slide-2",
+        "kind": "slide",
+        "number": 2
+      }
+    },
+    {
+      "id": "slide-2-b1",
+      "type": "list",
+      "text": "- Store sales are down 6% year on year\n- Online sales are up 23% year on year\n- Online now makes up 31% of total sales",
+      "items": [
+        "Store sales are down 6% year on year",
+        "Online sales are up 23% year on year",
+        "Online now makes up 31% of total sales"
+      ],
+      "ordered": false,
+      "location": {
+        "id": "slide-2",
+        "kind": "slide",
+        "number": 2
+      },
+      "headingPath": [
+        "Store sales fell 6% while online sales grew 23%"
+      ]
+    },
+    {
+      "id": "slide-2-notes",
+      "type": "notes",
+      "text": "Online share crossed 30% for the first time.",
+      "location": {
+        "id": "slide-2",
+        "kind": "slide",
+        "number": 2
+      },
+      "headingPath": [
+        "Store sales fell 6% while online sales grew 23%"
+      ]
+    },
+    {
+      "id": "slide-3-title",
+      "type": "heading",
+      "level": 1,
+      "text": "Rent is the largest fixed cost",
+      "location": {
+        "id": "slide-3",
+        "kind": "slide",
+        "number": 3
+      }
+    },
+    {
+      "id": "slide-3-b1",
+      "type": "table",
+      "text": "Cost line | Share of costs | Change\nRent | 38% | +4%\nStaff | 31% | +2%\nLogistics | 14% | +9%",
+      "headers": [
+        "Cost line",
+        "Share of costs",
+        "Change"
+      ],
+      "rows": [
+        [
+          "Rent",
+          "38%",
+          "+4%"
+        ],
+        [
+          "Staff",
+          "31%",
+          "+2%"
+        ],
+        [
+          "Logistics",
+          "14%",
+          "+9%"
+        ]
+      ],
+      "location": {
+        "id": "slide-3",
+        "kind": "slide",
+        "number": 3
+      },
+      "headingPath": [
+        "Rent is the largest fixed cost"
+      ]
+    },
+    {
+      "id": "slide-4-title",
+      "type": "heading",
+      "level": 1,
+      "text": "Footfall is falling fastest in small stores",
+      "location": {
+        "id": "slide-4",
+        "kind": "slide",
+        "number": 4
+      }
+    },
+    {
+      "id": "slide-4-b1",
+      "type": "list",
+      "text": "- Small stores lost 14% of visits\n- Large stores lost 5% of visits\n- Customers still value local pickup",
+      "items": [
+        "Small stores lost 14% of visits",
+        "Large stores lost 5% of visits",
+        "Customers still value local pickup"
+      ],
+      "ordered": false,
+      "location": {
+        "id": "slide-4",
+        "kind": "slide",
+        "number": 4
+      },
+      "headingPath": [
+        "Footfall is falling fastest in small stores"
+      ]
+    },
+    {
+      "id": "slide-5-title",
+      "type": "heading",
+      "level": 1,
+      "text": "Recommendation: close weak stores, grow pickup points",
+      "location": {
+        "id": "slide-5",
+        "kind": "slide",
+        "number": 5
+      }
+    },
+    {
+      "id": "slide-5-b1",
+      "type": "list",
+      "text": "- Close 12 of the weakest stores\n- Open 40 pickup points near transit\n- Reinvest the savings in delivery speed",
+      "items": [
+        "Close 12 of the weakest stores",
+        "Open 40 pickup points near transit",
+        "Reinvest the savings in delivery speed"
+      ],
+      "ordered": false,
+      "location": {
+        "id": "slide-5",
+        "kind": "slide",
+        "number": 5
+      },
+      "headingPath": [
+        "Recommendation: close weak stores, grow pickup points"
+      ]
+    },
+    {
+      "id": "slide-5-notes",
+      "type": "notes",
+      "text": "The closures are phased over two years.",
+      "location": {
+        "id": "slide-5",
+        "kind": "slide",
+        "number": 5
+      },
+      "headingPath": [
+        "Recommendation: close weak stores, grow pickup points"
+      ]
+    },
+    {
+      "id": "slide-6-title",
+      "type": "heading",
+      "level": 1,
+      "text": "Next steps",
+      "location": {
+        "id": "slide-6",
+        "kind": "slide",
+        "number": 6
+      }
+    },
+    {
+      "id": "slide-6-b1",
+      "type": "list",
+      "text": "- Agree the closure list with the board\n- Select pickup point sites\n- Report progress each quarter",
+      "items": [
+        "Agree the closure list with the board",
+        "Select pickup point sites",
+        "Report progress each quarter"
+      ],
+      "ordered": false,
+      "location": {
+        "id": "slide-6",
+        "kind": "slide",
+        "number": 6
+      },
+      "headingPath": [
+        "Next steps"
+      ]
+    }
+  ],
+  "warnings": [],
+  "stats": {
+    "sections": 14,
+    "characters": 866,
+    "tables": 1
+  }
+}

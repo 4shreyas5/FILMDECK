@@ -1,0 +1,392 @@
+{
+  "note": "MOCK mode: hand-planned fixtures, not AI output",
+  "docs": [
+    {
+      "doc": "01-consulting-deck.pptx",
+      "ok": true,
+      "qaMode": "full",
+      "totalMs": 186797,
+      "sections": 14,
+      "tables": 1,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 6,
+      "scenes": 6,
+      "beats": 21,
+      "recipes": [
+        "minimal-close",
+        "big-number",
+        "comparison",
+        "range-bar-chart",
+        "pillars-roof"
+      ],
+      "qaChecks": "30/30",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 42,
+        "chunk": 41,
+        "storyboard": 47,
+        "validate": 45,
+        "generate": 63,
+        "qa": 186555
+      },
+      "bytes": 443345,
+      "warnings": []
+    },
+    {
+      "doc": "02-dense-corporate.pptx",
+      "ok": true,
+      "qaMode": "fast",
+      "totalMs": 45711,
+      "sections": 16,
+      "tables": 1,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 8,
+      "scenes": 6,
+      "beats": 20,
+      "recipes": [
+        "minimal-close",
+        "big-number",
+        "gauge-needle",
+        "range-bar-chart",
+        "strike-three-moves-checklist"
+      ],
+      "qaChecks": "29/29",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 55,
+        "chunk": 42,
+        "storyboard": 45,
+        "validate": 36,
+        "generate": 46,
+        "qa": 45483
+      },
+      "bytes": 447556,
+      "warnings": []
+    },
+    {
+      "doc": "03-annual-report.pdf",
+      "ok": true,
+      "qaMode": "full",
+      "totalMs": 157284,
+      "sections": 13,
+      "tables": 1,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 8,
+      "scenes": 5,
+      "beats": 15,
+      "recipes": [
+        "minimal-close",
+        "big-number",
+        "gauge-needle",
+        "icon-rows-ranked-bars"
+      ],
+      "qaChecks": "30/30",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 58,
+        "chunk": 44,
+        "storyboard": 45,
+        "validate": 37,
+        "generate": 48,
+        "qa": 157050
+      },
+      "bytes": 440810,
+      "warnings": []
+    },
+    {
+      "doc": "04-multi-column.pdf",
+      "ok": true,
+      "qaMode": "fast",
+      "totalMs": 37222,
+      "sections": 17,
+      "tables": 1,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 6,
+      "scenes": 5,
+      "beats": 15,
+      "recipes": [
+        "minimal-close",
+        "gauge-needle",
+        "comparison",
+        "big-number"
+      ],
+      "qaChecks": "29/29",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 54,
+        "chunk": 45,
+        "storyboard": 44,
+        "validate": 38,
+        "generate": 44,
+        "qa": 36994
+      },
+      "bytes": 437268,
+      "warnings": []
+    },
+    {
+      "doc": "05-text-heavy.docx",
+      "ok": true,
+      "qaMode": "fast",
+      "totalMs": 38651,
+      "sections": 15,
+      "tables": 0,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 4,
+      "scenes": 5,
+      "beats": 17,
+      "recipes": [
+        "minimal-close",
+        "gauge-needle",
+        "big-number",
+        "pillars-roof"
+      ],
+      "qaChecks": "29/29",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 48,
+        "chunk": 41,
+        "storyboard": 42,
+        "validate": 35,
+        "generate": 45,
+        "qa": 38438
+      },
+      "bytes": 436914,
+      "warnings": []
+    },
+    {
+      "doc": "06-tables.docx",
+      "ok": true,
+      "qaMode": "fast",
+      "totalMs": 45047,
+      "sections": 10,
+      "tables": 2,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 8,
+      "scenes": 6,
+      "beats": 19,
+      "recipes": [
+        "minimal-close",
+        "range-bar-chart",
+        "comparison",
+        "gauge-needle",
+        "big-number"
+      ],
+      "qaChecks": "29/29",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 54,
+        "chunk": 42,
+        "storyboard": 42,
+        "validate": 36,
+        "generate": 46,
+        "qa": 44825
+      },
+      "bytes": 445810,
+      "warnings": []
+    },
+    {
+      "doc": "07-financial-report.md",
+      "ok": true,
+      "qaMode": "full",
+      "totalMs": 180884,
+      "sections": 11,
+      "tables": 1,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 10,
+      "scenes": 6,
+      "beats": 19,
+      "recipes": [
+        "minimal-close",
+        "big-number",
+        "gauge-needle",
+        "range-bar-chart",
+        "comparison"
+      ],
+      "qaChecks": "30/30",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 53,
+        "chunk": 42,
+        "storyboard": 43,
+        "validate": 36,
+        "generate": 47,
+        "qa": 180661
+      },
+      "bytes": 446077,
+      "warnings": []
+    },
+    {
+      "doc": "08-marketing-case.txt",
+      "ok": true,
+      "qaMode": "fast",
+      "totalMs": 45313,
+      "sections": 7,
+      "tables": 0,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 6,
+      "scenes": 6,
+      "beats": 19,
+      "recipes": [
+        "minimal-close",
+        "big-number",
+        "comparison",
+        "gauge-needle",
+        "strike-three-moves-checklist"
+      ],
+      "qaChecks": "29/29",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 50,
+        "chunk": 42,
+        "storyboard": 42,
+        "validate": 37,
+        "generate": 46,
+        "qa": 45093
+      },
+      "bytes": 442701,
+      "warnings": []
+    },
+    {
+      "doc": "09-hr-case.docx",
+      "ok": true,
+      "qaMode": "fast",
+      "totalMs": 45392,
+      "sections": 12,
+      "tables": 0,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 10,
+      "scenes": 6,
+      "beats": 19,
+      "recipes": [
+        "minimal-close",
+        "gauge-needle",
+        "range-bar-chart",
+        "comparison",
+        "big-number"
+      ],
+      "qaChecks": "29/29",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 48,
+        "chunk": 42,
+        "storyboard": 42,
+        "validate": 36,
+        "generate": 45,
+        "qa": 45178
+      },
+      "bytes": 446325,
+      "warnings": []
+    },
+    {
+      "doc": "10-qualitative-narrative.md",
+      "ok": true,
+      "qaMode": "fast",
+      "totalMs": 33090,
+      "sections": 11,
+      "tables": 0,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 0,
+      "scenes": 4,
+      "beats": 15,
+      "recipes": [
+        "minimal-close",
+        "pillars-roof",
+        "strike-three-moves-checklist"
+      ],
+      "qaChecks": "29/29",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 53,
+        "chunk": 42,
+        "storyboard": 42,
+        "validate": 35,
+        "generate": 46,
+        "qa": 32870
+      },
+      "bytes": 430557,
+      "warnings": []
+    },
+    {
+      "doc": "11-long-report.md",
+      "ok": true,
+      "qaMode": "fast",
+      "totalMs": 23394,
+      "sections": 322,
+      "tables": 40,
+      "chunks": 8,
+      "extractionWarnings": 0,
+      "facts": 2,
+      "scenes": 3,
+      "beats": 9,
+      "recipes": [
+        "minimal-close",
+        "big-number"
+      ],
+      "qaChecks": "29/29",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 50,
+        "chunk": 44,
+        "storyboard": 45,
+        "validate": 34,
+        "generate": 44,
+        "qa": 23174
+      },
+      "bytes": 425317,
+      "warnings": []
+    },
+    {
+      "doc": "12-messy-mixed.docx",
+      "ok": true,
+      "qaMode": "fast",
+      "totalMs": 38150,
+      "sections": 14,
+      "tables": 1,
+      "chunks": 1,
+      "extractionWarnings": 0,
+      "facts": 5,
+      "scenes": 5,
+      "beats": 16,
+      "recipes": [
+        "minimal-close",
+        "big-number",
+        "range-bar-chart",
+        "comparison"
+      ],
+      "qaChecks": "29/29",
+      "consoleErrors": 0,
+      "layoutWarnings": 0,
+      "timingsMs": {
+        "ingest": 43,
+        "chunk": 37,
+        "storyboard": 42,
+        "validate": 35,
+        "generate": 41,
+        "qa": 37949
+      },
+      "bytes": 438165,
+      "warnings": []
+    }
+  ]
+}

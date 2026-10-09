@@ -1,0 +1,42 @@
+{
+  "mode": "mock",
+  "name": "07-product-launch",
+  "generated": true,
+  "firstPassValid": false,
+  "repairRequired": true,
+  "repairs": 1,
+  "finalValid": true,
+  "fenced": false,
+  "cats": {
+    "json-parse": 1
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "kind": "generate",
+      "valid": false,
+      "fenced": false,
+      "errorCount": 1,
+      "errors": [
+        {
+          "category": "json-parse",
+          "message": "response is not a single JSON object (prose or markup outside the JSON is not accepted)"
+        }
+      ]
+    },
+    {
+      "attempt": 1,
+      "kind": "repair",
+      "valid": true,
+      "fenced": false,
+      "errorCount": 0,
+      "errors": []
+    }
+  ],
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheWrite": 0
+  }
+}

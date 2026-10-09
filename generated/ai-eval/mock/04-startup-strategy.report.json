@@ -1,0 +1,42 @@
+{
+  "mode": "mock",
+  "name": "04-startup-strategy",
+  "generated": true,
+  "firstPassValid": false,
+  "repairRequired": true,
+  "repairs": 1,
+  "finalValid": true,
+  "fenced": false,
+  "cats": {
+    "unsupported-recipe": 1
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "kind": "generate",
+      "valid": false,
+      "fenced": false,
+      "errorCount": 1,
+      "errors": [
+        {
+          "category": "unsupported-recipe",
+          "message": "scenes[groups]: unknown or not-yet-parameterised recipe \"decision-tree\" (available: gauge-needle, range-bar-chart, pillars-roof, strike-three-moves-checklist, minimal-close, icon-rows-ranked-bars, big-number, comparison)"
+        }
+      ]
+    },
+    {
+      "attempt": 1,
+      "kind": "repair",
+      "valid": true,
+      "fenced": false,
+      "errorCount": 0,
+      "errors": []
+    }
+  ],
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheWrite": 0
+  }
+}

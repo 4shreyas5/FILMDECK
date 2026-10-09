@@ -1,0 +1,39 @@
+{
+  "chunkVersion": 1,
+  "document": "01-consulting-deck",
+  "maxChars": 24000,
+  "chunkCount": 1,
+  "totalChars": 866,
+  "chunks": [
+    {
+      "id": "chunk-1",
+      "sectionIds": [
+        "slide-1-title",
+        "slide-1-b1",
+        "slide-2-title",
+        "slide-2-b1",
+        "slide-2-notes",
+        "slide-3-title",
+        "slide-3-b1",
+        "slide-4-title",
+        "slide-4-b1",
+        "slide-5-title",
+        "slide-5-b1",
+        "slide-5-notes",
+        "slide-6-title",
+        "slide-6-b1"
+      ],
+      "first": {
+        "sectionId": "slide-1-title",
+        "location": "slide-1"
+      },
+      "last": {
+        "sectionId": "slide-6-b1",
+        "location": "slide-6"
+      },
+      "text": "[slide-1-title] (slide 1 · heading)\nHalden Retail: store network review\n\n[slide-1-b1] (slide 1 · paragraph)\nFictional case prepared for FilmDeck testing\n\n[slide-2-title] (slide 2 · heading)\nStore sales fell 6% while online sales grew 23%\n\n[slide-2-b1] (slide 2 · list)\n- Store sales are down 6% year on year\n- Online sales are up 23% year on year\n- Online now makes up 31% of total sales\n\n[slide-2-notes] (slide 2 · speaker notes)\nOnline share crossed 30% for the first time.\n\n[slide-3-title] (slide 3 · heading)\nRent is the largest fixed cost\n\n[slide-3-b1] (slide 3 · table (first row = column headers))\nCost line | Share of costs | Change\nRent | 38% | +4%\nStaff | 31% | +2%\nLogistics | 14% | +9%\n\n[slide-4-title] (slide 4 · heading)\nFootfall is falling fastest in small stores\n\n[slide-4-b1] (slide 4 · list)\n- Small stores lost 14% of visits\n- Large stores lost 5% of visits\n- Customers still value local pickup\n\n[slide-5-title] (slide 5 · heading)\nRecommendation: close weak stores, grow pickup points\n\n[slide-5-b1] (slide 5 · list)\n- Close 12 of the weakest stores\n- Open 40 pickup points near transit\n- Reinvest the savings in delivery speed\n\n[slide-5-notes] (slide 5 · speaker notes)\nThe closures are phased over two years.\n\n[slide-6-title] (slide 6 · heading)\nNext steps\n\n[slide-6-b1] (slide 6 · list)\n- Agree the closure list with the board\n- Select pickup point sites\n- Report progress each quarter",
+      "chars": 1407,
+      "tokenEstimate": 391
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "mode": "mock",
+  "name": "10-many-numbers",
+  "generated": true,
+  "firstPassValid": false,
+  "repairRequired": true,
+  "repairs": 2,
+  "finalValid": true,
+  "fenced": false,
+  "cats": {
+    "beat-count": 1,
+    "recipe-input": 2,
+    "evidence": 1,
+    "ungrounded-fact": 1,
+    "source-reference": 1
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "kind": "generate",
+      "valid": false,
+      "fenced": false,
+      "errorCount": 5,
+      "errors": [
+        {
+          "category": "beat-count",
+          "message": "scenes[margin]: recipe gauge-needle produces 3 beats for these inputs but the scene lists 4"
+        },
+        {
+          "category": "recipe-input",
+          "message": "scenes[online].inputs: rows[0]: fact \"retention\" lies outside scale 0..40"
+        },
+        {
+          "category": "recipe-input",
+          "message": "scenes[online].inputs: rows[0]: value label for \"retention\" would run past x=1810; raise scale.max"
+        },
+        {
+          "category": "evidence",
+          "message": "fact \"retention\": missing \"evidence\" (an exact quote from block p4 containing 47%)"
+        },
+        {
+          "category": "ungrounded-fact",
+          "message": "ungrounded fact \"retention\": number \"47\" in display \"47%\" is not found in source block p4"
+        }
+      ]
+    },
+    {
+      "attempt": 1,
+      "kind": "repair",
+      "valid": false,
+      "fenced": false,
+      "errorCount": 1,
+      "errors": [
+        {
+          "category": "source-reference",
+          "message": "facts[cost-up]: needs a sourceRef (or a derivation from sourced facts)"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "kind": "repair",
+      "valid": true,
+      "fenced": false,
+      "errorCount": 0,
+      "errors": []
+    }
+  ],
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheWrite": 0
+  }
+}

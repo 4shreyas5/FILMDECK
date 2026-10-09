@@ -1,0 +1,13 @@
+Spark Coffee relaunch case (fictional)
+
+This document is fictional and was written only to test FilmDeck. All names and figures are made up.
+
+Spark Coffee is a made-up chain of 60 cafes. Last spring it relaunched its loyalty app with a simple offer: a free drink after every seventh purchase.
+
+In the first 8 weeks the app gained 120,000 new members, three times the forecast. Members visited 2.3 times a week on average, compared with 1.4 for non-members.
+
+The team tested two messages. "Your seventh is on us" beat "Join the club" by 18 percentage points in sign-ups. Social posts reached 2.1 million people at a cost of $0.012 per view.
+
+Not everything worked. Email reminders had an open rate of only 9%, and several members complained that the free drink expired too quickly. The team extended the expiry from 14 to 30 days.
+
+The campaign cost $340,000 and the marketing lead estimates it returned $1.1 million in extra sales over the quarter.

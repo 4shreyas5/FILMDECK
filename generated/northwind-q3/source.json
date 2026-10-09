@@ -1,0 +1,187 @@
+{
+  "sourceVersion": 1,
+  "document": {
+    "id": "deck",
+    "name": "deck.pptx",
+    "type": "pptx",
+    "title": "Northwind Foods Q3 review (fictional)",
+    "slideCount": 5,
+    "fictional": true
+  },
+  "sections": [
+    {
+      "id": "slide-1-title",
+      "type": "heading",
+      "level": 1,
+      "text": "Northwind Foods: Q3 review",
+      "location": {
+        "id": "slide-1",
+        "kind": "slide",
+        "number": 1
+      }
+    },
+    {
+      "id": "slide-1-b1",
+      "type": "paragraph",
+      "text": "Fictional demo deck, not real data",
+      "location": {
+        "id": "slide-1",
+        "kind": "slide",
+        "number": 1
+      },
+      "headingPath": [
+        "Northwind Foods: Q3 review"
+      ]
+    },
+    {
+      "id": "slide-1-notes",
+      "type": "notes",
+      "text": "Welcome. Everything here is made up for testing.",
+      "location": {
+        "id": "slide-1",
+        "kind": "slide",
+        "number": 1
+      },
+      "headingPath": [
+        "Northwind Foods: Q3 review"
+      ]
+    },
+    {
+      "id": "slide-2-title",
+      "type": "heading",
+      "level": 1,
+      "text": "Revenue grew 18% year on year",
+      "location": {
+        "id": "slide-2",
+        "kind": "slide",
+        "number": 2
+      }
+    },
+    {
+      "id": "slide-2-b1",
+      "type": "list",
+      "text": "- Revenue reached $4.2 million in Q3\n- Up from $3.56 million in Q3 last year\n- Online orders were 62% of sales",
+      "items": [
+        "Revenue reached $4.2 million in Q3",
+        "Up from $3.56 million in Q3 last year",
+        "Online orders were 62% of sales"
+      ],
+      "ordered": false,
+      "location": {
+        "id": "slide-2",
+        "kind": "slide",
+        "number": 2
+      },
+      "headingPath": [
+        "Revenue grew 18% year on year"
+      ]
+    },
+    {
+      "id": "slide-2-notes",
+      "type": "notes",
+      "text": "Say the 18% figure slowly. Online share is 62%.",
+      "location": {
+        "id": "slide-2",
+        "kind": "slide",
+        "number": 2
+      },
+      "headingPath": [
+        "Revenue grew 18% year on year"
+      ]
+    },
+    {
+      "id": "slide-3-title",
+      "type": "heading",
+      "level": 1,
+      "text": "Regional results",
+      "location": {
+        "id": "slide-3",
+        "kind": "slide",
+        "number": 3
+      }
+    },
+    {
+      "id": "slide-3-b1",
+      "type": "table",
+      "text": "Region | Revenue ($M) | Growth\nNorth | 1.9 | 21%\nSouth | 1.4 | 12%\nWest | 0.9 | 19%",
+      "headers": [
+        "Region",
+        "Revenue ($M)",
+        "Growth"
+      ],
+      "rows": [
+        [
+          "North",
+          "1.9",
+          "21%"
+        ],
+        [
+          "South",
+          "1.4",
+          "12%"
+        ],
+        [
+          "West",
+          "0.9",
+          "19%"
+        ]
+      ],
+      "location": {
+        "id": "slide-3",
+        "kind": "slide",
+        "number": 3
+      },
+      "headingPath": [
+        "Regional results"
+      ]
+    },
+    {
+      "id": "slide-5-title",
+      "type": "heading",
+      "level": 1,
+      "text": "Next steps",
+      "location": {
+        "id": "slide-5",
+        "kind": "slide",
+        "number": 5,
+        "hidden": true
+      }
+    },
+    {
+      "id": "slide-5-b1",
+      "type": "paragraph",
+      "text": "Open 3 new stores by March 2026\nHire 45 support staff",
+      "location": {
+        "id": "slide-5",
+        "kind": "slide",
+        "number": 5,
+        "hidden": true
+      },
+      "headingPath": [
+        "Next steps"
+      ]
+    },
+    {
+      "id": "slide-5-notes",
+      "type": "notes",
+      "text": "Hidden backup slide.",
+      "location": {
+        "id": "slide-5",
+        "kind": "slide",
+        "number": 5,
+        "hidden": true
+      },
+      "headingPath": [
+        "Next steps"
+      ]
+    }
+  ],
+  "warnings": [
+    "slide 4 has no extractable text (image-only slide?)"
+  ],
+  "stats": {
+    "sections": 11,
+    "characters": 476,
+    "tables": 1
+  }
+}

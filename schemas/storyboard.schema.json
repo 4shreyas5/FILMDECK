@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "filmdeck/storyboard.schema.json",
+  "title": "FilmDeck storyboard",
+  "description": "Declarative description of a deck. Contains text, facts and recipe inputs only: no code, markup or styling. Written against the keyword subset implemented in tools/schema-lite.mjs. Cross-reference rules (fact and source references, derivations, number provenance, beat counts) are enforced by tools/validate-storyboard.mjs, see docs/STORYBOARD-SPEC.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["storyboardVersion", "deck", "sources", "facts", "scenes"],
+  "properties": {
+    "storyboardVersion": { "const": 1 },
+    "deck": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "subtitle", "intro"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{1,40}$" },
+        "title": { "type": "string", "minLength": 3, "maxLength": 60 },
+        "titleAccent": { "type": "string", "maxLength": 30, "description": "A word inside title shown in the accent colour" },
+        "subtitle": { "type": "string", "minLength": 3, "maxLength": 80 },
+        "intro": { "type": "string", "minLength": 3, "maxLength": 200 },
+        "audience": { "type": "string", "maxLength": 120 },
+        "credits": { "type": "array", "maxItems": 12, "items": { "type": "string", "maxLength": 60 } },
+        "language": { "type": "string", "pattern": "^[a-z]{2}(-[A-Z]{2})?$" },
+        "theme": { "const": "ink-ember" },
+        "fictional": { "type": "boolean", "description": "true marks the whole deck as demo/fictional content" },
+        "properNouns": { "type": "array", "maxItems": 20, "items": { "type": "string", "maxLength": 60 }, "description": "Names that contain digits (e.g. 'Group 7'). Exempt from the number-provenance scan; each must appear verbatim in the storyboard." }
+      }
+    },
+    "sources": {
+      "type": "array", "minItems": 1, "maxItems": 60,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "kind", "label"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,40}$" },
+          "kind": { "enum": ["slide", "page", "document", "table", "note", "brief", "fictional"] },
+          "label": { "type": "string", "minLength": 1, "maxLength": 120 },
+          "locator": { "type": "string", "maxLength": 80 }
+        }
+      }
+    },
+    "facts": {
+      "type": "array", "maxItems": 80,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "kind", "value", "display"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,40}$" },
+          "kind": { "enum": ["number", "range"] },
+          "value": { "type": ["number", "object"], "description": "number, or {lo, hi} for kind range" },
+          "display": { "type": "string", "minLength": 1, "maxLength": 40, "description": "Exactly the string shown to the audience" },
+          "unit": { "type": "string", "maxLength": 12 },
+          "sourceRef": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,40}$" },
+          "evidence": { "type": "string", "minLength": 3, "maxLength": 300, "description": "Exact quote (an unbroken span) copied from the source block named by sourceRef, containing the fact's number. Required for every non-derived fact." },
+          "derivation": {
+            "type": "object", "additionalProperties": false, "required": ["op", "of"],
+            "properties": {
+              "op": { "enum": ["diff", "ratio", "sum"] },
+              "of": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "type": "string", "maxLength": 50 }, "description": "fact ids, or 'id.lo' / 'id.hi' for a range edge" }
+            }
+          }
+        }
+      }
+    },
+    "scenes": {
+      "type": "array", "minItems": 1, "maxItems": 12,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "chapter", "kicker", "recipe", "mood", "inputs", "beats"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{0,30}$" },
+          "chapter": { "type": "string", "minLength": 2, "maxLength": 30 },
+          "kicker": { "type": "string", "minLength": 2, "maxLength": 40 },
+          "title": { "type": "string", "maxLength": 70 },
+          "idea": { "type": "string", "maxLength": 200 },
+          "visualDirection": { "type": "string", "maxLength": 240 },
+          "recipe": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "mood": { "enum": ["quiet", "calm", "tense", "rising", "triumphant"] },
+          "letterbox": { "type": "boolean" },
+          "inputs": { "type": "object" },
+          "beats": {
+            "type": "array", "minItems": 1, "maxItems": 12,
+            "items": {
+              "type": "object", "additionalProperties": false, "required": ["n", "notes"],
+              "properties": {
+                "n": { "type": "integer", "minimum": 1 },
+                "summary": { "type": "string", "maxLength": 160 },
+                "notes": { "type": "string", "minLength": 3, "maxLength": 400 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

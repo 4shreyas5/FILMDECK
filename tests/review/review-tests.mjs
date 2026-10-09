@@ -1,0 +1,34 @@
+// Tests of the visual-review workflow (tools/review-deck.mjs). Needs a browser (npm run setup:qa). Offline: no network, no key.
+import '../support/qa-env.mjs';
+import fs from 'fs'; import os from 'os'; import path from 'path'; import { spawnSync } from 'child_process'; import { fileURLToPath } from 'url';
+import { runFilmDeck } from '../../tools/lib/filmdeck.mjs';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+let bad = 0; const t = (n, c, d = '') => { if (c) console.log('PASS  ' + n); else { bad++; console.log('FAIL  ' + n + (d ? '  -> ' + String(d).slice(0, 300) : '')); } };
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'fd-rev-'));
+const deck = path.join(tmp, 'deck');
+const r = await runFilmDeck({ inputPath: path.join(root, 'tests/corpus/docs/01-consulting-deck.pptx'), outputDir: deck, mode: 'mock', mockFixture: path.join(root, 'tests/corpus/fixtures/01-consulting-deck.json'), qaMode: 'none', fictional: true });
+t('setup: a mock deck is built for review', r.ok);
+const run = (args) => spawnSync(process.execPath, [path.join(root, 'tools/review-deck.mjs'), ...args], { encoding: 'utf8', env: process.env, timeout: 280000 });
+const o = run([deck, '--fast', '--gallery', path.join(tmp, 'gallery.html')]);
+t('review: exits 0', o.status === 0, o.stderr + o.stdout.slice(-300));
+const out = path.join(deck, 'review'), rj = JSON.parse(fs.readFileSync(path.join(out, 'review.json'), 'utf8')), html = fs.readFileSync(path.join(out, 'index.html'), 'utf8');
+t('review: report.json identifies source, mode, scene and beat counts from the real deck', rj.summary.source === '01-consulting-deck.pptx' && rj.summary.mode === 'mock' && rj.summary.scenes === 6 && rj.summary.beats === 21 && rj.scenes.length === 6, JSON.stringify(rj.summary));
+t('review: every scene has an entering frame, a settled frame and one frame per beat, and the files exist', rj.scenes.every(s => fs.existsSync(path.join(out, s.frames.enter)) && fs.existsSync(path.join(out, s.frames.start)) && s.frames.beats.length === s.steps && s.frames.beats.every(f => fs.existsSync(path.join(out, f)))));
+t('review: screenshots are real images (JPEG signature, plausible size)', rj.scenes.every(s => { const b = fs.readFileSync(path.join(out, s.frames.enter)); return b[0] === 0xff && b[1] === 0xd8 && b.length > 5000; }));
+t('review: text density, layout errors and warnings are recorded per scene', rj.scenes.every(s => typeof s.words === 'number' && ['light', 'moderate', 'dense'].includes(s.density) && Array.isArray(s.layoutErrors) && Array.isArray(s.layoutWarnings)));
+t('review: the evidence excerpt for a figure shows the exact quote inside its source section', rj.scenes.some(s => s.facts.some(f => f.excerpt && f.excerpt.quote.replace(/\s+/g, ' ') === f.evidence.replace(/\s+/g, ' ') && f.excerpt.where)), 'no excerpt found');
+t('review: the HTML states that technical checks do not prove quality and scores nothing', /for human judgment/.test(html) && /does not mean the deck is clear, beautiful or persuasive/.test(html) && !/score:|rating:/i.test(html));
+t('review: the HTML links the narrative arc, every scene, the evidence and a reviewer checklist', (html.match(/class="scene"/g) || []).length === 6 && /Narrative arc/.test(html) && /Evidence behind the figures/.test(html) && /Your review of scene 6/.test(html));
+t('review: the report is self-contained (no external URLs, scripts only inline)', !/(src|href)="https?:/.test(html) && !/<script[^>]+src=/.test(html));
+t('review: reading the deck made no external request and no console error', rj.summary.externalRequests === 0 && rj.summary.pageErrors === 0);
+t('review: HTML escapes text from the deck (no raw angle brackets from content)', !/<script>(?!\(function)/.test(html.replace(/<style[\s\S]*?<\/style>/, '')));
+t('review: gallery page links the report', fs.existsSync(path.join(tmp, 'gallery.html')) && /review\/index\.html/.test(fs.readFileSync(path.join(tmp, 'gallery.html'), 'utf8')));
+const bads = run([path.join(tmp, 'nothing-here')]); t('review: a folder that is not a FilmDeck deck fails with a clear message', bads.status === 1 && /not a FilmDeck output folder/.test(bads.stderr));
+t('review: a bad --sizes value is refused', run([deck, '--sizes', '12x']).status === 2);
+// a deck with a deliberate defect shows up in the report instead of being hidden
+const broken = path.join(tmp, 'broken'); fs.cpSync(deck, broken, { recursive: true }); fs.rmSync(path.join(broken, 'review'), { recursive: true, force: true });
+let css = fs.readFileSync(path.join(broken, 'index.html'), 'utf8'); css = css.replace('</style>', '.slide.on h1,.slide.on .title,.slide.on [class*="-t"]{position:relative;left:1500px !important}</style>'); fs.writeFileSync(path.join(broken, 'index.html'), css);
+const ob = run([broken, '--fast']); const rb = JSON.parse(fs.readFileSync(path.join(broken, 'review/review.json'), 'utf8'));
+t('review: a deck whose text is pushed off-stage reports layout findings (the report does not hide problems)', ob.status === 0 && (rb.summary.layoutErrors + rb.summary.layoutWarnings) > 0, JSON.stringify(rb.summary));
+fs.rmSync(tmp, { recursive: true, force: true });
+console.log(bad ? `${bad} review test(s) FAILED` : 'ALL REVIEW TESTS PASSED'); process.exit(bad ? 1 : 0);

@@ -1,0 +1,1495 @@
+{
+  "version": 2,
+  "description": "Recipe taxonomy for FilmDeck scenes with evidence from the two reference decks. 8 recipes are parameterised (generator-ready); the others are reference-code-only.",
+  "statusVocabulary": {
+    "demonstrated": "a complete working scene exists in a reference deck, with deck-specific content hardcoded",
+    "partial": "only part of the described recipe exists in the references",
+    "taxonomy-only": "named but no reference scene",
+    "implementationStatus": {
+      "reference-code-only": "the code to adapt is the reference scene itself; no template, no input schema",
+      "parameterised": "a renderer exists in engine/recipes: inputs schema + scene/CSS templates; used by tools/generate-deck.mjs"
+    }
+  },
+  "reuseReadinessVocabulary": {
+    "high": "data-driven or simple DOM; adapting means replacing constants",
+    "medium": "needs layout adjustment and some bespoke art",
+    "low": "bespoke simulation; adapt by copying and editing, do not parameterise"
+  },
+  "deckSceneIds": {
+    "mba": "decks/mba/scenes.js (ids s1..s10)",
+    "velcure": "decks/velcure/scenes.js (ids s1..s9)"
+  },
+  "recipes": [
+    {
+      "order": 1,
+      "id": "cold-open",
+      "name": "Cold open: particles form a word, word cycles, reveal",
+      "visualPurpose": "Opening that poses the central question and resolves it into one claim",
+      "whenToUse": "Scene 1 of a talk with a single provocative question",
+      "inputs": [
+        "questionWord",
+        "questionLead",
+        "cycleWords[5]",
+        "finalParticleWord",
+        "contrastPhrase",
+        "closingQuestion"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 4,
+      "sceneExamples": [
+        {
+          "deck": "mba",
+          "scene": "s1"
+        }
+      ],
+      "deterministic": "structure only (scramble letters and particles are random)",
+      "usesAudio": true,
+      "audioNotes": "boom x3, whoosh, tick+hit per cycled word, riser",
+      "usesParticles": true,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "medium",
+      "primitives": [
+        "P2",
+        "P3",
+        "P4",
+        "P32",
+        "P33"
+      ],
+      "notes": "Uses letterbox and a minimal pad mood; contains a 'not equal' SVG that is specific to the MBA message"
+    },
+    {
+      "order": 2,
+      "id": "people-grid-exits",
+      "name": "People grid: figures turn red and leave, counter ticks",
+      "visualPurpose": "Show attrition or loss as people departing from a workforce",
+      "whenToUse": "A count of people lost out of a population (opening or problem scene)",
+      "inputs": [
+        "rows",
+        "cols",
+        "exitCount",
+        "counterLabel",
+        "kickerText",
+        "titleLines[3]",
+        "creditNames[]"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 4,
+      "sceneExamples": [
+        {
+          "deck": "velcure",
+          "scene": "s1"
+        }
+      ],
+      "deterministic": "no: which figures leave is random each build",
+      "usesAudio": true,
+      "audioNotes": "riser, boom, whoosh+tick per exit",
+      "usesParticles": true,
+      "usesCanvas": true,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "medium",
+      "primitives": [
+        "P15",
+        "P7",
+        "P3",
+        "P33"
+      ],
+      "notes": "Canvas scene; the exit count must be supplied (hardcoded 12 today)"
+    },
+    {
+      "order": 3,
+      "id": "ecosystem-network",
+      "name": "Ecosystem: centre node, rings pull out, links, moving packets",
+      "visualPurpose": "Show how parts of a system connect",
+      "whenToUse": "A business/system described by one core and satellite parts",
+      "inputs": [
+        "centreLabel",
+        "nodes[{label,ring}]",
+        "linkPairs by ring",
+        "ringLabel",
+        "figureLabel",
+        "caption"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 5,
+      "sceneExamples": [
+        {
+          "deck": "mba",
+          "scene": "s2"
+        }
+      ],
+      "deterministic": "structure only (packet start phases random)",
+      "usesAudio": true,
+      "audioNotes": "boom, blip rising per node, riser, chime",
+      "usesParticles": true,
+      "usesCanvas": true,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "medium",
+      "primitives": [
+        "P19",
+        "P8",
+        "P27",
+        "P1"
+      ],
+      "notes": "Only scene with exitFx; geometry is polar from radii 200/345/445"
+    },
+    {
+      "order": 4,
+      "id": "decision-tree",
+      "name": "Branching decision tree grows, freezes, one path lit, DECIDE / ACT",
+      "visualPurpose": "Show a widening decision space ending in a chosen path",
+      "whenToUse": "Decision making, option analysis",
+      "inputs": [
+        "question",
+        "branchLabels[5]",
+        "yesNo labels",
+        "microLabels[16]",
+        "chosenBranchIndex",
+        "finalWords[2]",
+        "caption"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 6,
+      "sceneExamples": [
+        {
+          "deck": "mba",
+          "scene": "s3"
+        }
+      ],
+      "deterministic": "no: growth is random and time-dependent (NOW, INSTANT pre-roll)",
+      "usesAudio": true,
+      "audioNotes": "tick, riser, glitch, chime, boom",
+      "usesParticles": true,
+      "usesCanvas": true,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "low",
+      "primitives": [
+        "P20",
+        "P2",
+        "P31",
+        "P1"
+      ],
+      "notes": "Bespoke canvas simulation; replay approximates rather than reproduces"
+    },
+    {
+      "order": 5,
+      "id": "puzzle-pieces",
+      "name": "3D puzzle pieces scatter then lock; beam runs PROBLEM to ACTION",
+      "visualPurpose": "Show parts assembling into a process",
+      "whenToUse": "A multi-part framework that becomes a sequence",
+      "inputs": [
+        "pieces[6]{name,metric?,colour}",
+        "stageWords[4]{word,sub}"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 4,
+      "sceneExamples": [
+        {
+          "deck": "mba",
+          "scene": "s4"
+        }
+      ],
+      "deterministic": "structure only (scatter jitter random)",
+      "usesAudio": true,
+      "audioNotes": "whoosh per piece, snap on lock, boom, hit+tick per stage",
+      "usesParticles": true,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "medium",
+      "primitives": [
+        "P24",
+        "P8",
+        "P1"
+      ],
+      "notes": "metric strings in the reference are invented placeholders; make them optional"
+    },
+    {
+      "order": 6,
+      "id": "orbit-people",
+      "name": "Orbit of people with speech bubbles, conflict then collaboration",
+      "visualPurpose": "Show differing perspectives around a decision-maker",
+      "whenToUse": "Stakeholders, roles, team dynamics",
+      "inputs": [
+        "actors[6]{role,colour,line}",
+        "you",
+        "conflictPairs",
+        "chips1[3]",
+        "chips2[3]",
+        "equation{left,right}"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 5,
+      "sceneExamples": [
+        {
+          "deck": "mba",
+          "scene": "s5"
+        }
+      ],
+      "deterministic": "structure only (conflict zigzag and sparks random)",
+      "usesAudio": true,
+      "audioNotes": "chime, blip rising, glitch, hit",
+      "usesParticles": false,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "medium",
+      "primitives": [
+        "P17",
+        "P8",
+        "P1"
+      ],
+      "notes": "6 actors hand-positioned"
+    },
+    {
+      "order": 7,
+      "id": "shatter-reform-dolly",
+      "name": "Word cracks into 3D shards, becomes a new word, camera dolly to the leader",
+      "visualPurpose": "Contrast two ideas (manage vs lead) and show a team following",
+      "whenToUse": "A before/after word pair plus a 4-label strip",
+      "inputs": [
+        "oldWord",
+        "newWord",
+        "titleAccent",
+        "labels[4]",
+        "closingLines[2]"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 5,
+      "sceneExamples": [
+        {
+          "deck": "mba",
+          "scene": "s6"
+        }
+      ],
+      "deterministic": "no (shard geometry and flights random)",
+      "usesAudio": true,
+      "audioNotes": "crack, boom, whoosh, riser, chime x4",
+      "usesParticles": true,
+      "usesCanvas": true,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "low",
+      "primitives": [
+        "P5",
+        "P18",
+        "P28",
+        "P2"
+      ],
+      "notes": "Uses this-binding; canvas pseudo-3D; slot morph; bespoke"
+    },
+    {
+      "order": 8,
+      "id": "chaos-to-framework",
+      "name": "Chaos (glitch, flying words, tickers, dot globe) snapped into an ordered grid",
+      "visualPurpose": "Show noise becoming a structured framework",
+      "whenToUse": "Environment/forces mapped to lenses",
+      "inputs": [
+        "forces[5]",
+        "lenses[5]",
+        "finalWords[3]",
+        "tickerStrings[] (optional, must be non-numeric unless sourced)"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 4,
+      "sceneExamples": [
+        {
+          "deck": "mba",
+          "scene": "s7"
+        }
+      ],
+      "deterministic": "no",
+      "usesAudio": true,
+      "audioNotes": "riser, glitch interval, boom, snap per row",
+      "usesParticles": true,
+      "usesCanvas": true,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "low",
+      "primitives": [
+        "P13",
+        "P23",
+        "P2",
+        "P32"
+      ],
+      "notes": "Heaviest scene (27 random calls, canvas glitch); tickers in the reference are invented numbers"
+    },
+    {
+      "order": 9,
+      "id": "light-seam-worlds",
+      "name": "Light-seam wipe from one world (chalkboard) into another (live dashboards)",
+      "visualPurpose": "Contrast theory with reality",
+      "whenToUse": "Two contexts side by side in time",
+      "inputs": [
+        "leftStages[4]",
+        "rightCards[5]{header,figure,sub,miniVisual}",
+        "caption",
+        "labelLeft",
+        "labelRight"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 4,
+      "sceneExamples": [
+        {
+          "deck": "mba",
+          "scene": "s8"
+        }
+      ],
+      "deterministic": "structure only (market series random)",
+      "usesAudio": true,
+      "audioNotes": "chalk, whoosh, riser, tick per card, boom, chime",
+      "usesParticles": true,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "low",
+      "primitives": [
+        "P26",
+        "P14",
+        "P13",
+        "P3"
+      ],
+      "notes": "Card figures are invented placeholders; mini visuals are bespoke"
+    },
+    {
+      "order": 10,
+      "id": "orbs-vortex-word",
+      "name": "Orbs appear and network, vortex pulls them into one word, which explodes into the final word",
+      "visualPurpose": "Many strengths converge into one outcome",
+      "whenToUse": "A list of 6 benefits merging into a result",
+      "inputs": [
+        "question",
+        "orbs[6]",
+        "convergedWord",
+        "finalWord"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 9,
+      "sceneExamples": [
+        {
+          "deck": "mba",
+          "scene": "s9"
+        }
+      ],
+      "deterministic": "no (particles)",
+      "usesAudio": true,
+      "audioNotes": "chime per note, blip, riser, boom, crack",
+      "usesParticles": true,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "high",
+      "primitives": [
+        "P19",
+        "P3",
+        "P32",
+        "P2"
+      ],
+      "notes": "Best-structured MBA scene: data-driven loop over orbs; 9 beats is the longest scene"
+    },
+    {
+      "order": 11,
+      "id": "gauge-needle",
+      "name": "Gauge needle sweeps from before to after",
+      "visualPurpose": "Show a rate changing",
+      "whenToUse": "One metric with a before and after value",
+      "inputs": [
+        "scale{min,max,tickStep}",
+        "before{value,display}",
+        "after{value,display}",
+        "labels",
+        "bandRegions"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 3,
+      "sceneExamples": [
+        {
+          "deck": "velcure",
+          "scene": "s2",
+          "beats": "1-3 of 5"
+        }
+      ],
+      "deterministic": "yes (no randomness)",
+      "usesAudio": true,
+      "audioNotes": "riser, hit, blip, boom, glitch",
+      "usesParticles": false,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": true,
+      "implementationStatus": "parameterised",
+      "reuseReadiness": "high",
+      "primitives": [
+        "P9",
+        "P7",
+        "P8",
+        "P1"
+      ],
+      "notes": "Shares scene s2 with recipe 12: scene boundary of the recipe is a beat range, not a whole scene (UNRESOLVED how to split)",
+      "renderer": {
+        "metadata": "engine/recipes/gauge-needle.mjs",
+        "sceneTemplate": "engine/recipes/gauge-needle.scene.js",
+        "cssTemplate": "engine/recipes/gauge-needle.scene.css"
+      },
+      "inputContract": {
+        "beats": "3 (fixed)",
+        "required": [
+          "scale{min,max,majorStep}",
+          "before{fact}",
+          "after{fact}",
+          "labelBefore",
+          "labelAfter"
+        ],
+        "optional": [
+          "scale.minorStep",
+          "scale.unit",
+          "afterTone",
+          "caption"
+        ],
+        "facts": "before and after: number or range fact; both must lie inside the scale"
+      },
+      "capabilities": {
+        "id": "gauge-needle",
+        "name": "Gauge needle, before to after",
+        "status": "parameterized",
+        "beats": "3 (fixed)",
+        "requiresFacts": true,
+        "supports": {
+          "items": {
+            "min": 2,
+            "max": 2,
+            "of": "before and after values"
+          }
+        },
+        "inputTypes": [
+          "fact-ref (number or range)",
+          "scale",
+          "text"
+        ],
+        "textLimits": {
+          "scale.unit": 6,
+          "labelBefore": 34,
+          "labelAfter": 34,
+          "caption": 60
+        },
+        "textZones": [
+          {
+            "selector": ".__C__-read .l",
+            "role": "readout label",
+            "maxLines": 1,
+            "maxWidth": 700
+          },
+          {
+            "selector": ".__C__-read .n",
+            "role": "readout number",
+            "maxLines": 1,
+            "maxWidth": 700
+          },
+          {
+            "selector": ".__C__-cap",
+            "role": "caption",
+            "maxLines": 2,
+            "maxWidth": 1560
+          }
+        ],
+        "sourceReferences": "every fact used needs sourceRef and an exact evidence quote",
+        "purpose": "Show one rate moving from a before value to an after value on a dial.",
+        "knownLimitations": [
+          "one metric per scene",
+          "fixed 3 beats",
+          "scale limited to 60 minor and 10 major ticks",
+          "both values must lie inside the scale"
+        ]
+      }
+    },
+    {
+      "order": 12,
+      "id": "icon-rows-ranked-bars",
+      "name": "Icon rows (before and now) then ranked bars",
+      "visualPurpose": "Show a count doubling and rank categories",
+      "whenToUse": "Two compared counts plus a ranking",
+      "inputs": [
+        "rows[{label,n,hollow,colour,display}]",
+        "claim",
+        "ranking[{label,tag}]",
+        "sourceNote"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 3,
+      "sceneExamples": [
+        {
+          "deck": "velcure",
+          "scene": "s2",
+          "beats": "4-5 of 5"
+        }
+      ],
+      "deterministic": "yes",
+      "usesAudio": true,
+      "audioNotes": "tick per icon, boom, whoosh, hit",
+      "usesParticles": false,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": true,
+      "implementationStatus": "parameterised",
+      "reuseReadiness": "high",
+      "primitives": [
+        "P16",
+        "P12",
+        "P1"
+      ],
+      "notes": "Second half of Velcure s2; bar lengths are decorative, rank is the data",
+      "inputContract": {
+        "beats": "3 (fixed)",
+        "required": [
+          "rows[2]{head,text,count{fact}}",
+          "ranked{kicker,items[2-3]{label,value{fact},tag}}"
+        ],
+        "optional": [
+          "rows[].tone",
+          "stamp",
+          "ranked.note"
+        ],
+        "facts": "row counts: whole-number facts 1 to 20 (a range shows uncertain icons hollow); bar values: number or range facts listed in descending order, display up to 8 characters"
+      },
+      "renderer": {
+        "metadata": "engine/recipes/icon-rows-ranked-bars.mjs",
+        "sceneTemplate": "engine/recipes/icon-rows-ranked-bars.scene.js",
+        "cssTemplate": "engine/recipes/icon-rows-ranked-bars.scene.css"
+      },
+      "capabilities": {
+        "id": "icon-rows-ranked-bars",
+        "name": "Icon rows (before and now) then ranked bars",
+        "status": "parameterized",
+        "beats": "3 (fixed)",
+        "requiresFacts": true,
+        "supports": {
+          "items": {
+            "min": 2,
+            "max": 3,
+            "of": "ranked bars"
+          },
+          "rows": 2
+        },
+        "inputTypes": [
+          "fact-ref (whole-number counts 1 to 20 for icon rows)",
+          "fact-ref (number or range) for bars",
+          "text"
+        ],
+        "textLimits": {
+          "rows[].head": 14,
+          "rows[].text": 40,
+          "stamp": 30,
+          "ranked.kicker": 30,
+          "ranked.note": 70,
+          "ranked.items[].label": 14,
+          "ranked.items[].tag": 30
+        },
+        "textZones": [
+          {
+            "selector": ".__C__-row .h",
+            "role": "row caption",
+            "maxLines": 1,
+            "maxWidth": 1560
+          },
+          {
+            "selector": ".__C__-x",
+            "role": "stamp",
+            "maxLines": 1,
+            "maxWidth": 1560
+          },
+          {
+            "selector": ".__C__-fk",
+            "role": "ranked kicker",
+            "maxLines": 1,
+            "maxWidth": 1560
+          },
+          {
+            "selector": ".__C__-f .lb",
+            "role": "bar label",
+            "maxLines": 1,
+            "maxWidth": 620
+          },
+          {
+            "selector": ".__C__-f .tg",
+            "role": "bar tag",
+            "maxLines": 1,
+            "maxWidth": 900
+          },
+          {
+            "selector": ".__C__-f .vv",
+            "role": "bar value",
+            "maxLines": 1,
+            "maxWidth": 300
+          },
+          {
+            "selector": ".__C__-src",
+            "role": "note",
+            "maxLines": 2,
+            "maxWidth": 1560
+          }
+        ],
+        "sourceReferences": "every fact used needs sourceRef and an exact evidence quote",
+        "purpose": "Show a change in a count with rows of unit icons (people or neutral blocks), then rank categories by size.",
+        "knownLimitations": [
+          "icon \"person\" draws people (use it only when the counts ARE people, as in the Velcure reference); the default icon \"block\" is a neutral unit mark for anything else (centres, stores, tickets)",
+          "exactly two icon rows",
+          "icon counts must be whole numbers 1 to 20 (a range shows the uncertain icons hollow)",
+          "ranked items must be given in descending order",
+          "bar length is proportional to the fact value; rank numbers are not drawn (they would be unsourced digits)"
+        ]
+      }
+    },
+    {
+      "order": 13,
+      "id": "range-bar-chart",
+      "name": "Range bar chart to scale, gap bracket, verdict word",
+      "visualPurpose": "Compare ranges on one scale and name the primary cause",
+      "whenToUse": "Salary/price/percentage ranges and a conclusion",
+      "inputs": [
+        "axis{min,max,unit,tickStep}",
+        "rows[{label,lo,hi,colour,display}]",
+        "gap{from,to,label}",
+        "cards[2]{head,text}",
+        "verdict{kicker,word,sub}"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 5,
+      "sceneExamples": [
+        {
+          "deck": "velcure",
+          "scene": "s3"
+        }
+      ],
+      "deterministic": "yes (no randomness)",
+      "usesAudio": true,
+      "audioNotes": "riser, boom, hit, glitch, blip",
+      "usesParticles": true,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": true,
+      "implementationStatus": "parameterised",
+      "reuseReadiness": "high",
+      "primitives": [
+        "P10",
+        "P31",
+        "P2",
+        "P1"
+      ],
+      "notes": "The reference for charts drawn to scale; uses one linear X scale; beat 3 switches particles to flow mode",
+      "renderer": {
+        "metadata": "engine/recipes/range-bar-chart.mjs",
+        "sceneTemplate": "engine/recipes/range-bar-chart.scene.js",
+        "cssTemplate": "engine/recipes/range-bar-chart.scene.css"
+      },
+      "inputContract": {
+        "beats": "2 + (1 if more than one row or a gap) + (1 if cards) + 1 = 3 to 5",
+        "required": [
+          "scale{min,max,majorStep}",
+          "rows[1-4]{label,value{fact}}",
+          "verdict{kicker,word,sub}"
+        ],
+        "optional": [
+          "scale.step",
+          "scale.unit",
+          "axisLabel",
+          "rows[].tone",
+          "gap{from{row,edge},to{row,edge},value{fact},prefix}",
+          "cards[0-2]{head,text,tone}"
+        ],
+        "facts": "row values: number or range facts inside the scale; gap value: a number fact that must equal the drawn distance between the two edges (use a derived fact)"
+      },
+      "capabilities": {
+        "id": "range-bar-chart",
+        "name": "Range bar chart on one scale, gap bracket, verdict",
+        "status": "parameterized",
+        "beats": "2 + (1 if more than one row or a gap) + (1 if cards) + 1 = 3 to 5",
+        "requiresFacts": true,
+        "supports": {
+          "items": {
+            "min": 1,
+            "max": 4,
+            "of": "bar rows"
+          },
+          "cards": {
+            "min": 0,
+            "max": 2
+          }
+        },
+        "inputTypes": [
+          "fact-ref (number or range)",
+          "scale",
+          "text"
+        ],
+        "textLimits": {
+          "scale.unit": 6,
+          "axisLabel": 40,
+          "rows[].label": 24,
+          "gap.prefix": 20,
+          "cards[].head": 28,
+          "cards[].text": 80,
+          "verdict.kicker": 30,
+          "verdict.word": 14,
+          "verdict.sub": 60
+        },
+        "textZones": [
+          {
+            "selector": ".__C__-cd .h",
+            "role": "card heading",
+            "maxLines": 1,
+            "maxWidth": 580
+          },
+          {
+            "selector": ".__C__-cd .p",
+            "role": "card text",
+            "maxLines": 3,
+            "maxWidth": 580
+          },
+          {
+            "selector": ".__C__-v .b",
+            "role": "verdict word",
+            "maxLines": 1,
+            "maxWidth": 1700
+          },
+          {
+            "selector": ".__C__-v .s",
+            "role": "verdict sub",
+            "maxLines": 2,
+            "maxWidth": 1560
+          },
+          {
+            "selector": "text.__C__-rl",
+            "role": "row label",
+            "maxLines": 1,
+            "maxWidth": 480
+          }
+        ],
+        "sourceReferences": "every fact used needs sourceRef and an exact evidence quote",
+        "purpose": "Compare 1 to 4 values or ranges on one shared scale, optionally with a gap bracket and cards, ending on a verdict word.",
+        "knownLimitations": [
+          "one shared scale for all rows",
+          "gap bracket only between adjacent rows and must equal the drawn distance",
+          "at most 12 grid steps",
+          "value labels must fit left of x=1810 (raise scale.max)"
+        ]
+      }
+    },
+    {
+      "order": 14,
+      "id": "blanket-vs-targeted",
+      "name": "Blanket vs targeted: people grid plus cost meter against a budget line; scanner picks targets",
+      "visualPurpose": "Argue for selective action over across-the-board action",
+      "whenToUse": "A cost/benefit contrast with a targeted alternative",
+      "inputs": [
+        "verdictWord",
+        "verdictSub",
+        "grid{rows,cols}",
+        "targetIndexes[]",
+        "meter{current,blanket,targeted,budget} qualitative or sourced",
+        "levers[3]",
+        "goal{kicker,line1,line2}",
+        "tags[2]"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 6,
+      "sceneExamples": [
+        {
+          "deck": "velcure",
+          "scene": "s4"
+        }
+      ],
+      "deterministic": "yes (no randomness except FX)",
+      "usesAudio": true,
+      "audioNotes": "riser, boom, crack, whoosh, blip per target, chime, hit",
+      "usesParticles": false,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "medium",
+      "primitives": [
+        "P15",
+        "P11",
+        "P2",
+        "P31"
+      ],
+      "notes": "Meter heights are pixel metaphors; do not label with numbers unless sourced"
+    },
+    {
+      "order": 15,
+      "id": "emblem-trio",
+      "name": "Animated emblem trio: boomerang loop, dot climbing stairs, pulsing star",
+      "visualPurpose": "Three qualities each with a symbol",
+      "whenToUse": "Three parallel ideas",
+      "inputs": [
+        "columns[3]{heading,caption,emblem}",
+        "evidence line"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 5,
+      "sceneExamples": [
+        {
+          "deck": "velcure",
+          "scene": "s5"
+        }
+      ],
+      "deterministic": "yes",
+      "usesAudio": true,
+      "audioNotes": "chime per column (C4, E4, G4), boom, hit",
+      "usesParticles": true,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "medium",
+      "primitives": [
+        "P22",
+        "P8"
+      ],
+      "notes": "Three bespoke emblems; a new third emblem needs new SVG"
+    },
+    {
+      "order": 16,
+      "id": "leaking-tank",
+      "name": "Leaking tank: exits are leaks, plugs are retention, tap is recruitment",
+      "visualPurpose": "Explain balancing loss and inflow",
+      "whenToUse": "Retention vs recruitment, churn vs acquisition",
+      "inputs": [
+        "left{head,tag,items[3],sub,chips[3]}",
+        "right{head,tag,items[3],sub,chips[3]}",
+        "closingLines[2]",
+        "holeCount/plugCount"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 6,
+      "sceneExamples": [
+        {
+          "deck": "velcure",
+          "scene": "s6"
+        }
+      ],
+      "deterministic": "no (drops random)",
+      "usesAudio": true,
+      "audioNotes": "riser, hit, snap per plug, whoosh, blip, boom",
+      "usesParticles": false,
+      "usesCanvas": true,
+      "status": "demonstrated",
+      "parameterised": false,
+      "implementationStatus": "reference-code-only",
+      "reuseReadiness": "low",
+      "primitives": [
+        "P25",
+        "P1",
+        "P2"
+      ],
+      "notes": "Canvas fluid simulation; bespoke"
+    },
+    {
+      "order": 17,
+      "id": "pillars-roof",
+      "name": "Pillars rise one by one and a roof drops on top",
+      "visualPurpose": "Show a strategy supported by parts",
+      "whenToUse": "A 3-part strategy with sub-points",
+      "inputs": [
+        "pillars[3]{heading,items[3],colour}",
+        "roofLabel"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 5,
+      "sceneExamples": [
+        {
+          "deck": "velcure",
+          "scene": "s7"
+        }
+      ],
+      "deterministic": "yes",
+      "usesAudio": true,
+      "audioNotes": "riser, boom + shake per pillar, crack + flash on roof",
+      "usesParticles": true,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": true,
+      "implementationStatus": "parameterised",
+      "reuseReadiness": "high",
+      "primitives": [
+        "P21",
+        "P1"
+      ],
+      "notes": "Simplest recipe (about 2 KB)",
+      "renderer": {
+        "metadata": "engine/recipes/pillars-roof.mjs",
+        "sceneTemplate": "engine/recipes/pillars-roof.scene.js",
+        "cssTemplate": "engine/recipes/pillars-roof.scene.css"
+      },
+      "inputContract": {
+        "beats": "5 (fixed)",
+        "required": [
+          "roofLabel",
+          "pillars[3]{heading,items[1-3]}"
+        ],
+        "optional": [
+          "pillars[].tone"
+        ],
+        "facts": "none; text only (numbers in text must still come from facts)"
+      },
+      "capabilities": {
+        "id": "pillars-roof",
+        "name": "Three pillars rise, roof drops on top",
+        "status": "parameterized",
+        "beats": "5 (fixed)",
+        "requiresFacts": false,
+        "supports": {
+          "items": {
+            "min": 3,
+            "max": 3,
+            "of": "pillars"
+          },
+          "bullets": {
+            "min": 1,
+            "max": 3,
+            "of": "items per pillar"
+          }
+        },
+        "inputTypes": [
+          "text"
+        ],
+        "textLimits": {
+          "roofLabel": 34,
+          "pillars[].heading": 22,
+          "pillars[].items[]": 60
+        },
+        "textZones": [
+          {
+            "selector": ".__C__-pil .h",
+            "role": "pillar heading",
+            "maxLines": 1,
+            "maxWidth": 340
+          },
+          {
+            "selector": ".__C__-pil li",
+            "role": "pillar item",
+            "maxLines": 4,
+            "maxWidth": 340
+          }
+        ],
+        "sourceReferences": "none required (text only; digits in text are rejected unless they are fact displays)",
+        "purpose": "Three supports under one overarching idea (a framework, a strategy, three reasons).",
+        "knownLimitations": [
+          "exactly three pillars",
+          "text only: digits are rejected unless they are fact displays, so use another recipe for numbers",
+          "fixed 5 beats"
+        ]
+      }
+    },
+    {
+      "order": 18,
+      "id": "strike-three-moves-checklist",
+      "name": "Headline with strike-through, three moves, then a checklist that ticks off",
+      "visualPurpose": "Reject one approach and give the recommendation",
+      "whenToUse": "A recommendation scene",
+      "inputs": [
+        "headlineLead",
+        "headlineStruck",
+        "sub",
+        "moves[3]{head,text}",
+        "checklist[5]"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 4,
+      "sceneExamples": [
+        {
+          "deck": "velcure",
+          "scene": "s8"
+        }
+      ],
+      "deterministic": "yes",
+      "usesAudio": true,
+      "audioNotes": "hit, boom, crack, chime, whoosh, snap per item",
+      "usesParticles": false,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": true,
+      "implementationStatus": "parameterised",
+      "reuseReadiness": "high",
+      "primitives": [
+        "P29",
+        "P30",
+        "P3",
+        "P2"
+      ],
+      "notes": "Pure DOM; contains a list item with a source range",
+      "renderer": {
+        "metadata": "engine/recipes/strike-three-moves-checklist.mjs",
+        "sceneTemplate": "engine/recipes/strike-three-moves-checklist.scene.js",
+        "cssTemplate": "engine/recipes/strike-three-moves-checklist.scene.css"
+      },
+      "inputContract": {
+        "beats": "4 (fixed)",
+        "required": [
+          "headlineLead",
+          "headlineStruck",
+          "sub{lead,accent}",
+          "moves[3]{head,text}",
+          "checklist[3-5]"
+        ],
+        "optional": [],
+        "facts": "none; text only"
+      },
+      "capabilities": {
+        "id": "strike-three-moves-checklist",
+        "name": "Headline with strike-through, three moves, checklist",
+        "status": "parameterized",
+        "beats": "4 (fixed)",
+        "requiresFacts": false,
+        "supports": {
+          "items": {
+            "min": 3,
+            "max": 3,
+            "of": "moves"
+          },
+          "checklist": {
+            "min": 3,
+            "max": 5
+          }
+        },
+        "inputTypes": [
+          "text"
+        ],
+        "textLimits": {
+          "headlineLead": 20,
+          "headlineStruck": 14,
+          "sub.lead": 30,
+          "sub.accent": 40,
+          "moves[].head": 18,
+          "moves[].text": 90,
+          "checklist[]": 80
+        },
+        "textZones": [
+          {
+            "selector": ".__C__-h .a",
+            "role": "headline lead",
+            "maxLines": 1,
+            "maxWidth": 1700
+          },
+          {
+            "selector": ".__C__-h .b",
+            "role": "struck headline",
+            "maxLines": 1,
+            "maxWidth": 1700
+          },
+          {
+            "selector": ".__C__-s",
+            "role": "sub line",
+            "maxLines": 2,
+            "maxWidth": 1560
+          },
+          {
+            "selector": ".__C__-cols .h",
+            "role": "move heading",
+            "maxLines": 1,
+            "maxWidth": 480
+          },
+          {
+            "selector": ".__C__-cols .p",
+            "role": "move text",
+            "maxLines": 4,
+            "maxWidth": 480
+          },
+          {
+            "selector": ".__C__-list .it span",
+            "role": "checklist item",
+            "maxLines": 2,
+            "maxWidth": 1400
+          }
+        ],
+        "sourceReferences": "none required (text only; digits in text are rejected unless they are fact displays)",
+        "purpose": "Reject a bad approach (struck-through headline), propose three moves and tick off a checklist.",
+        "knownLimitations": [
+          "exactly three moves",
+          "text only",
+          "fixed 4 beats"
+        ]
+      }
+    },
+    {
+      "order": 19,
+      "id": "minimal-close",
+      "name": "Minimal close: serif quote lines, giant final word with sheen, held",
+      "visualPurpose": "End the talk",
+      "whenToUse": "Last scene",
+      "inputs": [
+        "line1",
+        "line2",
+        "emphasisRange?",
+        "finalWord",
+        "caption",
+        "thanks?"
+      ],
+      "output": "one scene module: def({...}) + scene CSS (prefix per scene)",
+      "typicalBeats": 3,
+      "sceneExamples": [
+        {
+          "deck": "mba",
+          "scene": "s10"
+        },
+        {
+          "deck": "velcure",
+          "scene": "s9"
+        }
+      ],
+      "deterministic": "yes (no randomness except FX which fades out)",
+      "usesAudio": true,
+      "audioNotes": "chime x3, boom",
+      "usesParticles": true,
+      "usesCanvas": false,
+      "status": "demonstrated",
+      "parameterised": true,
+      "implementationStatus": "parameterised",
+      "reuseReadiness": "high",
+      "primitives": [
+        "P6",
+        "P3",
+        "P33"
+      ],
+      "notes": "Identical structure in both decks (4 beats in MBA, 3 in Velcure; MBA adds a 3-word build before the final word)",
+      "renderer": {
+        "metadata": "engine/recipes/minimal-close.mjs",
+        "sceneTemplate": "engine/recipes/minimal-close.scene.js",
+        "cssTemplate": "engine/recipes/minimal-close.scene.css"
+      },
+      "inputContract": {
+        "beats": "3 (fixed)",
+        "required": [
+          "line1",
+          "line2",
+          "bigWord"
+        ],
+        "optional": [
+          "variant open|close",
+          "emphasis (substring of line2)",
+          "caption",
+          "thanks"
+        ],
+        "facts": "none; text only"
+      },
+      "capabilities": {
+        "id": "minimal-close",
+        "name": "Minimal close or open: serif lines, giant word with sheen",
+        "status": "parameterized",
+        "beats": "3 (fixed)",
+        "requiresFacts": false,
+        "supports": {
+          "items": {
+            "min": 0,
+            "max": 0
+          }
+        },
+        "inputTypes": [
+          "text"
+        ],
+        "textLimits": {
+          "line1": 40,
+          "line2": 90,
+          "emphasis": 40,
+          "bigWord": 16,
+          "caption": 60,
+          "thanks": 30
+        },
+        "textZones": [
+          {
+            "selector": ".__C__-l1",
+            "role": "line 1",
+            "maxLines": 1,
+            "maxWidth": 1400
+          },
+          {
+            "selector": ".__C__-l2",
+            "role": "line 2",
+            "maxLines": 2,
+            "maxWidth": 1400
+          },
+          {
+            "selector": ".__C__-big",
+            "role": "giant word",
+            "maxLines": 1,
+            "maxWidth": 1700
+          },
+          {
+            "selector": ".__C__-k",
+            "role": "caption",
+            "maxLines": 1,
+            "maxWidth": 1700
+          },
+          {
+            "selector": ".__C__-ty",
+            "role": "thanks",
+            "maxLines": 1,
+            "maxWidth": 1700
+          }
+        ],
+        "sourceReferences": "none required (text only; digits in text are rejected unless they are fact displays)",
+        "purpose": "Open or close the deck with two serif lines and one giant word.",
+        "knownLimitations": [
+          "text only",
+          "fixed 3 beats",
+          "the giant word must be 16 characters or fewer"
+        ]
+      }
+    },
+    {
+      "id": "big-number",
+      "name": "Big number (KPI): one hero figure counts up, with context and an optional comparison",
+      "order": 20,
+      "visualPurpose": "Make one figure the whole point of the scene",
+      "whenToUse": "A single headline KPI, optionally against a previous value",
+      "inputs": [
+        "label",
+        "value{fact}",
+        "context",
+        "compare{label,value{fact}}"
+      ],
+      "typicalBeats": 3,
+      "sceneExamples": [],
+      "deterministic": "yes",
+      "usesAudio": true,
+      "audioNotes": "riser, boom, chime",
+      "usesParticles": false,
+      "usesCanvas": false,
+      "status": "partial",
+      "reuseReadiness": "high",
+      "primitives": [
+        "P1",
+        "P7"
+      ],
+      "notes": "Composite of Velcure counter/readout timing; no single reference scene.",
+      "inputContract": {
+        "beats": "3 (fixed)",
+        "required": [
+          "label",
+          "value{fact}",
+          "context"
+        ],
+        "optional": [
+          "tone",
+          "compare{label,value{fact}}"
+        ],
+        "facts": "value and compare.value: number or range facts; display up to 12 characters"
+      },
+      "parameterised": true,
+      "implementationStatus": "parameterised",
+      "renderer": {
+        "metadata": "engine/recipes/big-number.mjs",
+        "sceneTemplate": "engine/recipes/big-number.scene.js",
+        "cssTemplate": "engine/recipes/big-number.scene.css"
+      },
+      "capabilities": {
+        "id": "big-number",
+        "name": "Big number (KPI): one hero figure counts up, with context and an optional comparison",
+        "status": "parameterized",
+        "beats": "3 (fixed)",
+        "requiresFacts": true,
+        "supports": {
+          "items": {
+            "min": 1,
+            "max": 1,
+            "of": "hero figure"
+          }
+        },
+        "inputTypes": [
+          "fact-ref (number or range)",
+          "text"
+        ],
+        "textLimits": {
+          "label": 40,
+          "context": 90,
+          "compare.label": 24
+        },
+        "textZones": [
+          {
+            "selector": ".__C__-l",
+            "role": "label",
+            "maxLines": 1,
+            "maxWidth": 1560
+          },
+          {
+            "selector": ".__C__-n",
+            "role": "hero number",
+            "maxLines": 1,
+            "maxWidth": 1700
+          },
+          {
+            "selector": ".__C__-c",
+            "role": "context",
+            "maxLines": 2,
+            "maxWidth": 1560
+          },
+          {
+            "selector": ".__C__-f",
+            "role": "comparison",
+            "maxLines": 1,
+            "maxWidth": 1560
+          }
+        ],
+        "sourceReferences": "every fact used needs sourceRef and an exact evidence quote",
+        "purpose": "Make one figure the whole point of the scene (a headline KPI), optionally against a previous value.",
+        "knownLimitations": [
+          "one figure per scene",
+          "the count-up animates the first number of the display; ranges are revealed without counting",
+          "display text longer than 12 characters is rejected"
+        ]
+      }
+    },
+    {
+      "id": "comparison",
+      "name": "Comparison: two options side by side, matching metrics, then a verdict line",
+      "order": 21,
+      "visualPurpose": "Put two options side by side on matching metrics",
+      "whenToUse": "Two groups, periods or options compared on 1 to 3 measures",
+      "inputs": [
+        "left{heading,metrics[]}",
+        "right{heading,metrics[]}",
+        "verdict"
+      ],
+      "typicalBeats": 3,
+      "sceneExamples": [],
+      "deterministic": "yes",
+      "usesAudio": true,
+      "audioNotes": "hit, tick, boom, chime",
+      "usesParticles": false,
+      "usesCanvas": false,
+      "status": "partial",
+      "reuseReadiness": "high",
+      "primitives": [
+        "P1",
+        "P7"
+      ],
+      "notes": "Two-column layout language of Velcure scenes 2 and 4; no single reference scene.",
+      "inputContract": {
+        "beats": "3 (fixed)",
+        "required": [
+          "left{heading,metrics[1-3]{label,value{fact}}}",
+          "right{...same count}",
+          "verdict"
+        ],
+        "optional": [
+          "left.tone",
+          "right.tone"
+        ],
+        "facts": "metric values: number or range facts; display up to 14 characters"
+      },
+      "parameterised": true,
+      "implementationStatus": "parameterised",
+      "renderer": {
+        "metadata": "engine/recipes/comparison.mjs",
+        "sceneTemplate": "engine/recipes/comparison.scene.js",
+        "cssTemplate": "engine/recipes/comparison.scene.css"
+      },
+      "capabilities": {
+        "id": "comparison",
+        "name": "Comparison: two options side by side, matching metrics, then a verdict line",
+        "status": "parameterized",
+        "beats": "3 (fixed)",
+        "requiresFacts": true,
+        "supports": {
+          "items": {
+            "min": 1,
+            "max": 3,
+            "of": "metrics per side (both sides equal)"
+          }
+        },
+        "inputTypes": [
+          "fact-ref (number or range)",
+          "text"
+        ],
+        "textLimits": {
+          "left.heading": 22,
+          "left.metrics[].label": 30,
+          "right.heading": 22,
+          "right.metrics[].label": 30,
+          "verdict": 70
+        },
+        "textZones": [
+          {
+            "selector": ".__C__-p .h",
+            "role": "side heading",
+            "maxLines": 1,
+            "maxWidth": 720
+          },
+          {
+            "selector": ".__C__-p .k",
+            "role": "metric label",
+            "maxLines": 1,
+            "maxWidth": 720
+          },
+          {
+            "selector": ".__C__-p .v",
+            "role": "metric value",
+            "maxLines": 1,
+            "maxWidth": 720
+          },
+          {
+            "selector": ".__C__-vd",
+            "role": "verdict",
+            "maxLines": 1,
+            "maxWidth": 1560
+          }
+        ],
+        "sourceReferences": "every fact used needs sourceRef and an exact evidence quote",
+        "purpose": "Put two options, groups or periods against each other on the same 1 to 3 metrics.",
+        "knownLimitations": [
+          "exactly two sides",
+          "both sides need the same number of metrics",
+          "no automatic winner or difference: put a derived fact in a separate scene if needed",
+          "value display longer than 14 characters is rejected"
+        ]
+      }
+    }
+  ],
+  "notStartedFromTaxonomy": [],
+  "candidatesNotInTaxonomy": [
+    {
+      "id": "title-slot-morph",
+      "evidence": "mba s6 beat 3",
+      "status": "pattern only"
+    },
+    {
+      "id": "dim-then-reveal",
+      "evidence": "velcure s3 beat 4, velcure s4 beat 5, mba s3 beat 5",
+      "status": "pattern only"
+    }
+  ],
+  "gapsNoReference": [
+    "timeline / roadmap",
+    "side-by-side comparison table",
+    "quote / testimonial",
+    "KPI big number",
+    "time-series line chart",
+    "map"
+  ],
+  "fieldNotes": {
+    "usesParticles": "true = the scene actively drives the particle field beyond its ambient enter() setup (bursts, modes, targets, fades). Every scene configures ambient particles in enter().",
+    "usesAudio": "every scene calls sfx(); audioNotes lists the effects used",
+    "deterministic": "'yes' = no scene-level randomness; particles are always random, so no scene is visually frame-identical",
+    "typicalBeats": "beat count of the reference scene(s); for recipes 11 and 12 the beats of one shared scene are split",
+    "sceneExamples": "deck and scene id; scenes live in decks/<deck>/scenes.js"
+  },
+  "parameterisedRecipes": [
+    "gauge-needle",
+    "range-bar-chart",
+    "pillars-roof",
+    "strike-three-moves-checklist",
+    "minimal-close"
+  ]
+}

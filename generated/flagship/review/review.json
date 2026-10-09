@@ -1,0 +1,378 @@
+{
+  "summary": {
+    "deck": "Halden adapts its shops",
+    "subtitle": "Fictional case, not real data",
+    "fictional": true,
+    "source": "01-consulting-deck.pptx",
+    "mode": "mock",
+    "model": null,
+    "status": "ready",
+    "scenes": 6,
+    "beats": 21,
+    "qa": {
+      "passed": true,
+      "mode": "full",
+      "checks": {
+        "total": 30,
+        "passed": 30,
+        "failed": 0
+      },
+      "layoutWarnings": 0
+    },
+    "pageErrors": 0,
+    "externalRequests": 0,
+    "layoutErrors": 0,
+    "layoutWarnings": 0,
+    "denseScenes": []
+  },
+  "scenes": [
+    {
+      "n": 1,
+      "id": "open",
+      "chapter": "THE STORY",
+      "kicker": "Opening",
+      "title": "",
+      "recipe": "minimal-close",
+      "mood": "quiet",
+      "idea": "",
+      "steps": 3,
+      "beats": [
+        {
+          "n": 1,
+          "summary": "",
+          "notes": "This is a fictional case written to test the deck."
+        },
+        {
+          "n": 2,
+          "summary": "",
+          "notes": "We look at what the document says."
+        },
+        {
+          "n": 3,
+          "summary": "",
+          "notes": "Every figure comes from the source."
+        }
+      ],
+      "frames": {
+        "enter": "img/s1-enter.jpg",
+        "start": "img/s1-start.jpg",
+        "end": "img/s1-end.jpg"
+      },
+      "words": 7,
+      "textItems": 2,
+      "density": "light",
+      "peakBeatWords": 75,
+      "layoutErrors": [],
+      "layoutWarnings": [],
+      "facts": [],
+      "extra": []
+    },
+    {
+      "n": 2,
+      "id": "online",
+      "chapter": "THE SHIFT",
+      "kicker": "The shift",
+      "title": "Online keeps growing.",
+      "recipe": "big-number",
+      "mood": "rising",
+      "idea": "",
+      "steps": 3,
+      "beats": [
+        {
+          "n": 1,
+          "summary": "",
+          "notes": "Online sales are the bright spot."
+        },
+        {
+          "n": 2,
+          "summary": "",
+          "notes": "They grew by 23% year on year."
+        },
+        {
+          "n": 3,
+          "summary": "",
+          "notes": "Store sales fell by 6% in the same period."
+        }
+      ],
+      "frames": {
+        "enter": "img/s2-enter.jpg",
+        "start": "img/s2-start.jpg",
+        "end": "img/s2-end.jpg"
+      },
+      "words": 32,
+      "textItems": 9,
+      "density": "light",
+      "peakBeatWords": 32,
+      "layoutErrors": [],
+      "layoutWarnings": [],
+      "facts": [
+        {
+          "id": "online-growth",
+          "display": "23%",
+          "kind": "number",
+          "sourceRef": "slide-2-title",
+          "derivation": null,
+          "evidence": "Store sales fell 6% while online sales grew 23%",
+          "excerpt": {
+            "before": "",
+            "quote": "Store sales fell 6% while online sales grew 23%",
+            "after": "",
+            "where": "slide 2"
+          }
+        },
+        {
+          "id": "store-drop",
+          "display": "6%",
+          "kind": "number",
+          "sourceRef": "slide-2-title",
+          "derivation": null,
+          "evidence": "Store sales fell 6% while online sales grew 23%",
+          "excerpt": {
+            "before": "",
+            "quote": "Store sales fell 6% while online sales grew 23%",
+            "after": "",
+            "where": "slide 2"
+          }
+        }
+      ],
+      "extra": []
+    },
+    {
+      "n": 3,
+      "id": "footfall",
+      "chapter": "THE VISITS",
+      "kicker": "The visits",
+      "title": "Small stores suffer most.",
+      "recipe": "comparison",
+      "mood": "tense",
+      "idea": "",
+      "steps": 3,
+      "beats": [
+        {
+          "n": 1,
+          "summary": "",
+          "notes": "Footfall fell in every store type."
+        },
+        {
+          "n": 2,
+          "summary": "",
+          "notes": "Small stores lost 14% of visits."
+        },
+        {
+          "n": 3,
+          "summary": "",
+          "notes": "Large stores lost 5%."
+        }
+      ],
+      "frames": {
+        "enter": "img/s3-enter.jpg",
+        "start": "img/s3-start.jpg",
+        "end": "img/s3-end.jpg"
+      },
+      "words": 39,
+      "textItems": 13,
+      "density": "light",
+      "peakBeatWords": 39,
+      "layoutErrors": [],
+      "layoutWarnings": [],
+      "facts": [
+        {
+          "id": "small-loss",
+          "display": "14%",
+          "kind": "number",
+          "sourceRef": "slide-3-b1",
+          "derivation": null,
+          "evidence": "Logistics | 14% | +9%",
+          "excerpt": {
+            "before": "Cost line | Share of costs | Change Rent | 38% | +4% Staff | 31% | +2% ",
+            "quote": "Logistics | 14% | +9%",
+            "after": "",
+            "where": "slide 3"
+          }
+        },
+        {
+          "id": "large-loss",
+          "display": "5%",
+          "kind": "number",
+          "sourceRef": "slide-4-b1",
+          "derivation": null,
+          "evidence": "- Large stores lost 5% of visits",
+          "excerpt": {
+            "before": "- Small stores lost 14% of visits ",
+            "quote": "- Large stores lost 5% of visits",
+            "after": " - Customers still value local pickup",
+            "where": "slide 4"
+          }
+        }
+      ],
+      "extra": []
+    },
+    {
+      "n": 4,
+      "id": "plan",
+      "chapter": "THE PLAN",
+      "kicker": "The plan",
+      "title": "Close some, open more.",
+      "recipe": "range-bar-chart",
+      "mood": "tense",
+      "idea": "",
+      "steps": 4,
+      "beats": [
+        {
+          "n": 1,
+          "summary": "",
+          "notes": "The recommendation has two parts."
+        },
+        {
+          "n": 2,
+          "summary": "",
+          "notes": "Close 12 of the weakest stores."
+        },
+        {
+          "n": 3,
+          "summary": "",
+          "notes": "Open 40 pickup points near transit."
+        },
+        {
+          "n": 4,
+          "summary": "",
+          "notes": "The network gets smaller and faster."
+        }
+      ],
+      "frames": {
+        "enter": "img/s4-enter.jpg",
+        "start": "img/s4-start.jpg",
+        "end": "img/s4-end.jpg"
+      },
+      "words": 24,
+      "textItems": 8,
+      "density": "light",
+      "peakBeatWords": 33,
+      "layoutErrors": [],
+      "layoutWarnings": [],
+      "facts": [
+        {
+          "id": "close-n",
+          "display": "12",
+          "kind": "number",
+          "sourceRef": "slide-5-b1",
+          "derivation": null,
+          "evidence": "- Close 12 of the weakest stores",
+          "excerpt": {
+            "before": "",
+            "quote": "- Close 12 of the weakest stores",
+            "after": " - Open 40 pickup points near transit - Reinvest the savings in delivery speed",
+            "where": "slide 5"
+          }
+        },
+        {
+          "id": "pickup-n",
+          "display": "40",
+          "kind": "number",
+          "sourceRef": "slide-5-b1",
+          "derivation": null,
+          "evidence": "- Open 40 pickup points near transit",
+          "excerpt": {
+            "before": "- Close 12 of the weakest stores ",
+            "quote": "- Open 40 pickup points near transit",
+            "after": " - Reinvest the savings in delivery speed",
+            "where": "slide 5"
+          }
+        }
+      ],
+      "extra": []
+    },
+    {
+      "n": 5,
+      "id": "how",
+      "chapter": "THE HOW",
+      "kicker": "The how",
+      "title": "How the plan works.",
+      "recipe": "pillars-roof",
+      "mood": "calm",
+      "idea": "",
+      "steps": 5,
+      "beats": [
+        {
+          "n": 1,
+          "summary": "",
+          "notes": "The plan rests on three pillars."
+        },
+        {
+          "n": 2,
+          "summary": "",
+          "notes": "First, close the weakest stores."
+        },
+        {
+          "n": 3,
+          "summary": "",
+          "notes": "Second, open pickup points."
+        },
+        {
+          "n": 4,
+          "summary": "",
+          "notes": "Third, reinvest the savings."
+        },
+        {
+          "n": 5,
+          "summary": "",
+          "notes": "Together they make a smaller, faster network."
+        }
+      ],
+      "frames": {
+        "enter": "img/s5-enter.jpg",
+        "start": "img/s5-start.jpg",
+        "end": "img/s5-end.jpg"
+      },
+      "words": 52,
+      "textItems": 15,
+      "density": "moderate",
+      "peakBeatWords": 52,
+      "layoutErrors": [],
+      "layoutWarnings": [],
+      "facts": [],
+      "extra": []
+    },
+    {
+      "n": 6,
+      "id": "close",
+      "chapter": "THE POINT",
+      "kicker": "Closing",
+      "title": "",
+      "recipe": "minimal-close",
+      "mood": "quiet",
+      "idea": "",
+      "steps": 3,
+      "beats": [
+        {
+          "n": 1,
+          "summary": "",
+          "notes": "That is the picture the document gives."
+        },
+        {
+          "n": 2,
+          "summary": "",
+          "notes": "The details are in the source."
+        },
+        {
+          "n": 3,
+          "summary": "",
+          "notes": "Thank you. This was a fictional case."
+        }
+      ],
+      "frames": {
+        "enter": "img/s6-enter.jpg",
+        "start": "img/s6-start.jpg",
+        "end": "img/s6-end.jpg"
+      },
+      "words": 6,
+      "textItems": 2,
+      "density": "light",
+      "peakBeatWords": 101,
+      "layoutErrors": [],
+      "layoutWarnings": [],
+      "facts": [],
+      "extra": []
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "storyboardVersion": 1,
+  "deck": {
+    "id": "harbor-bikes-demo",
+    "title": "Why Harbor Bikes riders leave",
+    "titleAccent": "riders",
+    "subtitle": "Fictional demo deck, not real data",
+    "intro": "A fictional demo built by FilmDeck from a storyboard. Every figure shown comes from the demo brief. Sound is on, best viewed fullscreen.",
+    "audience": "Demo audience for the FilmDeck generator",
+    "credits": ["FilmDeck generator demo"],
+    "language": "en",
+    "theme": "ink-ember",
+    "fictional": true
+  },
+  "sources": [
+    { "id": "demo-brief", "kind": "fictional", "label": "Fictional demo brief about the made-up company Harbor Bikes. Not real data." }
+  ],
+  "facts": [
+    { "id": "churn-before", "kind": "number", "value": 6, "display": "6%", "unit": "%", "sourceRef": "demo-brief" },
+    { "id": "churn-now", "kind": "number", "value": 11, "display": "11%", "unit": "%", "sourceRef": "demo-brief" },
+    { "id": "rival-cut", "kind": "range", "value": { "lo": 20, "hi": 30 }, "display": "20–30%", "unit": "%", "sourceRef": "demo-brief" },
+    { "id": "our-discount", "kind": "range", "value": { "lo": 8, "hi": 10 }, "display": "8–10%", "unit": "%", "sourceRef": "demo-brief" },
+    { "id": "price-gap", "kind": "number", "value": 10, "display": "10 points", "unit": "points", "derivation": { "op": "diff", "of": ["rival-cut.lo", "our-discount.hi"] } }
+  ],
+  "scenes": [
+    {
+      "id": "opening", "chapter": "THE QUIET EXIT", "kicker": "Opening", "mood": "quiet", "letterbox": true,
+      "recipe": "minimal-close",
+      "idea": "Open on the quiet loss of riders nobody asks about.",
+      "visualDirection": "Letterbox, slow serif lines, one giant word.",
+      "inputs": {
+        "variant": "open",
+        "line1": "Every month, riders quietly leave.",
+        "line2": "Nobody asks them why.",
+        "emphasis": "why",
+        "bigWord": "The quiet exit.",
+        "caption": "HARBOR BIKES · FICTIONAL DEMO"
+      },
+      "beats": [
+        { "n": 1, "summary": "First line fades in.", "notes": "Start slowly. Riders do not announce that they are leaving, they just stop renewing." },
+        { "n": 2, "summary": "Second line, emphasis on why.", "notes": "The real problem is that nobody has ever asked them why." },
+        { "n": 3, "summary": "Giant title word.", "notes": "Today we look at why riders leave Harbor Bikes. This is a fictional demo company." }
+      ]
+    },
+    {
+      "id": "problem", "chapter": "THE PROBLEM", "kicker": "The problem", "title": "Churn has nearly doubled.", "mood": "tense",
+      "recipe": "gauge-needle",
+      "idea": "Monthly churn went up from a lower level to a higher one.",
+      "visualDirection": "Large central gauge, needle sweeps then jumps to the alarm band.",
+      "inputs": {
+        "scale": { "min": 0, "max": 15, "majorStep": 5, "minorStep": 1, "unit": "%" },
+        "before": { "fact": "churn-before" },
+        "after": { "fact": "churn-now" },
+        "labelBefore": "MONTHLY CHURN · BEFORE",
+        "labelAfter": "MONTHLY CHURN · NOW",
+        "afterTone": "negative",
+        "caption": "More riders leave every month."
+      },
+      "beats": [
+        { "n": 1, "summary": "Title and empty gauge.", "notes": "Here is the problem. We measure monthly churn, the share of riders who leave." },
+        { "n": 2, "summary": "Needle to the earlier rate.", "notes": "It used to sit here, at the level shown on the gauge." },
+        { "n": 3, "summary": "Needle jumps to the current rate.", "notes": "Now it has jumped to the level you see. That is almost double." }
+      ]
+    },
+    {
+      "id": "cause", "chapter": "WHY THEY LEAVE", "kicker": "The cause", "title": "Why do riders switch?", "mood": "tense",
+      "recipe": "range-bar-chart",
+      "idea": "Rival price cuts are far bigger than our loyalty discount.",
+      "visualDirection": "Two range bars on one scale, a bracket for the gap, then a verdict word.",
+      "inputs": {
+        "scale": { "min": 0, "max": 40, "step": 10, "majorStep": 10, "unit": "%" },
+        "axisLabel": "PRICE CUT ON OFFER",
+        "rows": [
+          { "label": "RIVAL OFFER", "value": { "fact": "rival-cut" }, "tone": "negative" },
+          { "label": "OUR DISCOUNT", "value": { "fact": "our-discount" }, "tone": "accent" }
+        ],
+        "gap": { "from": { "row": 1, "edge": "hi" }, "to": { "row": 0, "edge": "lo" }, "value": { "fact": "price-gap" } },
+        "cards": [
+          { "head": "EASY TO SWITCH", "text": "Riders can change provider in a few minutes." },
+          { "head": "LOUD OFFERS", "text": "Rival cuts are advertised everywhere." }
+        ],
+        "verdict": { "kicker": "THE PRIMARY ISSUE", "word": "PRICE.", "sub": "Not the bikes. Not the service." }
+      },
+      "beats": [
+        { "n": 1, "summary": "Axis appears.", "notes": "Let us compare what the rivals offer with what we offer, on one scale." },
+        { "n": 2, "summary": "Rival range draws.", "notes": "Rivals are cutting prices by the range shown. That is a big swing." },
+        { "n": 3, "summary": "Our range and the gap.", "notes": "Our loyalty discount is much smaller, and the bracket shows the gap between the two." },
+        { "n": 4, "summary": "Two supporting cards.", "notes": "Two things make it worse. Switching is easy and the rival offers are loud." },
+        { "n": 5, "summary": "Verdict word slams in.", "notes": "So the primary issue is price, not the bikes and not the service." }
+      ]
+    },
+    {
+      "id": "framework", "chapter": "THE FRAMEWORK", "kicker": "The framework", "title": "Three pillars keep riders.", "mood": "rising",
+      "recipe": "pillars-roof",
+      "idea": "A retention plan with three supporting pillars and one promise on top.",
+      "visualDirection": "Three pillars rise one by one, roof drops with a crack.",
+      "inputs": {
+        "roofLabel": "THE RIDER PROMISE",
+        "pillars": [
+          { "heading": "PRICE", "tone": "accent", "items": ["Loyalty discount that grows with time", "Price match on rival offers for long-term riders"] },
+          { "heading": "SERVICE", "tone": "secondary", "items": ["Fast repairs close to home", "A real person for every complaint"] },
+          { "heading": "COMMUNITY", "tone": "neutral", "items": ["Group rides and events", "Rewards for referring a friend"] }
+        ]
+      },
+      "beats": [
+        { "n": 1, "summary": "Base appears.", "notes": "Our plan stands on three pillars." },
+        { "n": 2, "summary": "Price pillar.", "notes": "First pillar, price. Reward loyalty and answer rival offers fairly." },
+        { "n": 3, "summary": "Service pillar.", "notes": "Second pillar, service. Fix problems quickly and personally." },
+        { "n": 4, "summary": "Community pillar.", "notes": "Third pillar, community. Make riding with us a shared habit." },
+        { "n": 5, "summary": "Roof drops.", "notes": "Together they hold up one promise to every rider." }
+      ]
+    },
+    {
+      "id": "solution", "chapter": "THE ANSWER", "kicker": "The answer", "mood": "calm",
+      "recipe": "strike-three-moves-checklist",
+      "idea": "Do not start a price war; build a smarter loyalty offer.",
+      "visualDirection": "Strike through PRICE WAR, three moves, then a checklist ticking off.",
+      "inputs": {
+        "headlineLead": "DON'T FIGHT A",
+        "headlineStruck": "PRICE WAR.",
+        "sub": { "lead": "Build a smarter ", "accent": "loyalty offer." },
+        "moves": [
+          { "head": "HOLD THE LINE", "text": "Do not match every rival cut." },
+          { "head": "TARGET THE LOYAL", "text": "Reward riders who have stayed the longest." },
+          { "head": "ASK WHY", "text": "Talk to every rider who leaves." }
+        ],
+        "checklist": [
+          "Keep prices steady on the core range",
+          "Grow the loyalty discount over time",
+          "Add a quick exit survey",
+          "Review churn every month"
+        ]
+      },
+      "beats": [
+        { "n": 1, "summary": "Headline and strike-through.", "notes": "The tempting answer is a price war. It would hurt us more than the rivals." },
+        { "n": 2, "summary": "Smarter alternative.", "notes": "The better answer is a smarter loyalty offer." },
+        { "n": 3, "summary": "Three moves.", "notes": "Three moves. Hold the line, target the loyal, and always ask why riders leave." },
+        { "n": 4, "summary": "Checklist ticks off.", "notes": "Here is the checklist we start with on Monday." }
+      ]
+    },
+    {
+      "id": "closing", "chapter": "REASONS TO STAY", "kicker": "Closing", "mood": "quiet", "letterbox": true,
+      "recipe": "minimal-close",
+      "idea": "Close on the idea that riders need reasons to stay.",
+      "visualDirection": "Letterbox, quiet serif lines, giant final words.",
+      "inputs": {
+        "variant": "close",
+        "line1": "Prices may pull riders away,",
+        "line2": "but good reasons to stay can bring them back.",
+        "emphasis": "reasons to stay",
+        "bigWord": "Reasons to stay.",
+        "caption": "HARBOR BIKES · FICTIONAL DEMO",
+        "thanks": "Thank you."
+      },
+      "beats": [
+        { "n": 1, "summary": "First closing line.", "notes": "Prices may pull riders away." },
+        { "n": 2, "summary": "Second closing line.", "notes": "But good reasons to stay can bring them back." },
+        { "n": 3, "summary": "Giant words and thanks.", "notes": "Give riders reasons to stay. Thank you. This was a fictional demo." }
+      ]
+    }
+  ]
+}

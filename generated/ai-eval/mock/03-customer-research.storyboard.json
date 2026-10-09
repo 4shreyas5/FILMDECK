@@ -1,0 +1,292 @@
+{
+  "storyboardVersion": 1,
+  "deck": {
+    "id": "northlight-research",
+    "title": "Why Northlight customers stopped using the app",
+    "subtitle": "Fictional research summary, not real data",
+    "intro": "A fictional demo about a made-up bank. Every figure comes from the source brief. Sound is on, best viewed fullscreen.",
+    "language": "en",
+    "theme": "ink-ember",
+    "fictional": true,
+    "titleAccent": "stopped"
+  },
+  "sources": [
+    {
+      "id": "p2",
+      "kind": "document",
+      "label": "Interview paragraph",
+      "locator": "p2"
+    },
+    {
+      "id": "p3",
+      "kind": "document",
+      "label": "Findings paragraph",
+      "locator": "p3"
+    }
+  ],
+  "facts": [
+    {
+      "id": "interviews",
+      "kind": "number",
+      "value": 20,
+      "display": "20",
+      "sourceRef": "p2",
+      "evidence": "We interviewed 20 customers who had stopped using the mobile app within the last year."
+    },
+    {
+      "id": "login",
+      "kind": "number",
+      "value": 14,
+      "display": "14 of 20",
+      "sourceRef": "p3",
+      "evidence": "14 of the 20 said the login screen was confusing."
+    },
+    {
+      "id": "fees",
+      "kind": "number",
+      "value": 6,
+      "display": "6 of 20",
+      "sourceRef": "p3",
+      "evidence": "14 of the 20 said the login screen was confusing. 6 said unexpected fees were the reason they stopped."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "open",
+      "chapter": "THE QUESTION",
+      "kicker": "Opening",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "open",
+        "line1": "They stopped using the app.",
+        "line2": "We asked them why.",
+        "emphasis": "why",
+        "bigWord": "What they said.",
+        "caption": "NORTHLIGHT · FICTIONAL RESEARCH"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Twenty customers stopped using the app."
+        },
+        {
+          "n": 2,
+          "notes": "We sat down and asked each of them why."
+        },
+        {
+          "n": 3,
+          "notes": "This is fictional research for a made-up bank."
+        }
+      ]
+    },
+    {
+      "id": "reasons",
+      "chapter": "WHAT WE HEARD",
+      "kicker": "What we heard",
+      "title": "Why people stopped.",
+      "mood": "tense",
+      "recipe": "range-bar-chart",
+      "inputs": {
+        "scale": {
+          "min": 0,
+          "max": 20,
+          "majorStep": 5,
+          "step": 5,
+          "unit": ""
+        },
+        "rows": [
+          {
+            "label": "LOGIN CONFUSING",
+            "value": {
+              "fact": "login"
+            },
+            "tone": "negative"
+          },
+          {
+            "label": "UNEXPECTED FEES",
+            "value": {
+              "fact": "fees"
+            },
+            "tone": "accent"
+          }
+        ],
+        "verdict": {
+          "kicker": "THE MAIN REASON",
+          "word": "LOGIN.",
+          "sub": "Confusing from the first screen."
+        },
+        "cards": [
+          {
+            "head": "IN THEIR WORDS",
+            "text": "I never know where to start."
+          },
+          {
+            "head": "THOSE WHO STAYED",
+            "text": "Fast but hard to find things in."
+          }
+        ],
+        "axisLabel": "CUSTOMERS"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "We interviewed 20 customers."
+        },
+        {
+          "n": 2,
+          "notes": "14 of 20 said the login screen was confusing."
+        },
+        {
+          "n": 3,
+          "notes": "6 of 20 pointed to unexpected fees."
+        },
+        {
+          "n": 4,
+          "notes": "Two quotes bring it to life."
+        },
+        {
+          "n": 5,
+          "notes": "Login is the biggest reason."
+        }
+      ]
+    },
+    {
+      "id": "gap",
+      "chapter": "THE GAP",
+      "kicker": "The gap",
+      "title": "The gap is guidance.",
+      "mood": "rising",
+      "recipe": "pillars-roof",
+      "inputs": {
+        "roofLabel": "GUIDANCE, NOT FEATURES",
+        "pillars": [
+          {
+            "heading": "FIRST SCREEN",
+            "items": [
+              "Login confuses people"
+            ]
+          },
+          {
+            "heading": "FIRST FEES",
+            "items": [
+              "Fees come as a surprise"
+            ]
+          },
+          {
+            "heading": "FIRST USE",
+            "items": [
+              "Nobody shows where to start"
+            ]
+          }
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The biggest gap is first-time guidance."
+        },
+        {
+          "n": 2,
+          "notes": "It shows up in three places."
+        },
+        {
+          "n": 3,
+          "notes": "Login, fees and first use."
+        },
+        {
+          "n": 4,
+          "notes": "Not features."
+        },
+        {
+          "n": 5,
+          "notes": "That is the finding."
+        }
+      ]
+    },
+    {
+      "id": "answer",
+      "chapter": "THE ANSWER",
+      "kicker": "The answer",
+      "mood": "rising",
+      "recipe": "strike-three-moves-checklist",
+      "inputs": {
+        "headlineLead": "DON'T BUILD",
+        "headlineStruck": "MORE FEATURES.",
+        "sub": {
+          "lead": "Teach people ",
+          "accent": "where to start."
+        },
+        "moves": [
+          {
+            "head": "FIX LOGIN",
+            "text": "The login screen confuses people."
+          },
+          {
+            "head": "SHOW THE FEES",
+            "text": "Unexpected fees pushed people out."
+          },
+          {
+            "head": "GUIDE FIRST USE",
+            "text": "Help new users begin."
+          }
+        ],
+        "checklist": [
+          "Simplify the login screen",
+          "Show fees before they happen",
+          "Guide the first use of the app"
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Features are not the problem."
+        },
+        {
+          "n": 2,
+          "notes": "Guidance is."
+        },
+        {
+          "n": 3,
+          "notes": "Three moves."
+        },
+        {
+          "n": 4,
+          "notes": "The checklist."
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "chapter": "START HERE",
+      "kicker": "Closing",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "close",
+        "line1": "Customers did not leave for features,",
+        "line2": "they left because nobody showed the way.",
+        "emphasis": "nobody showed the way",
+        "bigWord": "Show the way.",
+        "caption": "NORTHLIGHT · FICTIONAL RESEARCH",
+        "thanks": "Thank you."
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "They did not leave for features."
+        },
+        {
+          "n": 2,
+          "notes": "They left because nobody showed the way."
+        },
+        {
+          "n": 3,
+          "notes": "Thank you. This was fictional research."
+        }
+      ]
+    }
+  ]
+}

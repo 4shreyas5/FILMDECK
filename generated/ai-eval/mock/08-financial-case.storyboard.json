@@ -1,0 +1,294 @@
+{
+  "storyboardVersion": 1,
+  "deck": {
+    "id": "solaris-ovens",
+    "title": "Why Solaris should replace its ovens",
+    "subtitle": "Fictional business case, not real data",
+    "intro": "A fictional demo about a made-up cafe chain. Every figure comes from the source brief. Sound is on, best viewed fullscreen.",
+    "language": "en",
+    "theme": "ink-ember",
+    "fictional": true,
+    "titleAccent": "replace"
+  },
+  "sources": [
+    {
+      "id": "p2",
+      "kind": "document",
+      "label": "Investment paragraph",
+      "locator": "p2"
+    },
+    {
+      "id": "p3",
+      "kind": "document",
+      "label": "Savings paragraph",
+      "locator": "p3"
+    },
+    {
+      "id": "p4",
+      "kind": "document",
+      "label": "Loan paragraph",
+      "locator": "p4"
+    }
+  ],
+  "facts": [
+    {
+      "id": "invest",
+      "kind": "number",
+      "value": 18,
+      "display": "₹18 lakh",
+      "sourceRef": "p2",
+      "evidence": "Replacing the old ovens needs an investment of ₹18 lakh."
+    },
+    {
+      "id": "saving",
+      "kind": "number",
+      "value": 7.5,
+      "display": "₹7.5 lakh",
+      "sourceRef": "p3",
+      "evidence": "The new ovens are expected to save ₹7.5 lakh a year in energy and repairs, which gives a payback of 2.4 years."
+    },
+    {
+      "id": "payback",
+      "kind": "number",
+      "value": 2.4,
+      "display": "2.4 years",
+      "sourceRef": "p3",
+      "evidence": "The new ovens are expected to save ₹7.5 lakh a year in energy and repairs, which gives a payback of 2.4 years."
+    },
+    {
+      "id": "rate",
+      "kind": "number",
+      "value": 9.5,
+      "display": "9.5%",
+      "unit": "%",
+      "sourceRef": "p4",
+      "evidence": "The bank loan for the purchase carries an interest rate of 9.5%."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "open",
+      "chapter": "THE DECISION",
+      "kicker": "Opening",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "open",
+        "line1": "The ovens keep breaking.",
+        "line2": "Replacing them is a decision.",
+        "emphasis": "decision",
+        "bigWord": "New ovens?",
+        "caption": "SOLARIS CAFE · FICTIONAL CASE"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The old ovens are a daily worry."
+        },
+        {
+          "n": 2,
+          "notes": "Replacing them is a real decision."
+        },
+        {
+          "n": 3,
+          "notes": "This is a fictional case for a made-up cafe chain."
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "chapter": "WHY NOW",
+      "kicker": "Why now",
+      "title": "The old ovens cost us.",
+      "mood": "rising",
+      "recipe": "pillars-roof",
+      "inputs": {
+        "roofLabel": "THE CASE TO REPLACE",
+        "pillars": [
+          {
+            "heading": "BREAKDOWNS",
+            "items": [
+              "Ovens fail about once a month",
+              "Each stops baking for a day"
+            ]
+          },
+          {
+            "heading": "RUNNING COST",
+            "items": [
+              "Energy and repairs add up"
+            ]
+          },
+          {
+            "heading": "FINANCE",
+            "items": [
+              "Loan interest rate 9.5%"
+            ]
+          }
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The old ovens cost us three ways."
+        },
+        {
+          "n": 2,
+          "notes": "They break down about once a month."
+        },
+        {
+          "n": 3,
+          "notes": "Energy and repairs add up."
+        },
+        {
+          "n": 4,
+          "notes": "The loan rate is 9.5%."
+        },
+        {
+          "n": 5,
+          "notes": "Staying put is not free."
+        }
+      ]
+    },
+    {
+      "id": "money",
+      "chapter": "THE MONEY",
+      "kicker": "The money",
+      "title": "The money, side by side.",
+      "mood": "tense",
+      "recipe": "range-bar-chart",
+      "inputs": {
+        "scale": {
+          "min": 0,
+          "max": 25,
+          "majorStep": 5,
+          "step": 5,
+          "unit": ""
+        },
+        "rows": [
+          {
+            "label": "INVESTMENT",
+            "value": {
+              "fact": "invest"
+            },
+            "tone": "negative"
+          },
+          {
+            "label": "SAVING EACH YEAR",
+            "value": {
+              "fact": "saving"
+            },
+            "tone": "positive"
+          }
+        ],
+        "verdict": {
+          "kicker": "THE PAYBACK",
+          "word": "2.4 YEARS.",
+          "sub": "The savings repay the investment."
+        },
+        "axisLabel": "LAKH"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Here is the money in lakh."
+        },
+        {
+          "n": 2,
+          "notes": "The investment is ₹18 lakh."
+        },
+        {
+          "n": 3,
+          "notes": "The saving is ₹7.5 lakh each year."
+        },
+        {
+          "n": 4,
+          "notes": "That gives a payback of 2.4 years."
+        }
+      ]
+    },
+    {
+      "id": "answer",
+      "chapter": "THE ANSWER",
+      "kicker": "The answer",
+      "mood": "rising",
+      "recipe": "strike-three-moves-checklist",
+      "inputs": {
+        "headlineLead": "KEEP PATCHING",
+        "headlineStruck": "OLD OVENS.",
+        "sub": {
+          "lead": "Replace them: ",
+          "accent": "approve the investment."
+        },
+        "moves": [
+          {
+            "head": "STOP BREAKDOWNS",
+            "text": "Each one stops baking for a day."
+          },
+          {
+            "head": "SAVE EVERY YEAR",
+            "text": "Energy and repairs cost less."
+          },
+          {
+            "head": "PAY BACK FAST",
+            "text": "Payback in 2.4 years."
+          }
+        ],
+        "checklist": [
+          "Approve the ₹18 lakh investment",
+          "Fund it with the bank loan",
+          "Review it in the next budget round"
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Finance recommends approval."
+        },
+        {
+          "n": 2,
+          "notes": "The next budget round is the time."
+        },
+        {
+          "n": 3,
+          "notes": "Three moves."
+        },
+        {
+          "n": 4,
+          "notes": "The checklist."
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "chapter": "APPROVE",
+      "kicker": "Closing",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "close",
+        "line1": "Every month the old ovens stay,",
+        "line2": "the problem stays too.",
+        "emphasis": "the problem stays too",
+        "bigWord": "Approve it.",
+        "caption": "SOLARIS CAFE · FICTIONAL CASE",
+        "thanks": "Thank you."
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Every month the old ovens stay, the problem stays too."
+        },
+        {
+          "n": 2,
+          "notes": "Finance recommends approval."
+        },
+        {
+          "n": 3,
+          "notes": "Thank you. This was fictional."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "filmdeck/source.schema.json",
+  "title": "FilmDeck normalized source",
+  "description": "Extraction output. Every section carries its source location. Text is exactly the document's text (whitespace-normalised only); nothing is summarised or interpreted.",
+  "type": "object", "additionalProperties": false,
+  "required": ["sourceVersion", "document", "sections"],
+  "properties": {
+    "sourceVersion": { "const": 1 },
+    "document": {
+      "type": "object", "additionalProperties": false, "required": ["id", "name", "type", "title"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,40}$" },
+        "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "type": { "enum": ["pdf", "pptx", "docx", "text", "markdown"] },
+        "title": { "type": "string", "maxLength": 300 },
+        "pageCount": { "type": "integer", "minimum": 1 },
+        "slideCount": { "type": "integer", "minimum": 1 },
+        "pagesWithoutText": { "type": "array", "items": { "type": "integer" }, "description": "PDF pages from which no text could be extracted (image-only or unreadable fonts). Their content is absent, not guessed." },
+        "fictional": { "type": "boolean", "description": "Set from Markdown front matter or the --fictional flag; never inferred." }
+      }
+    },
+    "sections": {
+      "type": "array", "minItems": 1, "maxItems": 20000,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "type", "text", "location"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,40}$", "description": "Unique, citable. Usable directly as storyboard sources[].id / facts[].sourceRef." },
+          "type": { "enum": ["heading", "paragraph", "list", "table", "notes"] },
+          "text": { "type": "string", "minLength": 1 },
+          "level": { "type": "integer", "minimum": 1, "maximum": 6, "description": "headings only" },
+          "items": { "type": "array", "items": { "type": "string" }, "description": "lists only" },
+          "ordered": { "type": "boolean", "description": "lists only" },
+          "headers": { "type": "array", "items": { "type": "string" }, "description": "tables only" },
+          "rows": { "type": "array", "items": { "type": "array", "items": { "type": "string" } }, "description": "tables only" },
+          "headingPath": { "type": "array", "items": { "type": "string" }, "description": "headings (or slide title) this section sits under" },
+          "location": {
+            "type": "object", "additionalProperties": false, "required": ["id", "kind", "number"],
+            "properties": {
+              "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,40}$", "description": "stable location id: page-14, slide-7, p3" },
+              "kind": { "enum": ["page", "slide", "paragraph"] },
+              "number": { "type": "integer", "minimum": 1 },
+              "line": { "type": "integer", "minimum": 1, "description": "text/markdown: 1-based line in the original file" },
+              "hidden": { "type": "boolean", "description": "pptx: slide is hidden in the show" }
+            }
+          }
+        }
+      }
+    },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "stats": { "type": "object" }
+  }
+}

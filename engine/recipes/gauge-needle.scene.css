@@ -1,0 +1,13 @@
+/* ---------- __SID__ gauge-needle ---------- */
+.__C__-a{position:absolute;inset:0}
+.__C__-trk{fill:none;stroke:rgba(238,233,224,.3);stroke-width:3;stroke-dasharray:1;stroke-dashoffset:1}
+.__C__-band{fill:none;stroke:var(--signal);stroke-width:30;stroke-dasharray:1;stroke-dashoffset:1}
+.__C__-band.hot{stroke:var(--tone);filter:drop-shadow(0 0 14px rgba(229,84,75,.5))}
+.__C__-tk{stroke:rgba(238,233,224,.3);stroke-width:2}
+.__C__-tk.mj{stroke:rgba(238,233,224,.7);stroke-width:3}
+.__C__-tl{font:500 18px var(--f-mono);fill:var(--dim);text-anchor:middle}
+.__C__-nd{stroke:var(--paper);stroke-width:6;stroke-linecap:round}
+.__C__-read{position:absolute;left:960px;top:736px;text-align:center;white-space:nowrap}
+.__C__-read .l{font:500 15px/1 var(--f-mono);letter-spacing:.32em;color:var(--dim)}
+.__C__-read .n{font:900 150px/1 var(--f-display);margin-top:10px;font-variant-numeric:tabular-nums}
+.__C__-cap{position:absolute;left:0;right:0;top:925px;text-align:center;font:italic 400 46px/1.1 var(--f-serif);color:#d4cec3}

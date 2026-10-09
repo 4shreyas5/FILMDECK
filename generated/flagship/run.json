@@ -1,0 +1,78 @@
+{
+  "filmdeckVersion": "0.4.0",
+  "status": "ready",
+  "failedStage": null,
+  "source": {
+    "file": "01-consulting-deck.pptx",
+    "type": "pptx",
+    "sizeBytes": 7668,
+    "sha256": "e1cb2638fd356c2ffc891f8ccaa81e9bf93f6aad215cae5d0403bcfcd98d30e9"
+  },
+  "normalizedSourceSha256": "d4322457e53b598aab0bb707c3864cbb412899b9ab7cea2bc62818b5cc268a28",
+  "storyboardSha256": "271d358a84363f98d87d206afe489b8f76b4fe998b2625e8bf4b35ff4f554275",
+  "generation": {
+    "requestedMode": "auto",
+    "mode": "mock",
+    "aiGenerated": false,
+    "apiUsed": false,
+    "fixture": "tests/corpus/fixtures/01-consulting-deck.json",
+    "model": null,
+    "repairsUsed": 0
+  },
+  "generator": {
+    "version": 2,
+    "runtime": "film-runtime.js@c2a754da43e2",
+    "gsap": "3.12.5 (embedded)",
+    "fonts": "Barlow Condensed, Instrument Serif, JetBrains Mono (embedded, latin + latin-ext)"
+  },
+  "timestamp": "2026-10-08T20:57:03.873Z",
+  "sectionCount": 14,
+  "chunkCount": 1,
+  "sceneCount": 6,
+  "beatCount": 21,
+  "recipes": [
+    "minimal-close",
+    "big-number",
+    "comparison",
+    "range-bar-chart",
+    "pillars-roof",
+    "minimal-close"
+  ],
+  "warnings": [],
+  "qaMode": "full",
+  "qa": {
+    "mode": "full",
+    "passed": true,
+    "checks": {
+      "total": 30,
+      "passed": 30,
+      "failed": 0
+    },
+    "consoleErrors": 0,
+    "layoutWarnings": 0,
+    "durationMs": 188308
+  },
+  "timingsMs": {
+    "ingest": 44,
+    "chunk": 42,
+    "storyboard": 45,
+    "validate": 37,
+    "generate": 49,
+    "qa": 188348
+  },
+  "deckSha256": "6fc4e686e4f499af9fb68c3a275873d02e581467ee32014cb6d73a2e51563791",
+  "totalMs": 188572,
+  "artifacts": [
+    "source.json",
+    "chunks.json",
+    "storyboard.json",
+    "storyboard.report.json",
+    "deck.json",
+    "scenes.js",
+    "scenes.css",
+    "index.html",
+    "qa-report.json",
+    "qa-output",
+    "run.json"
+  ]
+}

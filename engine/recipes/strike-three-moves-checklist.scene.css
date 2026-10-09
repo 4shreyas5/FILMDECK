@@ -1,0 +1,18 @@
+/* ---------- __SID__ strike-three-moves-checklist ---------- */
+.__C__-h{position:absolute;left:0;right:0;top:290px;text-align:center}
+.__C__-h .a{font:900 150px/.92 var(--f-display);text-transform:uppercase}
+.__C__-h .b{display:inline-block;position:relative;font:900 250px/.92 var(--f-display);color:var(--alarm);text-transform:uppercase}
+/* the reference used an SVG path with non-scaling-stroke + pathLength dashing, which renders as dashes; a scaled bar is continuous */
+.__C__-strike{position:absolute;left:-2%;top:50%;width:104%;height:8px;margin-top:-4px;background:var(--paper);border-radius:4px;box-shadow:0 0 12px rgba(255,250,240,.6)}
+.__C__-s{position:absolute;left:0;right:0;top:740px;text-align:center;font:italic 400 70px/1.1 var(--f-serif);color:#e6e0d5}
+.__C__-s em{color:var(--ember)}
+.__C__-cols{position:absolute;left:180px;right:180px;top:300px;display:grid;grid-template-columns:repeat(3,1fr);gap:60px}
+.__C__-cols .c{border-top:3px solid var(--ember);padding-top:20px}
+.__C__-cols .n{font:500 14px/1 var(--f-mono);letter-spacing:.3em;color:var(--dim)}
+.__C__-cols .h{font:900 56px/1 var(--f-display);margin-top:12px;text-transform:uppercase}
+.__C__-cols .p{font:italic 400 32px/1.2 var(--f-serif);color:#d4cec3;margin-top:12px}
+.__C__-list{position:absolute;left:180px;right:180px;top:600px;display:flex;flex-direction:column;gap:20px}
+.__C__-list .it{display:flex;align-items:center;gap:24px;font:italic 400 38px/1.1 var(--f-serif);color:#e6e0d5}
+.__C__-list i{flex:none;width:30px;height:30px;border:2px solid var(--dim);border-radius:6px;position:relative}
+.__C__-list i.on{border-color:var(--ember);background:var(--ember);box-shadow:0 0 16px rgba(242,162,71,.6)}
+.__C__-list i.on::after{content:"";position:absolute;left:9px;top:3px;width:8px;height:15px;border:solid var(--ink);border-width:0 4px 4px 0;transform:rotate(45deg)}

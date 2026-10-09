@@ -1,0 +1,8 @@
+{
+  "title": "FilmDeck Example",
+  "introKicker": "Scene API example · presenter controlled",
+  "introTitle": "Scene API <em>example</em>",
+  "introParagraph": "Two scenes that exercise the documented Scene API. Not a product deck.",
+  "helpDigits": "<div><b>1 to 9</b><br>jump to scene</div>",
+  "sections": ["s1", "s2"]
+}

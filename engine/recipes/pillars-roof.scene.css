@@ -1,0 +1,11 @@
+/* ---------- __SID__ pillars-roof ---------- */
+.__C__-ped{fill:#121620;stroke:var(--ember);stroke-width:3;stroke-linejoin:round}
+.__C__-ent{fill:#121620;stroke:var(--ember);stroke-width:2}
+.__C__-pt{font:800 40px var(--f-display);letter-spacing:.18em;fill:var(--ember);text-anchor:middle}
+.__C__-st{fill:#121620;stroke:rgba(238,233,224,.35);stroke-width:1.5}
+.__C__-pil{position:absolute;top:404px;width:400px;height:476px;box-sizing:border-box;padding:28px 30px;background:repeating-linear-gradient(90deg,rgba(238,233,224,.035) 0 2px,transparent 2px 40px),linear-gradient(180deg,#1a1f29,#0d1017);border:1px solid var(--line);border-top:4px solid var(--c);display:flex;flex-direction:column;gap:10px}
+.__C__-pil .n{font:500 13px/1 var(--f-mono);letter-spacing:.3em;color:var(--dim)}
+.__C__-pil .h{font:900 44px/1 var(--f-display);letter-spacing:.03em;color:var(--c)}
+.__C__-pil ul{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-direction:column;gap:18px}
+.__C__-pil li{font:italic 400 29px/1.18 var(--f-serif);color:#e6e0d5}
+.__C__-pil li::before{content:"";display:block;width:26px;height:2px;background:var(--c);margin-bottom:9px}

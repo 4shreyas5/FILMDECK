@@ -1,0 +1,51 @@
+{
+  "filmdeckVersion": "0.3.0",
+  "status": "ready",
+  "failedStage": null,
+  "source": {
+    "file": "deck.pptx",
+    "type": "pptx",
+    "sizeBytes": 7288,
+    "sha256": "8aab44a2faa08a912e0eed996704bb7102aa0be78d1639e56f2b4461af51b74c"
+  },
+  "generation": {
+    "requestedMode": "auto",
+    "mode": "mock",
+    "aiGenerated": false,
+    "fixture": "tests/ai/fixtures/deck.json",
+    "model": null,
+    "repairsUsed": 0
+  },
+  "timestamp": "2026-10-08T17:16:27.952Z",
+  "sceneCount": 5,
+  "beatCount": 18,
+  "recipes": [
+    "minimal-close",
+    "range-bar-chart",
+    "range-bar-chart",
+    "strike-three-moves-checklist",
+    "minimal-close"
+  ],
+  "qa": {
+    "passed": true,
+    "checks": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "consoleErrors": 0,
+    "durationMs": 155187
+  },
+  "artifacts": [
+    "source.json",
+    "storyboard.json",
+    "storyboard.report.json",
+    "deck.json",
+    "scenes.js",
+    "scenes.css",
+    "index.html",
+    "qa-report.json",
+    "qa-output",
+    "run.json"
+  ]
+}

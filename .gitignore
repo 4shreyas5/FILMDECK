@@ -1,0 +1,16 @@
+tests/parity/build/
+.DS_Store
+generated/**/qa-output/
+generated/ai-eval/*/decks/
+generated/storyboards/mock/
+
+generated/web/
+.env
+.env.*
+!.env.example
+.qa-env/
+web/.next/
+web/node_modules/
+generated/review/
+generated/live-eval/
+generated/web-ui-*.png

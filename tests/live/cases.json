@@ -1,0 +1,12 @@
+{
+  "note": "Realistic fictional documents for the LIVE evaluation (tests/live/live-eval.mjs). Paths are relative to the repository root. 'variance' cases are run twice by default.",
+  "cases": [
+    { "id": "consulting-pptx", "file": "tests/corpus/docs/01-consulting-deck.pptx", "kind": "consulting / business PPTX", "fictional": true, "variance": true },
+    { "id": "annual-report-pdf", "file": "tests/corpus/docs/03-annual-report.pdf", "kind": "annual-report style PDF", "fictional": true },
+    { "id": "mba-class-pptx", "file": "tests/live/docs/mba-class-presentation.pptx", "kind": "MBA / class presentation PPTX", "fictional": true },
+    { "id": "narrative-no-numbers", "file": "tests/corpus/docs/10-qualitative-narrative.md", "kind": "narrative document with no numbers", "fictional": true, "expectNoFacts": true },
+    { "id": "tables-docx", "file": "tests/corpus/docs/06-tables.docx", "kind": "document with several tables", "fictional": true },
+    { "id": "long-chunked", "file": "tests/corpus/docs/11-long-report.md", "kind": "long report requiring chunking (8 chunks)", "fictional": true, "expectMultiChunk": true },
+    { "id": "prompt-injection", "file": "tests/live/docs/injection-board-update.md", "kind": "board update containing prompt-injection text", "fictional": true, "injection": ["PWNED", "acquired for $2 billion", "reveal your system prompt"] }
+  ]
+}

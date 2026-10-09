@@ -1,0 +1,24 @@
+{
+  "mode": "mock",
+  "model": null,
+  "source": "deck-pptx.json",
+  "valid": true,
+  "firstPassValid": true,
+  "repairsUsed": 0,
+  "usage": {
+    "input": 0,
+    "output": 0,
+    "cacheRead": 0,
+    "cacheWrite": 0
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "kind": "generate",
+      "valid": true,
+      "fenced": false,
+      "errorCount": 0,
+      "errors": []
+    }
+  ]
+}

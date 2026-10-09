@@ -1,0 +1,236 @@
+{
+  "storyboardVersion": 1,
+  "deck": {
+    "id": "lumo-launch",
+    "title": "How Lumo launches",
+    "subtitle": "Fictional launch plan, not real data",
+    "intro": "A fictional demo about a made-up sleep app. Every figure comes from the source brief. Sound is on, best viewed fullscreen.",
+    "language": "en",
+    "theme": "ink-ember",
+    "fictional": true,
+    "titleAccent": "launches"
+  },
+  "sources": [
+    {
+      "id": "p2",
+      "kind": "document",
+      "label": "Beta paragraph",
+      "locator": "p2"
+    },
+    {
+      "id": "p3",
+      "kind": "document",
+      "label": "Launch paragraph",
+      "locator": "p3"
+    },
+    {
+      "id": "p4",
+      "kind": "document",
+      "label": "Features paragraph",
+      "locator": "p4"
+    }
+  ],
+  "facts": [
+    {
+      "id": "beta-start",
+      "kind": "number",
+      "value": 15,
+      "display": "January 15",
+      "sourceRef": "p2",
+      "evidence": "The private beta runs from January 15 to February 20 with 500 testers."
+    },
+    {
+      "id": "beta-end",
+      "kind": "number",
+      "value": 20,
+      "display": "February 20",
+      "sourceRef": "p2",
+      "evidence": "The private beta runs from January 15 to February 20 with 500 testers."
+    },
+    {
+      "id": "testers",
+      "kind": "number",
+      "value": 500,
+      "display": "500",
+      "sourceRef": "p2",
+      "evidence": "The private beta runs from January 15 to February 20 with 500 testers."
+    },
+    {
+      "id": "launch",
+      "kind": "number",
+      "value": 4,
+      "display": "March 4",
+      "sourceRef": "p3",
+      "evidence": "Public launch is planned for March 4."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "open",
+      "chapter": "THE LAUNCH",
+      "kicker": "Opening",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "open",
+        "line1": "A calm, confident launch.",
+        "line2": "A clear reason to choose Lumo.",
+        "emphasis": "clear reason",
+        "bigWord": "Launching Lumo.",
+        "caption": "LUMO · FICTIONAL LAUNCH PLAN"
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Lumo is almost ready."
+        },
+        {
+          "n": 2,
+          "notes": "The team wants a calm, confident rollout."
+        },
+        {
+          "n": 3,
+          "notes": "This is a fictional plan for a made-up app."
+        }
+      ]
+    },
+    {
+      "id": "plan",
+      "chapter": "THE PLAN",
+      "kicker": "The plan",
+      "title": "From beta to launch.",
+      "mood": "rising",
+      "recipe": "pillars-roof",
+      "inputs": {
+        "roofLabel": "THE ROLLOUT PLAN",
+        "pillars": [
+          {
+            "heading": "PRIVATE BETA",
+            "items": [
+              "January 15 to February 20",
+              "500 testers"
+            ]
+          },
+          {
+            "heading": "FIX FIRST",
+            "items": [
+              "A sync bug must be fixed"
+            ]
+          },
+          {
+            "heading": "PUBLIC LAUNCH",
+            "items": [
+              "March 4"
+            ]
+          }
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The plan has three steps."
+        },
+        {
+          "n": 2,
+          "notes": "The private beta runs from January 15 to February 20 with 500 testers."
+        },
+        {
+          "n": 3,
+          "notes": "A sync bug must be fixed first."
+        },
+        {
+          "n": 4,
+          "notes": "Then the public launch on March 4."
+        },
+        {
+          "n": 5,
+          "notes": "Calm and in order."
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "chapter": "THE MESSAGE",
+      "kicker": "The message",
+      "mood": "rising",
+      "recipe": "strike-three-moves-checklist",
+      "inputs": {
+        "headlineLead": "DON'T JUST LIST",
+        "headlineStruck": "FEATURES.",
+        "sub": {
+          "lead": "Say why Lumo is ",
+          "accent": "different."
+        },
+        "moves": [
+          {
+            "head": "LEAD WITH ALARM",
+            "text": "Testers rated it most useful."
+          },
+          {
+            "head": "KEEP IT CALM",
+            "text": "A calm, confident rollout."
+          },
+          {
+            "head": "BE HONEST",
+            "text": "The weekly report scored lowest."
+          }
+        ],
+        "checklist": [
+          "Fix the sync bug first",
+          "Launch on March 4",
+          "Lead with the smart alarm"
+        ]
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Features alone do not make a message."
+        },
+        {
+          "n": 2,
+          "notes": "Say why Lumo is different."
+        },
+        {
+          "n": 3,
+          "notes": "Three moves."
+        },
+        {
+          "n": 4,
+          "notes": "The checklist."
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "chapter": "SLEEP BETTER",
+      "kicker": "Closing",
+      "mood": "quiet",
+      "letterbox": true,
+      "recipe": "minimal-close",
+      "inputs": {
+        "variant": "close",
+        "line1": "A calm launch,",
+        "line2": "for people who want better sleep.",
+        "emphasis": "better sleep",
+        "bigWord": "Sleep, simple.",
+        "caption": "LUMO · FICTIONAL LAUNCH PLAN",
+        "thanks": "Thank you."
+      },
+      "beats": [
+        {
+          "n": 1,
+          "notes": "A calm launch."
+        },
+        {
+          "n": 2,
+          "notes": "For people who want better sleep."
+        },
+        {
+          "n": 3,
+          "notes": "Thank you. This was fictional."
+        }
+      ]
+    }
+  ]
+}

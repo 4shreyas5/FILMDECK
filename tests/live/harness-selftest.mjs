@@ -1,0 +1,32 @@
+// Offline self-test of the live-evaluation harness (tests/live/live-eval.mjs) against a local fake endpoint. Proves the harness refuses without a key,
+// records metrics correctly, flags simulated runs and keeps the key out of its output. It evaluates the HARNESS, not Claude.
+import fs from 'fs'; import os from 'os'; import path from 'path'; import { spawn } from 'child_process'; import { fileURLToPath } from 'url';
+import { startFake } from '../ai/fake-anthropic.mjs';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..'), H = path.join(root, 'tests/live/live-eval.mjs'), KEY = 'sk-ant-CANARY-harness-0001';
+let bad = 0; const t = (n, c, d = '') => { if (c) console.log('PASS  ' + n); else { bad++; console.log('FAIL  ' + n + (d ? '  -> ' + String(d).slice(0, 300) : '')); } };
+const run = (args, env) => new Promise(res => { const c = spawn(process.execPath, [H, ...args], { env, cwd: root }); let o = '', e = ''; c.stdout.on('data', d => o += d); c.stderr.on('data', d => e += d); c.on('close', status => res({ status, out: o, err: e })); });
+const NW = JSON.parse(fs.readFileSync(path.join(root, 'tests/ai/fixtures/northwind-q3.json'), 'utf8')).responses[0];
+const base = { ...process.env }; delete base.ANTHROPIC_API_KEY; delete base.ANTHROPIC_BASE_URL;
+const r0 = await run(['--yes'], base); t('refuses without ANTHROPIC_API_KEY (exit 3), runs nothing', r0.status === 3 && /REFUSING TO RUN/.test(r0.err) && !fs.existsSync(path.join(root, 'generated/live-eval')) || r0.status === 3 && /REFUSING/.test(r0.err));
+const r00 = await run(['--yes'], { ...base, ANTHROPIC_API_KEY: '  ' }); t('a blank key also refuses', r00.status === 3);
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'fd-harness-'));
+let f = await startFake(() => ({ text: NW, inTok: 1000, outTok: 500 }));
+const env = { ...base, ANTHROPIC_API_KEY: KEY, ANTHROPIC_BASE_URL: f.url, FILMDECK_PRICE_IN_PER_MTOK: '10', FILMDECK_PRICE_OUT_PER_MTOK: '50' };
+const r1 = await run(['--yes', '--cases', 'tests/live/selftest-cases.json', '--qa', 'none', '--out', path.join(tmp, 'a')], env);
+const S = fs.existsSync(path.join(tmp, 'a/summary.json')) ? JSON.parse(fs.readFileSync(path.join(tmp, 'a/summary.json'), 'utf8')) : null;
+t('harness run against the fake endpoint exits 0', r1.status === 0 && S, r1.err + r1.out.slice(-300));
+t('the run is flagged simulated everywhere (console, summary, report)', /NOT from api.anthropic.com/.test(r1.out) && S.simulated === true && /OVERRIDDEN/.test(S.endpoint) && /NOT REAL CLAUDE/.test(fs.readFileSync(path.join(tmp, 'a/report.md'), 'utf8')));
+t('variance case ran twice; 2 calls, 2000 input / 1000 output tokens measured', S.metrics.runs === 2 && S.metrics.claudeCalls === 2 && S.metrics.tokens.input === 2000 && S.metrics.tokens.output === 1000 && f.seen.length === 2);
+t('first-pass rate 100, repair rate 0, no failures, no invented numbers', S.metrics.firstPassValidRate === 100 && S.metrics.repairRate === 0 && S.metrics.failed === 0 && S.metrics.inventedNumbersFoundByIndependentCheck === 0);
+t('variance block compares the two runs', S.variance.length === 1 && S.variance[0].recipeSequenceIdentical === true && S.variance[0].factSetJaccard === 1 && S.variance[0].scenes.length === 2);
+t('cost is computed only because prices were supplied: (2000*10+1000*50)/1e6', Math.abs(S.metrics.costUSD - 0.07) < 1e-9, S.metrics.costUSD);
+const r2 = await run(['--yes', '--cases', 'tests/live/selftest-cases.json', '--qa', 'none', '--out', path.join(tmp, 'b')], { ...env, FILMDECK_PRICE_IN_PER_MTOK: '', FILMDECK_PRICE_OUT_PER_MTOK: '' });
+t('without prices the cost is reported as not computed (never invented)', /not computed/.test(JSON.parse(fs.readFileSync(path.join(tmp, 'b/summary.json'), 'utf8')).metrics.costUSD));
+const all = []; const walk = d => { for (const x of fs.readdirSync(d)) { const p = path.join(d, x); fs.statSync(p).isDirectory() ? walk(p) : all.push(p); } }; walk(tmp);
+t('the API key appears in no output file or console output', !all.some(p => fs.readFileSync(p, 'utf8').includes(KEY)) && !r1.out.includes(KEY) && !r1.err.includes(KEY));
+f.close(); f = await startFake(() => ({ text: 'never json' }));
+const r3 = await run(['--yes', '--cases', 'tests/live/selftest-cases.json', '--qa', 'none', '--repeats', '1', '--out', path.join(tmp, 'c')], { ...env, ANTHROPIC_BASE_URL: f.url });
+const S3 = JSON.parse(fs.readFileSync(path.join(tmp, 'c/summary.json'), 'utf8'));
+t('a model that never produces valid JSON: exit 1, failure recorded with category counts and 4 calls', r3.status === 1 && S3.metrics.failed === 1 && S3.metrics.errorCategoriesAcrossAllAttempts['json-parse'] === 4 && f.seen.length === 4 && S3.runs[0].errorKind === 'validation', JSON.stringify(S3.metrics));
+f.close(); fs.rmSync(tmp, { recursive: true, force: true });
+console.log(bad ? `${bad} harness test(s) FAILED` : 'ALL HARNESS TESTS PASSED'); process.exit(bad ? 1 : 0);

@@ -1,0 +1,159 @@
+{
+  "ok": true,
+  "passed": true,
+  "checks": {
+    "total": 28,
+    "passed": 28,
+    "failed": 0
+  },
+  "results": [
+    {
+      "name": "1 generated HTML exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "2 runtime appears exactly once and is byte-identical to engine/film-runtime.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "2b scenes inserted at the runtime splice point",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "5 storyboard scene ids unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "5b section ids unique and match scenes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "6 recipe ids valid",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "7 no untraceable factual numbers (storyboard validator)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "8 no code or markup inside storyboard JSON",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "4 step counts planned per scene equal storyboard beats",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "H source references survive generation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G speaker notes survive generation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime duplicated nowhere else in the output folder",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no em-dashes in generated files",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "offline: the HTML references no external URL (GSAP and fonts are embedded)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "offline: GSAP and embedded fonts are present in the file",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "doctype absent (quirks mode preserved, as in the reference decks)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "3 every storyboard scene exists in the deck with its chapter",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "4 every storyboard beat has a corresponding step",
+      "ok": true,
+      "detail": "3,3,5,5,4,3"
+    },
+    {
+      "name": "G meta (notes, sources) available at runtime via window.__filmdeckMeta",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "7b every number visible in the rendered scenes traces to a fact display or a declared axis tick",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "7c layout: no critical text outside the stage and none clipped",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "7d text fit: every recipe text zone is within its declared width and line count",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "9b embedded fonts load without the network",
+      "ok": true,
+      "detail": "Barlow Condensed,Barlow Condensed,Barlow Condensed,Instrument Serif,JetBrains Mono,JetBrains Mono"
+    },
+    {
+      "name": "9d page encoding is UTF-8 (no mojibake for non-ASCII text)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "9c no external network request was attempted by the page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "9 no console errors while opening and walking every scene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "3b navigation: forward through every beat, backward to the start, final scene reachable",
+      "ok": true,
+      "detail": "{\"problems\":[],\"forwardEnd\":true,\"scenesSeen\":6,\"backStart\":true,\"rebuild\":[true,true,true,true,true,true],\"finalReachable\":true}"
+    },
+    {
+      "name": "3c scene rebuild: stepping back one beat and forward again restores the identical scene",
+      "ok": true,
+      "detail": "[true,true,true,true,true,true]"
+    }
+  ],
+  "sceneCount": 6,
+  "beatCount": 23,
+  "consoleErrors": 0,
+  "mode": "fast",
+  "durationMs": 48666,
+  "consoleErrorMessages": [],
+  "layoutWarnings": 0,
+  "warnings": []
+}

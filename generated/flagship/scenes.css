@@ -1,0 +1,68 @@
+/* ---------- s1 minimal-close ---------- */
+.s1-light{position:absolute;left:460px;top:-200px;width:1000px;height:1000px;background:radial-gradient(circle,rgba(238,233,224,.07),transparent 65%)}
+.s1-l{position:absolute;left:260px;right:260px;text-align:center;font:italic 400 78px/1.15 var(--f-serif);color:#e6e0d5}
+.s1-l1{top:340px}
+.s1-l2{top:450px}
+.s1-l .hi{color:var(--ember)}
+.s1-big{position:absolute;left:0;right:0;top:350px;text-align:center;white-space:nowrap;font:900 200px/1 var(--f-display);text-transform:uppercase;letter-spacing:.02em;background:linear-gradient(100deg,var(--ember) 0%,var(--ember) 42%,#fff3df 50%,var(--ember) 58%,var(--ember) 100%);background-size:300% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent}
+.s1-k{position:absolute;left:0;right:0;top:640px;text-align:center;font:500 22px/1 var(--f-mono);letter-spacing:.44em;padding-left:.44em;color:var(--dim)}
+.s1-ty{position:absolute;left:0;right:0;top:720px;text-align:center;font:italic 400 64px/1 var(--f-serif);color:#e6e0d5}
+
+/* ---------- s2 big-number ---------- */
+.s2-l{position:absolute;left:0;right:0;top:300px;text-align:center;font:500 22px/1 var(--f-mono);letter-spacing:.42em;padding-left:.42em;color:var(--dim)}
+.s2-n{position:absolute;left:0;right:0;top:350px;text-align:center;white-space:nowrap;font-family:var(--f-display);font-weight:900;line-height:1;text-shadow:0 0 70px rgba(242,162,71,.28)}
+.s2-c{position:absolute;left:180px;right:180px;top:790px;text-align:center;font:italic 400 56px/1.12 var(--f-serif);color:#e2dcd2}
+.s2-f{position:absolute;left:0;right:0;top:940px;text-align:center;font:500 22px/1 var(--f-mono);letter-spacing:.3em;color:var(--dim)}
+.s2-f b{margin-left:20px;font:800 34px/1 var(--f-display);letter-spacing:.06em;color:var(--paper)}
+
+/* ---------- s3 comparison ---------- */
+.s3-p{position:absolute;top:310px;width:720px;border-top:3px solid var(--tone);padding-top:18px}
+.s3-p.L{left:180px}.s3-p.R{left:1020px}
+.s3-p .h{font:900 84px/1 var(--f-display);text-transform:uppercase;color:var(--tone);white-space:nowrap}
+.s3-p .m{height:150px;margin-top:14px}
+.s3-p .k{font:500 18px/1 var(--f-mono);letter-spacing:.3em;color:var(--dim);text-transform:uppercase;white-space:nowrap;margin-top:6px}
+.s3-p .v{font-family:var(--f-display);font-weight:900;line-height:1;margin-top:12px;white-space:nowrap}
+.s3-vs{position:absolute;left:900px;width:120px;top:560px;text-align:center;font:800 34px/1 var(--f-display);letter-spacing:.3em;padding-left:.3em;color:var(--dim)}
+.s3-vd{position:absolute;left:180px;right:180px;top:905px;text-align:center;white-space:nowrap;font:italic 400 48px/1.1 var(--f-serif);color:#e2dcd2}
+
+/* ---------- s4 range-bar-chart ---------- */
+.s4-a{position:absolute;inset:0}
+.s4-gl{stroke:rgba(238,233,224,.07);stroke-width:1}
+.s4-ax{stroke:rgba(238,233,224,.45);stroke-width:2}
+.s4-tl{font:500 16px var(--f-mono);fill:var(--dim);text-anchor:middle}
+.s4-at{font:500 14px var(--f-mono);letter-spacing:.3em;fill:var(--dim);text-anchor:end}
+.s4-rl{font:700 30px var(--f-display);letter-spacing:.08em;fill:var(--paper);text-anchor:end}
+.s4-vl{font:800 40px var(--f-display);letter-spacing:.02em}
+.s4-gd{stroke:rgba(238,233,224,.55);stroke-width:2;stroke-dasharray:4 6}
+.s4-gb{fill:none;stroke:var(--paper);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.s4-gt{font:500 15px var(--f-mono);letter-spacing:.24em;fill:var(--paper);text-anchor:middle}
+.s4-cd{position:absolute;top:760px;width:620px;padding-left:26px;border-left:3px solid var(--tone)}
+.s4-cd .h{font:800 44px/1 var(--f-display);letter-spacing:.06em}
+.s4-cd .p{font:italic 400 34px/1.2 var(--f-serif);color:#d4cec3;margin-top:12px}
+.s4-v{position:absolute;left:0;right:0;top:330px;text-align:center}
+.s4-v .k{font:500 18px/1 var(--f-mono);letter-spacing:.5em;padding-left:.5em;color:var(--dim)}
+.s4-v .b{white-space:nowrap;font:900 210px/1 var(--f-display);color:var(--ember);margin-top:18px;text-shadow:0 0 60px rgba(242,162,71,.3)}
+.s4-v .s{font:italic 400 64px/1.1 var(--f-serif);color:#e2dcd2;margin-top:10px}
+
+/* ---------- s5 pillars-roof ---------- */
+.s5-ped{fill:#121620;stroke:var(--ember);stroke-width:3;stroke-linejoin:round}
+.s5-ent{fill:#121620;stroke:var(--ember);stroke-width:2}
+.s5-pt{font:800 40px var(--f-display);letter-spacing:.18em;fill:var(--ember);text-anchor:middle}
+.s5-st{fill:#121620;stroke:rgba(238,233,224,.35);stroke-width:1.5}
+.s5-pil{position:absolute;top:404px;width:400px;height:476px;box-sizing:border-box;padding:28px 30px;background:repeating-linear-gradient(90deg,rgba(238,233,224,.035) 0 2px,transparent 2px 40px),linear-gradient(180deg,#1a1f29,#0d1017);border:1px solid var(--line);border-top:4px solid var(--c);display:flex;flex-direction:column;gap:10px}
+.s5-pil .n{font:500 13px/1 var(--f-mono);letter-spacing:.3em;color:var(--dim)}
+.s5-pil .h{font:900 44px/1 var(--f-display);letter-spacing:.03em;color:var(--c)}
+.s5-pil ul{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-direction:column;gap:18px}
+.s5-pil li{font:italic 400 29px/1.18 var(--f-serif);color:#e6e0d5}
+.s5-pil li::before{content:"";display:block;width:26px;height:2px;background:var(--c);margin-bottom:9px}
+
+/* ---------- s6 minimal-close ---------- */
+.s6-light{position:absolute;left:460px;top:-200px;width:1000px;height:1000px;background:radial-gradient(circle,rgba(238,233,224,.07),transparent 65%)}
+.s6-l{position:absolute;left:260px;right:260px;text-align:center;font:italic 400 78px/1.15 var(--f-serif);color:#e6e0d5}
+.s6-l1{top:340px}
+.s6-l2{top:450px}
+.s6-l .hi{color:var(--ember)}
+.s6-big{position:absolute;left:0;right:0;top:350px;text-align:center;white-space:nowrap;font:900 200px/1 var(--f-display);text-transform:uppercase;letter-spacing:.02em;background:linear-gradient(100deg,var(--ember) 0%,var(--ember) 42%,#fff3df 50%,var(--ember) 58%,var(--ember) 100%);background-size:300% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent}
+.s6-k{position:absolute;left:0;right:0;top:640px;text-align:center;font:500 22px/1 var(--f-mono);letter-spacing:.44em;padding-left:.44em;color:var(--dim)}
+.s6-ty{position:absolute;left:0;right:0;top:720px;text-align:center;font:italic 400 64px/1 var(--f-serif);color:#e6e0d5}
+

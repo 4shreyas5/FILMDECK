@@ -1,0 +1,105 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "name": "1 generated HTML exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "2 runtime appears exactly once and is byte-identical to engine/film-runtime.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "2b scenes inserted at the runtime splice point",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "5 storyboard scene ids unique",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "5b section ids unique and match scenes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "6 recipe ids valid",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "7 no untraceable factual numbers (storyboard validator)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "8 no code or markup inside storyboard JSON",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "4 step counts planned per scene equal storyboard beats",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "H source references survive generation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G speaker notes survive generation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime duplicated nowhere else in the output folder",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no em-dashes in generated files",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "doctype absent (quirks mode preserved, as in the reference decks)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "3 every storyboard scene exists in the deck with its chapter",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "4 every storyboard beat has a corresponding step",
+      "ok": true,
+      "detail": "3,4,4,4,3"
+    },
+    {
+      "name": "G meta (notes, sources) available at runtime via window.__filmdeckMeta",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "7b every number visible in the rendered scenes traces to a fact display or a declared axis tick",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "9 no console errors while opening and walking every scene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "10-14 forward, back, rebuild, keyboard, mouse, rapid clicks, transitions, HUD, timecode, blackout, help, fullscreen request, sound toggle, reduced motion, 3 viewports, final scene reachable",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

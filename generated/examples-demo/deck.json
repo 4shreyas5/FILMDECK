@@ -1,0 +1,520 @@
+{
+  "title": "Why Harbor Bikes riders leave",
+  "introKicker": "Fictional demo deck, not real data",
+  "introTitle": "Why Harbor Bikes <em>riders</em> leave",
+  "introParagraph": "A fictional demo built by FilmDeck from a storyboard. Every figure shown comes from the demo brief. Sound is on, best viewed fullscreen.",
+  "helpDigits": "<div><b>1 to 6</b><br>jump to scene</div>",
+  "sections": [
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6"
+  ],
+  "generator": {
+    "version": 2,
+    "offline": true,
+    "gsap": "3.12.5",
+    "storyboardSha256": "fc224f7b7b88b909bf995b91b34a116f11b67364b59e91764255278f524c5ae4",
+    "deckId": "harbor-bikes-demo",
+    "fictional": true
+  },
+  "sources": [
+    {
+      "id": "demo-brief",
+      "kind": "fictional",
+      "label": "Fictional demo brief about the made-up company Harbor Bikes. Not real data."
+    }
+  ],
+  "facts": [
+    {
+      "id": "churn-before",
+      "kind": "number",
+      "value": 6,
+      "display": "6%",
+      "unit": "%",
+      "sourceRef": "demo-brief"
+    },
+    {
+      "id": "churn-now",
+      "kind": "number",
+      "value": 11,
+      "display": "11%",
+      "unit": "%",
+      "sourceRef": "demo-brief"
+    },
+    {
+      "id": "rival-cut",
+      "kind": "range",
+      "value": {
+        "lo": 20,
+        "hi": 30
+      },
+      "display": "20–30%",
+      "unit": "%",
+      "sourceRef": "demo-brief"
+    },
+    {
+      "id": "our-discount",
+      "kind": "range",
+      "value": {
+        "lo": 8,
+        "hi": 10
+      },
+      "display": "8–10%",
+      "unit": "%",
+      "sourceRef": "demo-brief"
+    },
+    {
+      "id": "price-gap",
+      "kind": "number",
+      "value": 10,
+      "display": "10 points",
+      "unit": "points",
+      "derivation": {
+        "op": "diff",
+        "of": [
+          "rival-cut.lo",
+          "our-discount.hi"
+        ]
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "opening",
+      "section": "s1",
+      "n": 1,
+      "chapter": "THE QUIET EXIT",
+      "recipe": "minimal-close",
+      "mood": "quiet",
+      "letterbox": true,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Start slowly. Riders do not announce that they are leaving, they just stop renewing.",
+          "summary": "First line fades in."
+        },
+        {
+          "n": 2,
+          "notes": "The real problem is that nobody has ever asked them why.",
+          "summary": "Second line, emphasis on why."
+        },
+        {
+          "n": 3,
+          "notes": "Today we look at why riders leave Harbor Bikes. This is a fictional demo company.",
+          "summary": "Giant title word."
+        }
+      ],
+      "sourceRefs": [],
+      "sources": [],
+      "textZones": [
+        {
+          "selector": ".s1-l1",
+          "role": "line 1",
+          "maxLines": 1,
+          "maxWidth": 1400
+        },
+        {
+          "selector": ".s1-l2",
+          "role": "line 2",
+          "maxLines": 2,
+          "maxWidth": 1400
+        },
+        {
+          "selector": ".s1-big",
+          "role": "giant word",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s1-k",
+          "role": "caption",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s1-ty",
+          "role": "thanks",
+          "maxLines": 1,
+          "maxWidth": 1700
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "section": "s2",
+      "n": 2,
+      "chapter": "THE PROBLEM",
+      "recipe": "gauge-needle",
+      "mood": "tense",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Here is the problem. We measure monthly churn, the share of riders who leave.",
+          "summary": "Title and empty gauge."
+        },
+        {
+          "n": 2,
+          "notes": "It used to sit here, at the level shown on the gauge.",
+          "summary": "Needle to the earlier rate."
+        },
+        {
+          "n": 3,
+          "notes": "Now it has jumped to the level you see. That is almost double.",
+          "summary": "Needle jumps to the current rate."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "fact": "churn-before",
+          "display": "6%",
+          "sourceRef": "demo-brief"
+        },
+        {
+          "fact": "churn-now",
+          "display": "11%",
+          "sourceRef": "demo-brief"
+        }
+      ],
+      "sources": [
+        "demo-brief"
+      ],
+      "textZones": [
+        {
+          "selector": ".s2-read .l",
+          "role": "readout label",
+          "maxLines": 1,
+          "maxWidth": 700
+        },
+        {
+          "selector": ".s2-read .n",
+          "role": "readout number",
+          "maxLines": 1,
+          "maxWidth": 700
+        },
+        {
+          "selector": ".s2-cap",
+          "role": "caption",
+          "maxLines": 2,
+          "maxWidth": 1560
+        }
+      ]
+    },
+    {
+      "id": "cause",
+      "section": "s3",
+      "n": 3,
+      "chapter": "WHY THEY LEAVE",
+      "recipe": "range-bar-chart",
+      "mood": "tense",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Let us compare what the rivals offer with what we offer, on one scale.",
+          "summary": "Axis appears."
+        },
+        {
+          "n": 2,
+          "notes": "Rivals are cutting prices by the range shown. That is a big swing.",
+          "summary": "Rival range draws."
+        },
+        {
+          "n": 3,
+          "notes": "Our loyalty discount is much smaller, and the bracket shows the gap between the two.",
+          "summary": "Our range and the gap."
+        },
+        {
+          "n": 4,
+          "notes": "Two things make it worse. Switching is easy and the rival offers are loud.",
+          "summary": "Two supporting cards."
+        },
+        {
+          "n": 5,
+          "notes": "So the primary issue is price, not the bikes and not the service.",
+          "summary": "Verdict word slams in."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "fact": "rival-cut",
+          "display": "20–30%",
+          "sourceRef": "demo-brief"
+        },
+        {
+          "fact": "our-discount",
+          "display": "8–10%",
+          "sourceRef": "demo-brief"
+        },
+        {
+          "fact": "price-gap",
+          "display": "10 points",
+          "sourceRef": null,
+          "derivedFrom": [
+            "rival-cut.lo",
+            "our-discount.hi"
+          ]
+        }
+      ],
+      "sources": [
+        "demo-brief"
+      ],
+      "textZones": [
+        {
+          "selector": ".s3-cd .h",
+          "role": "card heading",
+          "maxLines": 1,
+          "maxWidth": 580
+        },
+        {
+          "selector": ".s3-cd .p",
+          "role": "card text",
+          "maxLines": 3,
+          "maxWidth": 580
+        },
+        {
+          "selector": ".s3-v .b",
+          "role": "verdict word",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s3-v .s",
+          "role": "verdict sub",
+          "maxLines": 2,
+          "maxWidth": 1560
+        },
+        {
+          "selector": "text.s3-rl",
+          "role": "row label",
+          "maxLines": 1,
+          "maxWidth": 480
+        }
+      ]
+    },
+    {
+      "id": "framework",
+      "section": "s4",
+      "n": 4,
+      "chapter": "THE FRAMEWORK",
+      "recipe": "pillars-roof",
+      "mood": "rising",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Our plan stands on three pillars.",
+          "summary": "Base appears."
+        },
+        {
+          "n": 2,
+          "notes": "First pillar, price. Reward loyalty and answer rival offers fairly.",
+          "summary": "Price pillar."
+        },
+        {
+          "n": 3,
+          "notes": "Second pillar, service. Fix problems quickly and personally.",
+          "summary": "Service pillar."
+        },
+        {
+          "n": 4,
+          "notes": "Third pillar, community. Make riding with us a shared habit.",
+          "summary": "Community pillar."
+        },
+        {
+          "n": 5,
+          "notes": "Together they hold up one promise to every rider.",
+          "summary": "Roof drops."
+        }
+      ],
+      "sourceRefs": [],
+      "sources": [],
+      "textZones": [
+        {
+          "selector": ".s4-pil .h",
+          "role": "pillar heading",
+          "maxLines": 1,
+          "maxWidth": 340
+        },
+        {
+          "selector": ".s4-pil li",
+          "role": "pillar item",
+          "maxLines": 4,
+          "maxWidth": 340
+        }
+      ]
+    },
+    {
+      "id": "solution",
+      "section": "s5",
+      "n": 5,
+      "chapter": "THE ANSWER",
+      "recipe": "strike-three-moves-checklist",
+      "mood": "calm",
+      "letterbox": false,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "The tempting answer is a price war. It would hurt us more than the rivals.",
+          "summary": "Headline and strike-through."
+        },
+        {
+          "n": 2,
+          "notes": "The better answer is a smarter loyalty offer.",
+          "summary": "Smarter alternative."
+        },
+        {
+          "n": 3,
+          "notes": "Three moves. Hold the line, target the loyal, and always ask why riders leave.",
+          "summary": "Three moves."
+        },
+        {
+          "n": 4,
+          "notes": "Here is the checklist we start with on Monday.",
+          "summary": "Checklist ticks off."
+        }
+      ],
+      "sourceRefs": [],
+      "sources": [],
+      "textZones": [
+        {
+          "selector": ".s5-h .a",
+          "role": "headline lead",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s5-h .b",
+          "role": "struck headline",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s5-s",
+          "role": "sub line",
+          "maxLines": 2,
+          "maxWidth": 1560
+        },
+        {
+          "selector": ".s5-cols .h",
+          "role": "move heading",
+          "maxLines": 1,
+          "maxWidth": 480
+        },
+        {
+          "selector": ".s5-cols .p",
+          "role": "move text",
+          "maxLines": 4,
+          "maxWidth": 480
+        },
+        {
+          "selector": ".s5-list .it span",
+          "role": "checklist item",
+          "maxLines": 2,
+          "maxWidth": 1400
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "section": "s6",
+      "n": 6,
+      "chapter": "REASONS TO STAY",
+      "recipe": "minimal-close",
+      "mood": "quiet",
+      "letterbox": true,
+      "beats": [
+        {
+          "n": 1,
+          "notes": "Prices may pull riders away.",
+          "summary": "First closing line."
+        },
+        {
+          "n": 2,
+          "notes": "But good reasons to stay can bring them back.",
+          "summary": "Second closing line."
+        },
+        {
+          "n": 3,
+          "notes": "Give riders reasons to stay. Thank you. This was a fictional demo.",
+          "summary": "Giant words and thanks."
+        }
+      ],
+      "sourceRefs": [],
+      "sources": [],
+      "textZones": [
+        {
+          "selector": ".s6-l1",
+          "role": "line 1",
+          "maxLines": 1,
+          "maxWidth": 1400
+        },
+        {
+          "selector": ".s6-l2",
+          "role": "line 2",
+          "maxLines": 2,
+          "maxWidth": 1400
+        },
+        {
+          "selector": ".s6-big",
+          "role": "giant word",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s6-k",
+          "role": "caption",
+          "maxLines": 1,
+          "maxWidth": 1700
+        },
+        {
+          "selector": ".s6-ty",
+          "role": "thanks",
+          "maxLines": 1,
+          "maxWidth": 1700
+        }
+      ]
+    }
+  ],
+  "allowedNumberStrings": [
+    "6%",
+    "11%",
+    "20–30%",
+    "8–10%",
+    "10 points",
+    "Scene 01 · Opening",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "Scene 02 · The problem",
+    "20",
+    "30",
+    "40",
+    "Scene 03 · The cause",
+    "Scene 04 · The framework",
+    "PILLAR 01",
+    "PILLAR 02",
+    "PILLAR 03",
+    "Scene 05 · The answer",
+    "MOVE 01",
+    "MOVE 02",
+    "MOVE 03",
+    "Scene 06 · Closing"
+  ]
+}
